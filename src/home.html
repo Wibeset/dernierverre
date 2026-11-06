@@ -1,0 +1,152 @@
+<main id="top">
+
+<!-- ===================== HERO ===================== -->
+<!-- The hero is the app's Ideas feed: the phone cycles through drinks the way swiping up does. -->
+<section class="hero surface" id="hero">
+  <div class="col">
+    <div class="hero-copy pad">
+      <p class="kicker tag rv">{{hero_tag}}</p>
+      <h1 class="poster rv">{{hero_h1}}</h1>
+      <p class="lead rv">{{hero_lead}}</p>
+      <div class="hero-cta rv">
+        <a class="pill" href="{{appstore}}" data-appstore>{{APPLE}} {{cta_download}}</a>
+        <a class="pill ghost" href="#how">{{nav_how}}</a>
+      </div>
+      <a class="now rv" id="hero-recipe" href="cocktails/negroni/"><span class="kicker">{{now_on_screen}}</span> <b id="hero-name">Negroni</b> <span aria-hidden="true">→</span></a>
+    </div>
+
+    <div class="hero-phone" aria-hidden="false">
+      <div class="phone-clip">
+      <button class="phone" id="phone" type="button" aria-label="{{phone_label}}">
+        <span class="screen" id="screen">
+          <span class="sb"><span>9:41</span><span class="island"></span><span>●●●</span></span>
+          <span class="app-head">
+            <span class="poster">Cocktails</span>
+            <span class="mini-circle"><svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="6"/><path d="m15 15 5 5"/></svg></span>
+            <span class="mini-pill">{{phone_filters}}</span>
+          </span>
+          <span class="mini-chips" id="mini-chips"></span>
+          <span class="poster-card swap" id="poster">
+            <span class="top"><span class="kicker" id="p-kicker"></span><span class="badge">{{phone_ready}}</span></span>
+            <span class="poster p-name" id="p-name">Negroni</span>
+            <span class="tl" id="p-tag"></span>
+            <span class="rows" id="p-rows"></span>
+            <span class="poster-actions">
+              <span class="go">{{phone_see}} →</span>
+              <span class="heart"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></span>
+            </span>
+          </span>
+          <span class="tabbar"><span class="on">{{tab_ideas}}</span><span>{{tab_bar}}</span><span>{{tab_favorites}}</span></span>
+        </span>
+      </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 01 — HOW IT WORKS ===================== -->
+<div class="band surface" id="how">
+  <div class="col pad"><p>01 — {{nav_how}}</p><span>{{how_aside}}</span></div>
+</div>
+<section class="surface" aria-labelledby="how-h">
+  <div class="col">
+    <div class="head pad rv">
+      <h2 class="poster" id="how-h">{{how_h2}}</h2>
+      <p class="body muted">{{how_lead}}</p>
+    </div>
+    <div class="cells c3">
+      <div class="step rv"><span class="poster num">01</span><h3 class="poster">{{step1_t}}</h3><p class="body">{{step1_d}}</p></div>
+      <div class="step rv"><span class="poster num">02</span><h3 class="poster">{{step2_t}}</h3><p class="body">{{step2_d}}</p></div>
+      <div class="step rv"><span class="poster num">03</span><h3 class="poster">{{step3_t}}</h3><p class="body">{{step3_d}}</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 02 — MY BAR (interactive) ===================== -->
+<div class="band surface" id="bar">
+  <div class="col pad"><p>02 — {{nav_bar}}</p><span>{{bar_aside}}</span></div>
+</div>
+<section class="surface" aria-labelledby="bar-h">
+  <div class="col">
+    <div class="head pad rv">
+      <h2 class="poster" id="bar-h">{{bar_h2}}</h2>
+      <p class="body muted">{{bar_lead}}</p>
+    </div>
+    <div class="bar-grid">
+      <div class="bar-pick" id="bar-pick"></div>
+      <div class="bar-out" id="bar-out" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 03 — FEATURES ===================== -->
+<div class="band surface" id="features">
+  <div class="col pad"><p>03 — {{nav_features}}</p><span>{{feat_aside}}</span></div>
+</div>
+<section class="surface" aria-labelledby="feat-h">
+  <div class="col">
+    <div class="head pad rv">
+      <h2 class="poster" id="feat-h">{{feat_h2}}</h2>
+      <p class="body muted">{{feat_lead}}</p>
+    </div>
+    <div class="cells c3x" id="feat-grid">
+      <div class="feat rv"><div class="top"><span class="kicker">N° 01</span><i class="dot" style="background:#FF6B35"></i></div><h3 class="poster">{{f1_t}}</h3><p class="body muted">{{f1_d}}</p></div>
+      <div class="feat rv"><div class="top"><span class="kicker">N° 02</span><i class="dot" style="background:#D7F25C"></i></div><h3 class="poster">{{f2_t}}</h3><p class="body muted">{{f2_d}}</p></div>
+      <div class="feat rv"><div class="top"><span class="kicker">N° 03</span><i class="dot" style="background:#9FD8FF"></i></div><h3 class="poster">{{f3_t}}</h3><p class="body muted">{{f3_d}}</p></div>
+      <div class="feat rv"><div class="top"><span class="kicker">N° 04</span><i class="dot" style="background:#F7A928"></i></div><h3 class="poster">{{f4_t}}</h3><p class="body muted">{{f4_d}}</p></div>
+      <div class="feat rv"><div class="top"><span class="kicker">N° 05</span><i class="dot" style="background:#B99AFF"></i></div><h3 class="poster">{{f5_t}}</h3><p class="body muted">{{f5_d}}</p></div>
+      <div class="feat rv"><div class="top"><span class="kicker">N° 06</span><i class="dot" style="background:#FFB3CF"></i></div><h3 class="poster">{{f6_t}}</h3><p class="body muted">{{f6_d}}</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 04 — RECIPES ===================== -->
+<div class="band surface" id="recipes">
+  <div class="col pad"><p>04 — {{nav_recipes}}</p><span id="lib-count">{{lib_count}}</span></div>
+</div>
+<section class="surface" aria-labelledby="lib-h">
+  <div class="col">
+    <div class="head pad rv">
+      <h2 class="poster" id="lib-h">{{lib_h2}}</h2>
+      <p class="body muted">{{lib_lead}}</p>
+    </div>
+    <div class="lib-filters" id="lib-filters" role="group" aria-label="{{lib_filter_label}}"></div>
+    <div class="lib" id="lib">
+{{library}}
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FACTS ===================== -->
+<section class="surface" aria-label="{{facts_label}}">
+  <div class="col facts pad">
+    <span><i style="background:#D7F25C"></i>{{fact1}}</span>
+    <span><i style="background:#9FD8FF"></i>{{fact2}}</span>
+    <span><i style="background:#FFB3CF"></i>{{fact3}}</span>
+    <span><i style="background:#FF6B35"></i>{{fact4}}</span>
+  </div>
+</section>
+
+<!-- ===================== 05 — FAQ ===================== -->
+<div class="band surface" id="faq">
+  <div class="col pad"><p>05 — {{faq_band}}</p><span>FAQ</span></div>
+</div>
+<section class="surface faq" aria-label="{{faq_band}}">
+  <div class="col" id="faq-list">
+{{faq}}
+  </div>
+</section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section class="surface" id="download">
+  <div class="col">
+    <div class="final pad rv">
+      <div class="swatches" aria-hidden="true">{{swatches}}</div>
+      <h2 class="poster">{{final_h2}}</h2>
+      <p class="lead">{{final_lead}}</p>
+      <a class="pill" href="{{appstore}}" data-appstore>{{APPLE}} {{cta_download}}</a>
+    </div>
+  </div>
+</section>
+
+</main>

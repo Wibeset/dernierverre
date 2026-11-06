@@ -1,0 +1,2195 @@
+[
+ {
+  "id": "amaretto-sour",
+  "name": "Amaretto sour",
+  "tagline": "Amande et citron, doux et mousseux",
+  "base": "liqueur",
+  "flavors": [
+   "sucre",
+   "agrumes",
+   "cremeux"
+  ],
+  "occasions": [
+   "cosy",
+   "fete"
+  ],
+  "strength": "moyen",
+  "difficulty": "moyen",
+  "method": "shaker",
+  "glass": "rocks",
+  "color": "#E6A75A",
+  "ingredients": [
+   {
+    "id": "amaretto",
+    "ml": 45.0
+   },
+   {
+    "id": "bourbon",
+    "ml": 15.0,
+    "optional": true
+   },
+   {
+    "id": "jusCitron",
+    "ml": 30.0
+   },
+   {
+    "id": "sirop",
+    "ml": 7.5
+   },
+   {
+    "id": "blancOeuf",
+    "count": 1.0,
+    "unit": "blanc",
+    "optional": true
+   }
+  ],
+  "steps": [
+   "Secouer sans glace 10 s.",
+   "Ajouter de la glace et secouer 15 s.",
+   "Filtrer sur glace."
+  ],
+  "garnish": "Cerise et zeste de citron"
+ },
+ {
+  "id": "americano",
+  "name": "Americano",
+  "tagline": "Le negroni léger et pétillant",
+  "base": "aperitif",
+  "flavors": [
+   "amer",
+   "petillant"
+  ],
+  "occasions": [
+   "apero",
+   "terrasse"
+  ],
+  "strength": "leger",
+  "difficulty": "facile",
+  "method": "construit",
+  "glass": "highball",
+  "color": "#D64933",
+  "ingredients": [
+   {
+    "id": "campari",
+    "ml": 30.0
+   },
+   {
+    "id": "vermouthRouge",
+    "ml": 30.0
+   },
+   {
+    "id": "soda",
+    "top": true
+   }
+  ],
+  "steps": [
+   "Verser le Campari et le vermouth sur glace.",
+   "Compléter d'eau gazeuse."
+  ],
+  "garnish": "Tranche d'orange"
+ },
+ {
+  "id": "aperol-spritz",
+  "name": "Aperol spritz",
+  "tagline": "L'orangé pétillant des terrasses",
+  "base": "aperitif",
+  "flavors": [
+   "amer",
+   "petillant",
+   "agrumes"
+  ],
+  "occasions": [
+   "apero",
+   "terrasse"
+  ],
+  "strength": "leger",
+  "difficulty": "facile",
+  "method": "construit",
+  "glass": "vin",
+  "color": "#F26B1D",
+  "ingredients": [
+   {
+    "id": "prosecco",
+    "ml": 90.0
+   },
+   {
+    "id": "aperol",
+    "ml": 60.0
+   },
+   {
+    "id": "soda",
+    "ml": 30.0
+   }
+  ],
+  "steps": [
+   "Remplir un verre à vin de glace.",
+   "Verser le prosecco, puis l'Aperol, puis l'eau gazeuse."
+  ],
+  "garnish": "Tranche d'orange"
+ },
+ {
+  "id": "aviation",
+  "name": "Aviation",
+  "tagline": "Floral, à la couleur de ciel",
+  "base": "gin",
+  "flavors": [
+   "agrumes",
+   "fruite"
+  ],
+  "occasions": [
+   "apero"
+  ],
+  "strength": "moyen",
+  "difficulty": "avance",
+  "method": "shaker",
+  "glass": "coupe",
+  "color": "#B7A6D9",
+  "ingredients": [
+   {
+    "id": "gin",
+    "ml": 50.0
+   },
+   {
+    "id": "marasquin",
+    "ml": 10.0
+   },
+   {
+    "id": "violette",
+    "ml": 5.0
+   },
+   {
+    "id": "jusCitron",
+    "ml": 15.0
+   }
+  ],
+  "steps": [
+   "Secouer avec de la glace.",
+   "Filtrer dans une coupe froide."
+  ],
+  "garnish": "Cerise au marasquin"
+ },
+ {
+  "id": "bees-knees",
+  "name": "Bee's Knees",
+  "tagline": "Gin, citron et miel de l'époque de la prohibition",
+  "base": "gin",
+  "flavors": [
+   "agrumes",
+   "sucre"
+  ],
+  "occasions": [
+   "apero",
+   "brunch"
+  ],
+  "strength": "moyen",
+  "difficulty": "facile",
+  "method": "shaker",
+  "glass": "coupe",
+  "color": "#F2C14E",
+  "ingredients": [
+   {
+    "id": "gin",
+    "ml": 50.0
+   },
+   {
+    "id": "jusCitron",
+    "ml": 20.0
+   },
+   {
+    "id": "miel",
+    "ml": 20.0
+   }
+  ],
+  "steps": [
+   "Secouer avec de la glace.",
+   "Filtrer dans une coupe froide."
+  ],
+  "garnish": "Zeste de citron"
+ },
+ {
+  "id": "bellini",
+  "name": "Bellini",
+  "tagline": "Pêche blanche et prosecco, à la vénitienne",
+  "base": "bulles",
+  "flavors": [
+   "fruite",
+   "petillant"
+  ],
+  "occasions": [
+   "brunch",
+   "apero"
+  ],
+  "strength": "leger",
+  "difficulty": "facile",
+  "method": "construit",
+  "glass": "flute",
+  "color": "#FFC9A3",
+  "ingredients": [
+   {
+    "id": "peche",
+    "ml": 50.0
+   },
+   {
+    "id": "prosecco",
+    "ml": 100.0
+   }
+  ],
+  "steps": [
+   "Verser la purée de pêche dans la flûte.",
+   "Ajouter le prosecco doucement en remuant."
+  ],
+  "garnish": null
+ },
+ {
+  "id": "bloody-mary",
+  "name": "Bloody Mary",
+  "tagline": "Tomate épicée, l'incontournable du brunch",
+  "base": "vodka",
+  "flavors": [
+   "epice"
+  ],
+  "occasions": [
+   "brunch"
+  ],
+  "strength": "leger",
+  "difficulty": "facile",
+  "method": "construit",
+  "glass": "highball",
+  "color": "#A4161A",
+  "ingredients": [
+   {
+    "id": "vodka",
+    "ml": 45.0
+   },
+   {
+    "id": "jusTomate",
+    "ml": 90.0
+   },
+   {
+    "id": "jusCitron",
+    "ml": 15.0
+   },
+   {
+    "id": "worcestershire",
+    "count": 2.0,
+    "unit": "trait"
+   },
+   {
+    "id": "tabasco",
+    "count": 2.0,
+    "unit": "trait"
+   },
+   {
+    "id": "sel",
+    "count": 1.0,
+    "unit": "pincée",
+    "optional": true
+   }
+  ],
+  "steps": [
+   "Mélanger tous les ingrédients dans un verre rempli de glace.",
+   "Remuer et goûter l'assaisonnement."
+  ],
+  "garnish": "Branche de céleri"
+ },
+ {
+  "id": "boulevardier",
+  "name": "Boulevardier",
+  "tagline": "Le cousin automnal du negroni",
+  "base": "whisky",
+  "flavors": [
+   "amer",
+   "sec"
+  ],
+  "occasions": [
+   "cosy",
+   "apero"
+  ],
+  "strength": "fort",
+  "difficulty": "facile",
+  "method": "verreMelange",
+  "glass": "rocks",
+  "color": "#9B2D20",
+  "ingredients": [
+   {
+    "id": "bourbon",
+    "ml": 40.0
+   },
+   {
+    "id": "campari",
+    "ml": 25.0
+   },
+   {
+    "id": "vermouthRouge",
+    "ml": 25.0
+   }
+  ],
+  "steps": [
+   "Remuer avec de la glace.",
+   "Filtrer sur un gros glaçon."
+  ],
+  "garnish": "Zeste d'orange"
+ },
+ {
+  "id": "caesar",
+  "name": "Caesar",
+  "tagline": "Le cocktail national canadien",
+  "base": "vodka",
+  "flavors": [
+   "epice",
+   "agrumes"
+  ],
+  "occasions": [
+   "brunch",
+   "terrasse"
+  ],
+  "strength": "leger",
+  "difficulty": "facile",
+  "method": "construit",
+  "glass": "highball",
+  "color": "#B0302A",
+  "ingredients": [
+   {
+    "id": "vodka",
+    "ml": 45.0
+   },
+   {
+    "id": "clamato",
+    "ml": 120.0
+   },
+   {
+    "id": "jusLime",
+    "ml": 10.0
+   },
+   {
+    "id": "worcestershire",
+    "count": 2.0,
+    "unit": "trait"
+   },
+   {
+    "id": "tabasco",
+    "count": 2.0,
+    "unit": "trait"
+   },
+   {
+    "id": "selCeleri",
+    "text": "Pour givrer le verre"
+   }
+  ],
+  "steps": [
+   "Givrer le bord du verre au sel de céleri.",
+   "Remplir de glace.",
+   "Ajouter les ingrédients et remuer."
+  ],
+  "garnish": "Branche de céleri et quartier de lime"
+ },
+ {
+  "id": "caipirinha",
+  "name": "Caïpirinha",
+  "tagline": "Le cocktail national du Brésil",
+  "base": "rhum",
+  "flavors": [
+   "agrumes",
+   "sucre"
+  ],
+  "occasions": [
+   "terrasse",
+   "fete"
+  ],
+  "strength": "moyen",
+  "difficulty": "facile",
+  "method": "pile",
+  "glass": "rocks",
+  "color": "#B8E06A",
+  "ingredients": [
+   {
+    "id": "cachaca",
+    "ml": 60.0
+   },
+   {
+    "id": "lime",
+    "count": 0.5,
+    "unit": "lime"
+   },
+   {
+    "id": "sucre",
+    "text": "2 c. à thé"
+   }
+  ],
+  "steps": [
+   "Couper la demi-lime en quartiers et la piler avec le sucre dans le verre.",
+   "Ajouter la glace pilée puis la cachaça.",
+   "Remuer."
+  ],
+  "garnish": null
+ },
+ {
+  "id": "clover-club",
+  "name": "Clover Club",
+  "tagline": "Framboise et citron, mousse soyeuse",
+  "base": "gin",
+  "flavors": [
+   "fruite",
+   "agrumes",
+   "cremeux"
+  ],
+  "occasions": [
+   "fete",
+   "apero"
+  ],
+  "strength": "moyen",
+  "difficulty": "moyen",
+  "method": "shaker",
+  "glass": "coupe",
+  "color": "#E57A8A",
+  "ingredients": [
+   {
+    "id": "gin",
+    "ml": 50.0
+   },
+   {
+    "id": "jusCitron",
+    "ml": 20.0
+   },
+   {
+    "id": "framboise",
+    "ml": 15.0
+   },
+   {
+    "id": "blancOeuf",
+    "count": 1.0,
+    "unit": "blanc"
+   }
+  ],
+  "steps": [
+   "Secouer sans glace 10 s pour faire mousser.",
+   "Ajouter de la glace et secouer encore 15 s.",
+   "Filtrer dans une coupe."
+  ],
+  "garnish": "Framboises fraîches"
+ },
+ {
+  "id": "cosmopolitan",
+  "name": "Cosmopolitan",
+  "tagline": "Canneberge et agrumes, rose et vif",
+  "base": "vodka",
+  "flavors": [
+   "fruite",
+   "agrumes"
+  ],
+  "occasions": [
+   "fete",
+   "apero"
+  ],
+  "strength": "moyen",
+  "difficulty": "facile",
+  "method": "shaker",
+  "glass": "martini",
+  "color": "#E0475B",
+  "ingredients": [
+   {
+    "id": "vodka",
+    "ml": 40.0
+   },
+   {
+    "id": "tripleSec",
+    "ml": 15.0
+   },
+   {
+    "id": "jusCanneberge",
+    "ml": 30.0
+   },
+   {
+    "id": "jusLime",
+    "ml": 15.0
+   }
+  ],
+  "steps": [
+   "Secouer avec de la glace.",
+   "Filtrer dans un verre à martini froid."
+  ],
+  "garnish": "Zeste d'orange"
+ },
+ {
+  "id": "cuba-libre",
+  "name": "Cuba libre",
+  "tagline": "Rhum, cola et un trait de lime",
+  "base": "rhum",
+  "flavors": [
+   "sucre",
+   "petillant"
+  ],
+  "occasions": [
+   "fete"
+  ],
+  "strength": "leger",
+  "difficulty": "facile",
+  "method": "construit",
+  "glass": "highball",
+  "color": "#5A2E1B",
+  "ingredients": [
+   {
+    "id": "rhumBlanc",
+    "ml": 50.0
+   },
+   {
+    "id": "cola",
+    "ml": 120.0
+   },
+   {
+    "id": "jusLime",
+    "ml": 10.0
+   }
+  ],
+  "steps": [
+   "Remplir le verre de glace.",
+   "Verser le rhum et la lime, compléter de cola."
+  ],
+  "garnish": "Quartier de lime"
+ },
+ {
+  "id": "daiquiri",
+  "name": "Daiquiri",
+  "tagline": "Rhum, lime, sucre : la trinité parfaite",
+  "base": "rhum",
+  "flavors": [
+   "agrumes",
+   "sucre"
+  ],
+  "occasions": [
+   "apero",
+   "terrasse"
+  ],
+  "strength": "moyen",
+  "difficulty": "facile",
+  "method": "shaker",
+  "glass": "coupe",
+  "color": "#E8F1C4",
+  "ingredients": [
+   {
+    "id": "rhumBlanc",
+    "ml": 60.0
+   },
+   {
+    "id": "jusLime",
+    "ml": 25.0
+   },
+   {
+    "id": "sirop",
+    "ml": 15.0
+   }
+  ],
+  "steps": [
+   "Secouer fort avec de la glace.",
+   "Filtrer dans une coupe froide."
+  ],
+  "garnish": "Roue de lime"
+ },
+ {
+  "id": "dark-n-stormy",
+  "name": "Dark 'n' Stormy",
+  "tagline": "Rhum ambré et gingembre piquant",
+  "base": "rhum",
+  "flavors": [
+   "epice",
+   "petillant"
+  ],
+  "occasions": [
+   "terrasse",
+   "cosy"
+  ],
+  "strength": "leger",
+  "difficulty": "facile",
+  "method": "construit",
+  "glass": "highball",
+  "color": "#8B5A2B",
+  "ingredients": [
+   {
+    "id": "gingerBeer",
+    "ml": 100.0
+   },
+   {
+    "id": "jusLime",
+    "ml": 10.0
+   },
+   {
+    "id": "rhumAmbre",
+    "ml": 60.0
+   }
+  ],
+  "steps": [
+   "Remplir le verre de glace et de ginger beer.",
+   "Ajouter la lime.",
+   "Faire flotter le rhum sur le dessus."
+  ],
+  "garnish": "Quartier de lime"
+ },
+ {
+  "id": "dry-martini",
+  "name": "Dry martini",
+  "tagline": "Sec, froid et élégant",
+  "base": "gin",
+  "flavors": [
+   "sec"
+  ],
+  "occasions": [
+   "apero"
+  ],
+  "strength": "fort",
+  "difficulty": "moyen",
+  "method": "verreMelange",
+  "glass": "martini",
+  "color": "#DDE6E8",
+  "ingredients": [
+   {
+    "id": "gin",
+    "ml": 60.0
+   },
+   {
+    "id": "vermouthSec",
+    "ml": 10.0
+   },
+   {
+    "id": "orangeBitters",
+    "count": 1.0,
+    "unit": "trait",
+    "optional": true
+   }
+  ],
+  "steps": [
+   "Remuer les ingrédients 30 s dans un verre à mélange rempli de glace.",
+   "Filtrer dans un verre à martini bien froid."
+  ],
+  "garnish": "Olive ou zeste de citron"
+ },
+ {
+  "id": "espresso-martini",
+  "name": "Espresso martini",
+  "tagline": "Le café qui réveille la soirée",
+  "base": "vodka",
+  "flavors": [
+   "cremeux",
+   "sucre"
+  ],
+  "occasions": [
+   "fete",
+   "digestif"
+  ],
+  "strength": "moyen",
+  "difficulty": "moyen",
+  "method": "shaker",
+  "glass": "coupe",
+  "color": "#4B2E20",
+  "ingredients": [
+   {
+    "id": "vodka",
+    "ml": 50.0
+   },
+   {
+    "id": "liqueurCafe",
+    "ml": 20.0
+   },
+   {
+    "id": "espresso",
+    "ml": 30.0
+   },
+   {
+    "id": "sirop",
+    "ml": 10.0,
+    "optional": true
+   }
+  ],
+  "steps": [
+   "Préparer un espresso et le laisser tiédir.",
+   "Secouer très vigoureusement avec beaucoup de glace.",
+   "Double filtrer dans une coupe pour obtenir une belle mousse."
+  ],
+  "garnish": "3 grains de café"
+ },
+ {
+  "id": "french-75",
+  "name": "French 75",
+  "tagline": "Gin, citron et bulles : chic et festif",
+  "base": "gin",
+  "flavors": [
+   "agrumes",
+   "petillant"
+  ],
+  "occasions": [
+   "fete",
+   "brunch"
+  ],
+  "strength": "moyen",
+  "difficulty": "facile",
+  "method": "shaker",
+  "glass": "flute",
+  "color": "#F7E7A1",
+  "ingredients": [
+   {
+    "id": "gin",
+    "ml": 30.0
+   },
+   {
+    "id": "jusCitron",
+    "ml": 15.0
+   },
+   {
+    "id": "sirop",
+    "ml": 10.0
+   },
+   {
+    "id": "champagne",
+    "ml": 60.0
+   }
+  ],
+  "steps": [
+   "Secouer le gin, le citron et le sirop avec de la glace.",
+   "Filtrer dans une flûte.",
+   "Compléter de champagne."
+  ],
+  "garnish": "Long zeste de citron"
+ },
+ {
+  "id": "gimlet",
+  "name": "Gimlet",
+  "tagline": "Gin et lime, tout simplement",
+  "base": "gin",
+  "flavors": [
+   "agrumes",
+   "sec"
+  ],
+  "occasions": [
+   "apero",
+   "terrasse"
+  ],
+  "strength": "moyen",
+  "difficulty": "facile",
+  "method": "shaker",
+  "glass": "coupe",
+  "color": "#D4E79E",
+  "ingredients": [
+   {
+    "id": "gin",
+    "ml": 60.0
+   },
+   {
+    "id": "jusLime",
+    "ml": 20.0
+   },
+   {
+    "id": "sirop",
+    "ml": 15.0
+   }
+  ],
+  "steps": [
+   "Secouer vigoureusement avec de la glace.",
+   "Filtrer dans une coupe froide."
+  ],
+  "garnish": "Roue de lime"
+ },
+ {
+  "id": "gin-fizz",
+  "name": "Gin fizz",
+  "tagline": "Citronné, léger et pétillant",
+  "base": "gin",
+  "flavors": [
+   "agrumes",
+   "petillant"
+  ],
+  "occasions": [
+   "brunch",
+   "terrasse"
+  ],
+  "strength": "leger",
+  "difficulty": "moyen",
+  "method": "shaker",
+  "glass": "highball",
+  "color": "#F3E9C6",
+  "ingredients": [
+   {
+    "id": "gin",
+    "ml": 50.0
+   },
+   {
+    "id": "jusCitron",
+    "ml": 25.0
+   },
+   {
+    "id": "sirop",
+    "ml": 15.0
+   },
+   {
+    "id": "blancOeuf",
+    "count": 1.0,
+    "unit": "blanc",
+    "optional": true
+   },
+   {
+    "id": "soda",
+    "top": true
+   }
+  ],
+  "steps": [
+   "Secouer gin, citron, sirop (et blanc d'œuf) sans glace 10 s.",
+   "Ajouter de la glace et secouer encore 15 s.",
+   "Filtrer dans un verre sans glace et compléter d'eau gazeuse."
+  ],
+  "garnish": "Zeste de citron"
+ },
+ {
+  "id": "gin-tonic",
+  "name": "Gin tonic",
+  "tagline": "Le grand classique désaltérant",
+  "base": "gin",
+  "flavors": [
+   "amer",
+   "petillant",
+   "agrumes"
+  ],
+  "occasions": [
+   "apero",
+   "terrasse"
+  ],
+  "strength": "leger",
+  "difficulty": "facile",
+  "method": "construit",
+  "glass": "highball",
+  "color": "#9FD8CB",
+  "ingredients": [
+   {
+    "id": "gin",
+    "ml": 50.0
+   },
+   {
+    "id": "tonic",
+    "ml": 150.0
+   },
+   {
+    "id": "lime",
+    "count": 1.0,
+    "unit": "quartier",
+    "optional": true
+   }
+  ],
+  "steps": [
+   "Remplir un verre de glace.",
+   "Verser le gin, puis le tonic doucement.",
+   "Remuer une fois."
+  ],
+  "garnish": "Quartier de lime ou de concombre"
+ },
+ {
+  "id": "hugo",
+  "name": "Hugo spritz",
+  "tagline": "Fleur de sureau, menthe et bulles",
+  "base": "bulles",
+  "flavors": [
+   "herbace",
+   "petillant",
+   "fruite"
+  ],
+  "occasions": [
+   "terrasse",
+   "brunch"
+  ],
+  "strength": "leger",
+  "difficulty": "facile",
+  "method": "construit",
+  "glass": "vin",
+  "color": "#DDEFB7",
+  "ingredients": [
+   {
+    "id": "prosecco",
+    "ml": 90.0
+   },
+   {
+    "id": "sureau",
+    "ml": 20.0
+   },
+   {
+    "id": "soda",
+    "ml": 30.0
+   },
+   {
+    "id": "menthe",
+    "count": 4.0,
+    "unit": "feuille"
+   }
+  ],
+  "steps": [
+   "Froisser la menthe dans le verre.",
+   "Ajouter glace, liqueur de sureau, prosecco et eau gazeuse."
+  ],
+  "garnish": "Menthe et roue de lime"
+ },
+ {
+  "id": "kir-royal",
+  "name": "Kir royal",
+  "tagline": "Cassis et champagne, l'apéro à la française",
+  "base": "bulles",
+  "flavors": [
+   "fruite",
+   "petillant"
+  ],
+  "occasions": [
+   "apero",
+   "fete"
+  ],
+  "strength": "leger",
+  "difficulty": "facile",
+  "method": "construit",
+  "glass": "flute",
+  "color": "#8E1F4B",
+  "ingredients": [
+   {
+    "id": "cassis",
+    "ml": 15.0
+   },
+   {
+    "id": "champagne",
+    "ml": 120.0
+   }
+  ],
+  "steps": [
+   "Verser la crème de cassis dans la flûte.",
+   "Compléter de champagne bien froid."
+  ],
+  "garnish": null
+ },
+ {
+  "id": "last-word",
+  "name": "Last Word",
+  "tagline": "Herbacé et intense, à parts égales",
+  "base": "gin",
+  "flavors": [
+   "herbace",
+   "agrumes",
+   "sucre"
+  ],
+  "occasions": [
+   "apero"
+  ],
+  "strength": "fort",
+  "difficulty": "moyen",
+  "method": "shaker",
+  "glass": "coupe",
+  "color": "#B5D33D",
+  "ingredients": [
+   {
+    "id": "gin",
+    "ml": 22.5
+   },
+   {
+    "id": "chartreuse",
+    "ml": 22.5
+   },
+   {
+    "id": "marasquin",
+    "ml": 22.5
+   },
+   {
+    "id": "jusLime",
+    "ml": 22.5
+   }
+  ],
+  "steps": [
+   "Secouer avec de la glace.",
+   "Filtrer dans une coupe froide."
+  ],
+  "garnish": "Cerise au marasquin"
+ },
+ {
+  "id": "limonade-concombre",
+  "name": "Limonade concombre-basilic",
+  "tagline": "Une limonade de spa, herbacée et désaltérante",
+  "base": "sansAlcool",
+  "flavors": [
+   "herbace",
+   "agrumes"
+  ],
+  "occasions": [
+   "terrasse",
+   "brunch"
+  ],
+  "strength": "sansAlcool",
+  "difficulty": "facile",
+  "method": "shaker",
+  "glass": "highball",
+  "color": "#C6E5A8",
+  "ingredients": [
+   {
+    "id": "jusCitron",
+    "ml": 30.0
+   },
+   {
+    "id": "sirop",
+    "ml": 20.0
+   },
+   {
+    "id": "concombre",
+    "count": 3.0,
+    "unit": "tranche"
+   },
+   {
+    "id": "basilic",
+    "count": 4.0,
+    "unit": "feuille"
+   },
+   {
+    "id": "soda",
+    "top": true
+   }
+  ],
+  "steps": [
+   "Piler le concombre et le basilic dans le shaker.",
+   "Ajouter citron, sirop et glace, puis secouer.",
+   "Filtrer sur glace et compléter d'eau gazeuse."
+  ],
+  "garnish": "Ruban de concombre"
+ },
+ {
+  "id": "mai-tai",
+  "name": "Mai tai",
+  "tagline": "Le roi des cocktails tiki",
+  "base": "rhum",
+  "flavors": [
+   "tropical",
+   "agrumes",
+   "sucre"
+  ],
+  "occasions": [
+   "fete",
+   "terrasse"
+  ],
+  "strength": "fort",
+  "difficulty": "moyen",
+  "method": "shaker",
+  "glass": "rocks",
+  "color": "#E2892F",
+  "ingredients": [
+   {
+    "id": "rhumAmbre",
+    "ml": 40.0
+   },
+   {
+    "id": "rhumBlanc",
+    "ml": 20.0
+   },
+   {
+    "id": "tripleSec",
+    "ml": 15.0
+   },
+   {
+    "id": "orgeat",
+    "ml": 15.0
+   },
+   {
+    "id": "jusLime",
+    "ml": 25.0
+   }
+  ],
+  "steps": [
+   "Secouer avec de la glace pilée.",
+   "Verser sans filtrer dans le verre."
+  ],
+  "garnish": "Brin de menthe et demi-lime"
+ },
+ {
+  "id": "manhattan",
+  "name": "Manhattan",
+  "tagline": "Rye et vermouth, riche et soyeux",
+  "base": "whisky",
+  "flavors": [
+   "sec",
+   "sucre"
+  ],
+  "occasions": [
+   "apero",
+   "cosy"
+  ],
+  "strength": "fort",
+  "difficulty": "facile",
+  "method": "verreMelange",
+  "glass": "coupe",
+  "color": "#8E2C1F",
+  "ingredients": [
+   {
+    "id": "rye",
+    "ml": 50.0
+   },
+   {
+    "id": "vermouthRouge",
+    "ml": 20.0
+   },
+   {
+    "id": "angostura",
+    "count": 2.0,
+    "unit": "trait"
+   }
+  ],
+  "steps": [
+   "Remuer avec de la glace 30 s.",
+   "Filtrer dans une coupe froide."
+  ],
+  "garnish": "Cerise au marasquin"
+ },
+ {
+  "id": "margarita",
+  "name": "Margarita",
+  "tagline": "Tequila, lime et triple sec, bord salé",
+  "base": "tequila",
+  "flavors": [
+   "agrumes",
+   "sec"
+  ],
+  "occasions": [
+   "fete",
+   "terrasse"
+  ],
+  "strength": "moyen",
+  "difficulty": "facile",
+  "method": "shaker",
+  "glass": "coupe",
+  "color": "#D7E86A",
+  "ingredients": [
+   {
+    "id": "tequila",
+    "ml": 50.0
+   },
+   {
+    "id": "tripleSec",
+    "ml": 20.0
+   },
+   {
+    "id": "jusLime",
+    "ml": 25.0
+   },
+   {
+    "id": "sel",
+    "text": "Pour givrer le verre",
+    "optional": true
+   }
+  ],
+  "steps": [
+   "Givrer la moitié du bord du verre au sel.",
+   "Secouer avec de la glace.",
+   "Filtrer dans le verre."
+  ],
+  "garnish": "Roue de lime"
+ },
+ {
+  "id": "mimosa",
+  "name": "Mimosa",
+  "tagline": "Bulles et jus d'orange pour le brunch",
+  "base": "bulles",
+  "flavors": [
+   "agrumes",
+   "petillant"
+  ],
+  "occasions": [
+   "brunch"
+  ],
+  "strength": "leger",
+  "difficulty": "facile",
+  "method": "construit",
+  "glass": "flute",
+  "color": "#FFB84D",
+  "ingredients": [
+   {
+    "id": "jusOrange",
+    "ml": 75.0
+   },
+   {
+    "id": "champagne",
+    "ml": 75.0
+   }
+  ],
+  "steps": [
+   "Verser le jus d'orange froid dans la flûte.",
+   "Compléter doucement de mousseux."
+  ],
+  "garnish": null
+ },
+ {
+  "id": "mojito",
+  "name": "Mojito",
+  "tagline": "Menthe fraîche, lime et rhum",
+  "base": "rhum",
+  "flavors": [
+   "herbace",
+   "agrumes",
+   "petillant"
+  ],
+  "occasions": [
+   "terrasse",
+   "fete"
+  ],
+  "strength": "leger",
+  "difficulty": "facile",
+  "method": "pile",
+  "glass": "highball",
+  "color": "#7BC67B",
+  "ingredients": [
+   {
+    "id": "rhumBlanc",
+    "ml": 50.0
+   },
+   {
+    "id": "jusLime",
+    "ml": 25.0
+   },
+   {
+    "id": "sirop",
+    "ml": 20.0
+   },
+   {
+    "id": "menthe",
+    "count": 8.0,
+    "unit": "feuille"
+   },
+   {
+    "id": "soda",
+    "top": true
+   }
+  ],
+  "steps": [
+   "Presser doucement la menthe avec le sirop et la lime dans le verre.",
+   "Ajouter le rhum et remplir de glace pilée.",
+   "Compléter d'eau gazeuse et remuer de bas en haut."
+  ],
+  "garnish": "Brin de menthe"
+ },
+ {
+  "id": "moscow-mule",
+  "name": "Moscow mule",
+  "tagline": "Vodka, gingembre et lime",
+  "base": "vodka",
+  "flavors": [
+   "epice",
+   "agrumes",
+   "petillant"
+  ],
+  "occasions": [
+   "terrasse",
+   "fete"
+  ],
+  "strength": "leger",
+  "difficulty": "facile",
+  "method": "construit",
+  "glass": "cuivre",
+  "color": "#C98A4B",
+  "ingredients": [
+   {
+    "id": "vodka",
+    "ml": 50.0
+   },
+   {
+    "id": "jusLime",
+    "ml": 15.0
+   },
+   {
+    "id": "gingerBeer",
+    "ml": 120.0
+   }
+  ],
+  "steps": [
+   "Remplir la tasse de glace.",
+   "Verser la vodka et la lime.",
+   "Compléter de ginger beer."
+  ],
+  "garnish": "Quartier de lime et menthe"
+ },
+ {
+  "id": "ginger-mule-zero",
+  "name": "Mule sans alcool",
+  "tagline": "Gingembre, lime et menthe",
+  "base": "sansAlcool",
+  "flavors": [
+   "epice",
+   "agrumes",
+   "petillant"
+  ],
+  "occasions": [
+   "terrasse",
+   "brunch"
+  ],
+  "strength": "sansAlcool",
+  "difficulty": "facile",
+  "method": "construit",
+  "glass": "cuivre",
+  "color": "#D9A066",
+  "ingredients": [
+   {
+    "id": "gingerBeer",
+    "ml": 150.0
+   },
+   {
+    "id": "jusLime",
+    "ml": 20.0
+   },
+   {
+    "id": "menthe",
+    "count": 4.0,
+    "unit": "feuille",
+    "optional": true
+   }
+  ],
+  "steps": [
+   "Remplir la tasse de glace.",
+   "Ajouter la lime et compléter de ginger beer."
+  ],
+  "garnish": "Menthe et quartier de lime"
+ },
+ {
+  "id": "negroni",
+  "name": "Negroni",
+  "tagline": "L'apéritif italien amer et parfaitement équilibré",
+  "base": "gin",
+  "flavors": [
+   "amer",
+   "sec"
+  ],
+  "occasions": [
+   "apero",
+   "cosy"
+  ],
+  "strength": "fort",
+  "difficulty": "facile",
+  "method": "verreMelange",
+  "glass": "rocks",
+  "color": "#C0392B",
+  "ingredients": [
+   {
+    "id": "gin",
+    "ml": 30.0
+   },
+   {
+    "id": "campari",
+    "ml": 30.0
+   },
+   {
+    "id": "vermouthRouge",
+    "ml": 30.0
+   }
+  ],
+  "steps": [
+   "Verser tous les ingrédients dans un verre à mélange rempli de glace.",
+   "Remuer 20 secondes.",
+   "Filtrer dans un verre old fashioned sur un gros glaçon."
+  ],
+  "garnish": "Zeste d'orange"
+ },
+ {
+  "id": "oaxaca-old-fashioned",
+  "name": "Oaxaca old fashioned",
+  "tagline": "Un old fashioned fumé à l'agave",
+  "base": "tequila",
+  "flavors": [
+   "sec",
+   "epice"
+  ],
+  "occasions": [
+   "cosy",
+   "digestif"
+  ],
+  "strength": "fort",
+  "difficulty": "moyen",
+  "method": "verreMelange",
+  "glass": "rocks",
+  "color": "#B5651D",
+  "ingredients": [
+   {
+    "id": "tequila",
+    "ml": 45.0
+   },
+   {
+    "id": "mezcal",
+    "ml": 15.0
+   },
+   {
+    "id": "agave",
+    "ml": 5.0
+   },
+   {
+    "id": "angostura",
+    "count": 2.0,
+    "unit": "trait"
+   }
+  ],
+  "steps": [
+   "Remuer avec de la glace.",
+   "Filtrer sur un gros glaçon."
+  ],
+  "garnish": "Zeste d'orange flambé"
+ },
+ {
+  "id": "old-fashioned",
+  "name": "Old fashioned",
+  "tagline": "Le cocktail originel, tout en profondeur",
+  "base": "whisky",
+  "flavors": [
+   "sec",
+   "sucre"
+  ],
+  "occasions": [
+   "cosy",
+   "digestif"
+  ],
+  "strength": "fort",
+  "difficulty": "facile",
+  "method": "verreMelange",
+  "glass": "rocks",
+  "color": "#C1772F",
+  "ingredients": [
+   {
+    "id": "bourbon",
+    "ml": 60.0
+   },
+   {
+    "id": "sirop",
+    "ml": 7.5
+   },
+   {
+    "id": "angostura",
+    "count": 2.0,
+    "unit": "trait"
+   }
+  ],
+  "steps": [
+   "Remuer les ingrédients avec de la glace 30 s.",
+   "Filtrer sur un gros glaçon.",
+   "Exprimer le zeste d'orange au-dessus du verre."
+  ],
+  "garnish": "Zeste d'orange"
+ },
+ {
+  "id": "old-fashioned-erable",
+  "name": "Old fashioned à l'érable",
+  "tagline": "La version québécoise, au rye et à l'érable",
+  "base": "whisky",
+  "flavors": [
+   "sec",
+   "sucre"
+  ],
+  "occasions": [
+   "cosy",
+   "digestif"
+  ],
+  "strength": "fort",
+  "difficulty": "facile",
+  "method": "verreMelange",
+  "glass": "rocks",
+  "color": "#A0522D",
+  "ingredients": [
+   {
+    "id": "rye",
+    "ml": 60.0
+   },
+   {
+    "id": "erable",
+    "ml": 7.5
+   },
+   {
+    "id": "angostura",
+    "count": 2.0,
+    "unit": "trait"
+   }
+  ],
+  "steps": [
+   "Remuer avec de la glace.",
+   "Filtrer sur un gros glaçon."
+  ],
+  "garnish": "Zeste d'orange"
+ },
+ {
+  "id": "paloma",
+  "name": "Paloma",
+  "tagline": "Pamplemousse et tequila, le favori mexicain",
+  "base": "tequila",
+  "flavors": [
+   "agrumes",
+   "petillant",
+   "amer"
+  ],
+  "occasions": [
+   "terrasse",
+   "fete"
+  ],
+  "strength": "leger",
+  "difficulty": "facile",
+  "method": "construit",
+  "glass": "highball",
+  "color": "#F5A3A3",
+  "ingredients": [
+   {
+    "id": "tequila",
+    "ml": 50.0
+   },
+   {
+    "id": "jusPamplemousse",
+    "ml": 60.0
+   },
+   {
+    "id": "jusLime",
+    "ml": 15.0
+   },
+   {
+    "id": "soda",
+    "top": true
+   },
+   {
+    "id": "sel",
+    "count": 1.0,
+    "unit": "pincée",
+    "optional": true
+   }
+  ],
+  "steps": [
+   "Remplir le verre de glace.",
+   "Ajouter tequila, jus et sel.",
+   "Compléter d'eau gazeuse."
+  ],
+  "garnish": "Tranche de pamplemousse"
+ },
+ {
+  "id": "pamplemousse-romarin",
+  "name": "Paloma sans alcool",
+  "tagline": "Pamplemousse, lime et une pincée de sel",
+  "base": "sansAlcool",
+  "flavors": [
+   "agrumes",
+   "amer",
+   "petillant"
+  ],
+  "occasions": [
+   "terrasse",
+   "apero"
+  ],
+  "strength": "sansAlcool",
+  "difficulty": "facile",
+  "method": "construit",
+  "glass": "highball",
+  "color": "#F7B2A8",
+  "ingredients": [
+   {
+    "id": "jusPamplemousse",
+    "ml": 90.0
+   },
+   {
+    "id": "jusLime",
+    "ml": 15.0
+   },
+   {
+    "id": "agave",
+    "ml": 10.0
+   },
+   {
+    "id": "soda",
+    "top": true
+   },
+   {
+    "id": "sel",
+    "count": 1.0,
+    "unit": "pincée",
+    "optional": true
+   }
+  ],
+  "steps": [
+   "Remplir le verre de glace.",
+   "Ajouter jus, agave et sel, puis compléter d'eau gazeuse."
+  ],
+  "garnish": "Tranche de pamplemousse"
+ },
+ {
+  "id": "paper-plane",
+  "name": "Paper plane",
+  "tagline": "Bourbon, aperol et amaro à parts égales",
+  "base": "whisky",
+  "flavors": [
+   "amer",
+   "agrumes"
+  ],
+  "occasions": [
+   "apero"
+  ],
+  "strength": "moyen",
+  "difficulty": "facile",
+  "method": "shaker",
+  "glass": "coupe",
+  "color": "#E97C3D",
+  "ingredients": [
+   {
+    "id": "bourbon",
+    "ml": 22.5
+   },
+   {
+    "id": "aperol",
+    "ml": 22.5
+   },
+   {
+    "id": "amaro",
+    "ml": 22.5
+   },
+   {
+    "id": "jusCitron",
+    "ml": 22.5
+   }
+  ],
+  "steps": [
+   "Secouer avec de la glace.",
+   "Filtrer dans une coupe froide."
+  ],
+  "garnish": null
+ },
+ {
+  "id": "penicillin",
+  "name": "Penicillin",
+  "tagline": "Scotch, miel et gingembre : un remède moderne",
+  "base": "whisky",
+  "flavors": [
+   "epice",
+   "agrumes",
+   "sucre"
+  ],
+  "occasions": [
+   "cosy"
+  ],
+  "strength": "moyen",
+  "difficulty": "moyen",
+  "method": "shaker",
+  "glass": "rocks",
+  "color": "#D99A3E",
+  "ingredients": [
+   {
+    "id": "scotch",
+    "ml": 60.0
+   },
+   {
+    "id": "jusCitron",
+    "ml": 25.0
+   },
+   {
+    "id": "mielGingembre",
+    "ml": 25.0
+   }
+  ],
+  "steps": [
+   "Secouer avec de la glace.",
+   "Filtrer sur un gros glaçon."
+  ],
+  "garnish": "Gingembre confit"
+ },
+ {
+  "id": "pisco-sour",
+  "name": "Pisco sour",
+  "tagline": "La fierté du Pérou et du Chili",
+  "base": "brandy",
+  "flavors": [
+   "agrumes",
+   "cremeux"
+  ],
+  "occasions": [
+   "apero",
+   "fete"
+  ],
+  "strength": "moyen",
+  "difficulty": "moyen",
+  "method": "shaker",
+  "glass": "coupe",
+  "color": "#F1E6B8",
+  "ingredients": [
+   {
+    "id": "pisco",
+    "ml": 60.0
+   },
+   {
+    "id": "jusLime",
+    "ml": 30.0
+   },
+   {
+    "id": "sirop",
+    "ml": 20.0
+   },
+   {
+    "id": "blancOeuf",
+    "count": 1.0,
+    "unit": "blanc"
+   },
+   {
+    "id": "angostura",
+    "count": 3.0,
+    "unit": "goutte",
+    "optional": true
+   }
+  ],
+  "steps": [
+   "Secouer sans glace 10 s.",
+   "Ajouter de la glace et secouer 15 s.",
+   "Filtrer et déposer quelques gouttes d'angostura sur la mousse."
+  ],
+  "garnish": null
+ },
+ {
+  "id": "pina-colada",
+  "name": "Piña colada",
+  "tagline": "Ananas et coco, vacances instantanées",
+  "base": "rhum",
+  "flavors": [
+   "tropical",
+   "cremeux",
+   "sucre"
+  ],
+  "occasions": [
+   "terrasse",
+   "fete"
+  ],
+  "strength": "leger",
+  "difficulty": "facile",
+  "method": "melangeur",
+  "glass": "tiki",
+  "color": "#FFF1C1",
+  "ingredients": [
+   {
+    "id": "rhumBlanc",
+    "ml": 50.0
+   },
+   {
+    "id": "cremeCoco",
+    "ml": 30.0
+   },
+   {
+    "id": "jusAnanas",
+    "ml": 90.0
+   }
+  ],
+  "steps": [
+   "Passer au mélangeur avec une tasse de glace jusqu'à consistance lisse.",
+   "Verser dans un grand verre."
+  ],
+  "garnish": "Morceau d'ananas et cerise"
+ },
+ {
+  "id": "pornstar-martini",
+  "name": "Pornstar martini",
+  "tagline": "Fruit de la passion et vanille, avec bulles à côté",
+  "base": "vodka",
+  "flavors": [
+   "fruite",
+   "tropical",
+   "sucre"
+  ],
+  "occasions": [
+   "fete"
+  ],
+  "strength": "moyen",
+  "difficulty": "moyen",
+  "method": "shaker",
+  "glass": "coupe",
+  "color": "#F4A93B",
+  "ingredients": [
+   {
+    "id": "vodka",
+    "ml": 45.0
+   },
+   {
+    "id": "passion",
+    "ml": 30.0
+   },
+   {
+    "id": "jusLime",
+    "ml": 15.0
+   },
+   {
+    "id": "vanille",
+    "ml": 15.0
+   },
+   {
+    "id": "prosecco",
+    "ml": 60.0,
+    "optional": true
+   }
+  ],
+  "steps": [
+   "Secouer tous les ingrédients sauf le prosecco avec de la glace.",
+   "Filtrer dans une coupe.",
+   "Servir le prosecco à côté, dans un petit verre."
+  ],
+  "garnish": "Demi fruit de la passion"
+ },
+ {
+  "id": "sazerac",
+  "name": "Sazerac",
+  "tagline": "Le grand classique de La Nouvelle-Orléans",
+  "base": "whisky",
+  "flavors": [
+   "sec",
+   "herbace"
+  ],
+  "occasions": [
+   "digestif"
+  ],
+  "strength": "fort",
+  "difficulty": "avance",
+  "method": "verreMelange",
+  "glass": "rocks",
+  "color": "#A1442A",
+  "ingredients": [
+   {
+    "id": "rye",
+    "ml": 60.0
+   },
+   {
+    "id": "sirop",
+    "ml": 7.5
+   },
+   {
+    "id": "peychaud",
+    "count": 3.0,
+    "unit": "trait"
+   },
+   {
+    "id": "absinthe",
+    "text": "Pour rincer le verre"
+   }
+  ],
+  "steps": [
+   "Rincer un verre froid avec l'absinthe et jeter l'excédent.",
+   "Remuer le rye, le sirop et le bitters avec de la glace.",
+   "Filtrer dans le verre, sans glace."
+  ],
+  "garnish": "Zeste de citron"
+ },
+ {
+  "id": "shirley-temple",
+  "name": "Shirley Temple",
+  "tagline": "Le classique sans alcool, rose et pétillant",
+  "base": "sansAlcool",
+  "flavors": [
+   "sucre",
+   "petillant",
+   "fruite"
+  ],
+  "occasions": [
+   "fete"
+  ],
+  "strength": "sansAlcool",
+  "difficulty": "facile",
+  "method": "construit",
+  "glass": "highball",
+  "color": "#F26D7D",
+  "ingredients": [
+   {
+    "id": "gingerAle",
+    "ml": 180.0
+   },
+   {
+    "id": "grenadine",
+    "ml": 15.0
+   },
+   {
+    "id": "jusLime",
+    "ml": 10.0,
+    "optional": true
+   }
+  ],
+  "steps": [
+   "Remplir le verre de glace et de ginger ale.",
+   "Ajouter la grenadine, qui coulera au fond."
+  ],
+  "garnish": "Cerise au marasquin"
+ },
+ {
+  "id": "sidecar",
+  "name": "Sidecar",
+  "tagline": "Cognac et agrumes, l'élégance des années folles",
+  "base": "brandy",
+  "flavors": [
+   "agrumes",
+   "sec"
+  ],
+  "occasions": [
+   "apero",
+   "digestif"
+  ],
+  "strength": "fort",
+  "difficulty": "facile",
+  "method": "shaker",
+  "glass": "coupe",
+  "color": "#D9A441",
+  "ingredients": [
+   {
+    "id": "cognac",
+    "ml": 50.0
+   },
+   {
+    "id": "tripleSec",
+    "ml": 20.0
+   },
+   {
+    "id": "jusCitron",
+    "ml": 20.0
+   },
+   {
+    "id": "sucre",
+    "text": "Pour givrer le verre",
+    "optional": true
+   }
+  ],
+  "steps": [
+   "Givrer le bord de la coupe au sucre (facultatif).",
+   "Secouer avec de la glace.",
+   "Filtrer dans la coupe."
+  ],
+  "garnish": "Zeste d'orange"
+ },
+ {
+  "id": "southside",
+  "name": "Southside",
+  "tagline": "Un gimlet rafraîchi à la menthe",
+  "base": "gin",
+  "flavors": [
+   "herbace",
+   "agrumes"
+  ],
+  "occasions": [
+   "terrasse"
+  ],
+  "strength": "moyen",
+  "difficulty": "facile",
+  "method": "shaker",
+  "glass": "coupe",
+  "color": "#A8D5A2",
+  "ingredients": [
+   {
+    "id": "gin",
+    "ml": 50.0
+   },
+   {
+    "id": "jusLime",
+    "ml": 25.0
+   },
+   {
+    "id": "sirop",
+    "ml": 15.0
+   },
+   {
+    "id": "menthe",
+    "count": 6.0,
+    "unit": "feuille"
+   }
+  ],
+  "steps": [
+   "Secouer tous les ingrédients avec de la glace.",
+   "Double filtrer dans une coupe froide."
+  ],
+  "garnish": "Feuille de menthe"
+ },
+ {
+  "id": "tommys-margarita",
+  "name": "Tommy's margarita",
+  "tagline": "La margarita moderne à l'agave",
+  "base": "tequila",
+  "flavors": [
+   "agrumes"
+  ],
+  "occasions": [
+   "terrasse"
+  ],
+  "strength": "moyen",
+  "difficulty": "facile",
+  "method": "shaker",
+  "glass": "rocks",
+  "color": "#E3EE9A",
+  "ingredients": [
+   {
+    "id": "tequila",
+    "ml": 60.0
+   },
+   {
+    "id": "jusLime",
+    "ml": 30.0
+   },
+   {
+    "id": "agave",
+    "ml": 15.0
+   }
+  ],
+  "steps": [
+   "Secouer avec de la glace.",
+   "Filtrer sur glace fraîche."
+  ],
+  "garnish": "Quartier de lime"
+ },
+ {
+  "id": "virgin-colada",
+  "name": "Virgin colada",
+  "tagline": "Ananas-coco onctueux pour tous",
+  "base": "sansAlcool",
+  "flavors": [
+   "tropical",
+   "cremeux"
+  ],
+  "occasions": [
+   "terrasse",
+   "fete"
+  ],
+  "strength": "sansAlcool",
+  "difficulty": "facile",
+  "method": "melangeur",
+  "glass": "tiki",
+  "color": "#FFF4D0",
+  "ingredients": [
+   {
+    "id": "cremeCoco",
+    "ml": 45.0
+   },
+   {
+    "id": "jusAnanas",
+    "ml": 120.0
+   },
+   {
+    "id": "jusLime",
+    "ml": 10.0,
+    "optional": true
+   }
+  ],
+  "steps": [
+   "Passer au mélangeur avec une tasse de glace.",
+   "Verser dans un grand verre."
+  ],
+  "garnish": "Morceau d'ananas"
+ },
+ {
+  "id": "virgin-mojito",
+  "name": "Virgin mojito",
+  "tagline": "Toute la fraîcheur du mojito, sans alcool",
+  "base": "sansAlcool",
+  "flavors": [
+   "herbace",
+   "agrumes",
+   "petillant"
+  ],
+  "occasions": [
+   "terrasse",
+   "brunch"
+  ],
+  "strength": "sansAlcool",
+  "difficulty": "facile",
+  "method": "pile",
+  "glass": "highball",
+  "color": "#9ED89E",
+  "ingredients": [
+   {
+    "id": "jusLime",
+    "ml": 25.0
+   },
+   {
+    "id": "sirop",
+    "ml": 20.0
+   },
+   {
+    "id": "menthe",
+    "count": 8.0,
+    "unit": "feuille"
+   },
+   {
+    "id": "soda",
+    "top": true
+   }
+  ],
+  "steps": [
+   "Presser doucement la menthe avec le sirop et la lime.",
+   "Remplir de glace pilée et compléter d'eau gazeuse."
+  ],
+  "garnish": "Brin de menthe"
+ },
+ {
+  "id": "whisky-sour",
+  "name": "Whisky sour",
+  "tagline": "Acidulé, soyeux et réconfortant",
+  "base": "whisky",
+  "flavors": [
+   "agrumes",
+   "cremeux"
+  ],
+  "occasions": [
+   "apero",
+   "cosy"
+  ],
+  "strength": "moyen",
+  "difficulty": "moyen",
+  "method": "shaker",
+  "glass": "rocks",
+  "color": "#E8B04B",
+  "ingredients": [
+   {
+    "id": "bourbon",
+    "ml": 50.0
+   },
+   {
+    "id": "jusCitron",
+    "ml": 25.0
+   },
+   {
+    "id": "sirop",
+    "ml": 20.0
+   },
+   {
+    "id": "blancOeuf",
+    "count": 1.0,
+    "unit": "blanc",
+    "optional": true
+   },
+   {
+    "id": "angostura",
+    "count": 1.0,
+    "unit": "trait",
+    "optional": true
+   }
+  ],
+  "steps": [
+   "Secouer sans glace 10 s (si blanc d'œuf).",
+   "Ajouter de la glace et secouer 15 s.",
+   "Filtrer sur glace, quelques gouttes d'angostura sur la mousse."
+  ],
+  "garnish": "Cerise et tranche d'orange"
+ },
+ {
+  "id": "white-russian",
+  "name": "White Russian",
+  "tagline": "Douceur crémeuse au café",
+  "base": "vodka",
+  "flavors": [
+   "cremeux",
+   "sucre"
+  ],
+  "occasions": [
+   "cosy",
+   "digestif"
+  ],
+  "strength": "moyen",
+  "difficulty": "facile",
+  "method": "construit",
+  "glass": "rocks",
+  "color": "#D9C3A5",
+  "ingredients": [
+   {
+    "id": "vodka",
+    "ml": 50.0
+   },
+   {
+    "id": "liqueurCafe",
+    "ml": 20.0
+   },
+   {
+    "id": "creme",
+    "ml": 30.0
+   }
+  ],
+  "steps": [
+   "Verser la vodka et la liqueur de café sur glace.",
+   "Napper de crème et remuer légèrement."
+  ],
+  "garnish": null
+ }
+]

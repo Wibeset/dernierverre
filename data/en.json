@@ -1,0 +1,686 @@
+{
+ "labels": {
+  "base": {
+   "gin": "Gin",
+   "vodka": "Vodka",
+   "rhum": "Rum",
+   "tequila": "Tequila",
+   "whisky": "Whisky",
+   "brandy": "Cognac & pisco",
+   "aperitif": "Apéritifs",
+   "bulles": "Bubbles",
+   "liqueur": "Liqueurs",
+   "sansAlcool": "Alcohol-free"
+  },
+  "flavors": {
+   "agrumes": "Citrus",
+   "fruite": "Fruity",
+   "sucre": "Sweet",
+   "amer": "Bitter",
+   "herbace": "Fresh & herbal",
+   "epice": "Spiced",
+   "cremeux": "Creamy",
+   "sec": "Dry & strong",
+   "petillant": "Sparkling",
+   "tropical": "Tropical"
+  },
+  "occasions": {
+   "apero": [
+    "🫒",
+    "Apéritif"
+   ],
+   "brunch": [
+    "🥐",
+    "Brunch"
+   ],
+   "terrasse": [
+    "☀️",
+    "Patio"
+   ],
+   "fete": [
+    "🎉",
+    "Party"
+   ],
+   "cosy": [
+    "🔥",
+    "Cosy night"
+   ],
+   "digestif": [
+    "🌙",
+    "Nightcap"
+   ]
+  },
+  "strength": {
+   "sansAlcool": "Alcohol-free",
+   "leger": "Light",
+   "moyen": "Medium",
+   "fort": "Strong"
+  },
+  "difficulty": {
+   "facile": "Easy",
+   "moyen": "Intermediate",
+   "avance": "Advanced"
+  },
+  "method": {
+   "shaker": "Shaken",
+   "verreMelange": "Stirred",
+   "construit": "Built",
+   "pile": "Muddled",
+   "melangeur": "Blended"
+  },
+  "glass": {
+   "coupe": "Coupe",
+   "martini": "Martini glass",
+   "rocks": "Old fashioned glass",
+   "highball": "Highball glass",
+   "flute": "Flute",
+   "vin": "Wine glass",
+   "tiki": "Tiki glass",
+   "cuivre": "Copper mug"
+  }
+ },
+ "units": {
+  "blanc": [
+   "egg white",
+   "egg whites"
+  ],
+  "pincée": [
+   "pinch",
+   "pinches"
+  ],
+  "quartier": [
+   "wedge",
+   "wedges"
+  ],
+  "trait": [
+   "dash",
+   "dashes"
+  ],
+  "goutte": [
+   "drop",
+   "drops"
+  ],
+  "tranche": [
+   "slice",
+   "slices"
+  ],
+  "feuille": [
+   "leaf",
+   "leaves"
+  ],
+  "lime": [
+   "lime",
+   "limes"
+  ],
+  "2 c. à thé": "2 tsp",
+  "Pour givrer le verre": "To rim the glass",
+  "Pour rincer le verre": "To rinse the glass",
+  "top": "Top up"
+ },
+ "ingredients": {
+  "gin": "Gin",
+  "vodka": "Vodka",
+  "rhumBlanc": "White rum",
+  "rhumAmbre": "Dark rum",
+  "cachaca": "Cachaça",
+  "tequila": "Tequila blanco",
+  "mezcal": "Mezcal",
+  "bourbon": "Bourbon",
+  "rye": "Rye whiskey",
+  "scotch": "Scotch",
+  "cognac": "Cognac",
+  "pisco": "Pisco",
+  "absinthe": "Absinthe",
+  "tripleSec": "Triple sec (Cointreau)",
+  "campari": "Campari",
+  "aperol": "Aperol",
+  "liqueurCafe": "Coffee liqueur",
+  "amaretto": "Amaretto",
+  "chartreuse": "Green Chartreuse",
+  "marasquin": "Maraschino liqueur",
+  "violette": "Crème de violette",
+  "cassis": "Crème de cassis",
+  "sureau": "Elderflower liqueur",
+  "amaro": "Amaro Nonino",
+  "vermouthRouge": "Sweet vermouth",
+  "vermouthSec": "Dry vermouth",
+  "prosecco": "Prosecco",
+  "champagne": "Champagne or sparkling wine",
+  "angostura": "Angostura bitters",
+  "orangeBitters": "Orange bitters",
+  "peychaud": "Peychaud's bitters",
+  "jusLime": "Lime juice",
+  "jusCitron": "Lemon juice",
+  "jusOrange": "Orange juice",
+  "jusAnanas": "Pineapple juice",
+  "jusCanneberge": "Cranberry juice",
+  "jusPamplemousse": "Grapefruit juice",
+  "jusTomate": "Tomato juice",
+  "clamato": "Clamato",
+  "passion": "Passion fruit purée",
+  "peche": "Peach purée",
+  "sirop": "Simple syrup",
+  "orgeat": "Orgeat syrup",
+  "grenadine": "Grenadine",
+  "erable": "Maple syrup",
+  "agave": "Agave syrup",
+  "miel": "Honey syrup",
+  "mielGingembre": "Honey-ginger syrup",
+  "framboise": "Raspberry syrup",
+  "vanille": "Vanilla syrup",
+  "soda": "Soda water",
+  "tonic": "Tonic water",
+  "gingerBeer": "Ginger beer",
+  "gingerAle": "Ginger ale",
+  "cola": "Cola",
+  "menthe": "Fresh mint",
+  "basilic": "Fresh basil",
+  "concombre": "Cucumber",
+  "lime": "Lime",
+  "blancOeuf": "Egg white",
+  "creme": "Cream (15%)",
+  "cremeCoco": "Coconut cream",
+  "espresso": "Espresso",
+  "sel": "Salt",
+  "sucre": "Sugar",
+  "worcestershire": "Worcestershire sauce",
+  "tabasco": "Tabasco",
+  "selCeleri": "Celery salt"
+ },
+ "cocktails": {
+  "amaretto-sour": {
+   "tagline": "Almond and lemon, sweet and frothy",
+   "description": "The amaretto sour is all marzipan and lemon peel under a soft cap of foam. A splash of bourbon is optional, but it keeps the sweetness in check and gives the drink a backbone.",
+   "steps": [
+    "Shake without ice for 10 seconds.",
+    "Add ice and shake for 15 seconds.",
+    "Strain over fresh ice."
+   ],
+   "garnish": "Cherry and lemon zest"
+  },
+  "americano": {
+   "tagline": "The light, sparkling negroni",
+   "description": "Campari and sweet vermouth lengthened with soda: the bittersweet apéritif Milan has poured since the 19th century, and the drink the negroni grew out of. Low in alcohol, high in refreshment.",
+   "steps": [
+    "Pour the Campari and vermouth over ice.",
+    "Top up with soda water."
+   ],
+   "garnish": "Orange slice"
+  },
+  "aperol-spritz": {
+   "tagline": "The orange fizz of every patio",
+   "description": "Three parts prosecco, two parts Aperol, a splash of soda. Bitter orange, gentle bubbles and very little effort — the drink that turns any balcony into a Venetian terrace.",
+   "steps": [
+    "Fill a wine glass with ice.",
+    "Pour the prosecco, then the Aperol, then the soda water."
+   ],
+   "garnish": "Orange slice"
+  },
+  "aviation": {
+   "tagline": "Floral, the colour of the sky",
+   "description": "Gin, lemon and maraschino, tinted pale lilac by a touch of crème de violette. A pre-Prohibition New York classic that tastes as delicate as it looks.",
+   "steps": [
+    "Shake with ice.",
+    "Strain into a chilled coupe."
+   ],
+   "garnish": "Maraschino cherry"
+  },
+  "bees-knees": {
+   "tagline": "Gin, lemon and honey from the Prohibition era",
+   "description": "Honey softens the gin and rounds out the lemon — a trick from the days when bathtub gin needed all the help it could get. With good gin, it's simply bright and golden.",
+   "steps": [
+    "Shake with ice.",
+    "Strain into a chilled coupe."
+   ],
+   "garnish": "Lemon zest"
+  },
+  "bellini": {
+   "tagline": "White peach and prosecco, the Venetian way",
+   "description": "Created at Harry's Bar in Venice, the Bellini is just white peach purée and prosecco. Ripe, summery and best with the freshest peaches you can find.",
+   "steps": [
+    "Pour the peach purée into the flute.",
+    "Add the prosecco slowly, stirring gently."
+   ],
+   "garnish": null
+  },
+  "bloody-mary": {
+   "tagline": "Spiced tomato, the brunch essential",
+   "description": "Vodka, tomato, lemon and a good kick of Worcestershire and Tabasco. Season it to taste — the Bloody Mary is as much a recipe as a conversation.",
+   "steps": [
+    "Combine all the ingredients in a glass filled with ice.",
+    "Stir and taste for seasoning."
+   ],
+   "garnish": "Celery stalk"
+  },
+  "boulevardier": {
+   "tagline": "The negroni's autumn cousin",
+   "description": "Swap the gin in a negroni for bourbon and you get the Boulevardier: warmer, rounder, a little sweeter. A 1920s Paris classic made for cool evenings.",
+   "steps": [
+    "Stir with ice.",
+    "Strain over a large ice cube."
+   ],
+   "garnish": "Orange zest"
+  },
+  "caesar": {
+   "tagline": "Canada's national cocktail",
+   "description": "Born in Calgary in 1969, the Caesar trades the Bloody Mary's tomato juice for Clamato. Rimmed with celery salt and spiked with hot sauce, it's savoury, briny and very Canadian.",
+   "steps": [
+    "Rim the glass with celery salt.",
+    "Fill with ice.",
+    "Add the ingredients and stir."
+   ],
+   "garnish": "Celery stalk and lime wedge"
+  },
+  "caipirinha": {
+   "name": "Caipirinha",
+   "tagline": "Brazil's national cocktail",
+   "description": "Lime and sugar muddled right in the glass, then cachaça and crushed ice. Rustic, zesty and impossible to drink slowly on a hot day.",
+   "steps": [
+    "Cut the half lime into wedges and muddle with the sugar in the glass.",
+    "Add crushed ice, then the cachaça.",
+    "Stir."
+   ],
+   "garnish": null
+  },
+  "clover-club": {
+   "tagline": "Raspberry and lemon, silky foam",
+   "description": "A pink, frothy gin sour from Philadelphia's Clover Club. Raspberry and lemon keep it tart; the egg white gives it a velvety head.",
+   "steps": [
+    "Dry shake for 10 seconds to build the foam.",
+    "Add ice and shake for another 15 seconds.",
+    "Strain into a coupe."
+   ],
+   "garnish": "Fresh raspberries"
+  },
+  "cosmopolitan": {
+   "tagline": "Cranberry and citrus, pink and lively",
+   "description": "Vodka, orange liqueur, cranberry and lime. The Cosmo defined the 90s cocktail bar — and, made with fresh lime, it still earns its place.",
+   "steps": [
+    "Shake with ice.",
+    "Strain into a chilled martini glass."
+   ],
+   "garnish": "Orange zest"
+  },
+  "cuba-libre": {
+   "tagline": "Rum, cola and a squeeze of lime",
+   "description": "More than a rum and coke: the lime is what makes it a Cuba libre. Simple, sweet and refreshing — a highball for any night.",
+   "steps": [
+    "Fill the glass with ice.",
+    "Pour in the rum and lime, then top up with cola."
+   ],
+   "garnish": "Lime wedge"
+  },
+  "daiquiri": {
+   "tagline": "Rum, lime, sugar: the perfect trinity",
+   "description": "Forget the slushy version. The classic daiquiri is three ingredients shaken hard and served straight up — the cleanest test of a good rum and a balanced hand.",
+   "steps": [
+    "Shake hard with ice.",
+    "Strain into a chilled coupe."
+   ],
+   "garnish": "Lime wheel"
+  },
+  "dark-n-stormy": {
+   "tagline": "Dark rum and fiery ginger",
+   "description": "Spicy ginger beer below, dark rum floating on top like a storm cloud. Sip it layered, or stir it and let the weather settle.",
+   "steps": [
+    "Fill the glass with ice and ginger beer.",
+    "Add the lime.",
+    "Float the rum on top."
+   ],
+   "garnish": "Lime wedge"
+  },
+  "dry-martini": {
+   "tagline": "Dry, cold and elegant",
+   "description": "Gin, a whisper of dry vermouth and a lot of stirring. The dry martini is about temperature and restraint: keep everything ice cold and serve it right away.",
+   "steps": [
+    "Stir the ingredients for 30 seconds in a mixing glass filled with ice.",
+    "Strain into a well-chilled martini glass."
+   ],
+   "garnish": "Olive or lemon zest"
+  },
+  "espresso-martini": {
+   "tagline": "The coffee that wakes up the party",
+   "description": "Vodka, coffee liqueur and fresh espresso shaken until a thick crema forms. Created in London in the 1980s, it's the after-dinner drink that keeps the night going.",
+   "steps": [
+    "Brew an espresso and let it cool a little.",
+    "Shake very hard with plenty of ice.",
+    "Double strain into a coupe for a good foam."
+   ],
+   "garnish": "3 coffee beans"
+  },
+  "french-75": {
+   "tagline": "Gin, lemon and bubbles: chic and festive",
+   "description": "Named after a First World War field gun, the French 75 is a gin sour crowned with champagne. Light on its feet, with more punch than you'd think.",
+   "steps": [
+    "Shake the gin, lemon and syrup with ice.",
+    "Strain into a flute.",
+    "Top up with champagne."
+   ],
+   "garnish": "Long lemon twist"
+  },
+  "gimlet": {
+   "tagline": "Gin and lime, nothing more",
+   "description": "Gin, lime and a little sugar. Sharp, bracing and cool — the gimlet is a reminder that a great cocktail can fit on a napkin.",
+   "steps": [
+    "Shake hard with ice.",
+    "Strain into a chilled coupe."
+   ],
+   "garnish": "Lime wheel"
+  },
+  "gin-fizz": {
+   "tagline": "Lemony, light and sparkling",
+   "description": "A gin sour lengthened with soda and served without ice. Add an egg white for a silky, cloud-like texture — that's the version bartenders love.",
+   "steps": [
+    "Shake the gin, lemon, syrup (and egg white) without ice for 10 seconds.",
+    "Add ice and shake for another 15 seconds.",
+    "Strain into a glass without ice and top up with soda water."
+   ],
+   "garnish": "Lemon zest"
+  },
+  "gin-tonic": {
+   "tagline": "The great thirst-quencher",
+   "description": "Gin and tonic over plenty of ice. The trick is cold ingredients, a full glass of ice and a gentle pour, so the bubbles last to the final sip.",
+   "steps": [
+    "Fill a glass with ice.",
+    "Pour in the gin, then the tonic, gently.",
+    "Stir once."
+   ],
+   "garnish": "Lime or cucumber wedge"
+  },
+  "hugo": {
+   "tagline": "Elderflower, mint and bubbles",
+   "description": "The Aperol spritz's floral cousin from the Alps: elderflower, fresh mint, prosecco and soda. Fragrant, light and made for long summer afternoons.",
+   "steps": [
+    "Gently bruise the mint in the glass.",
+    "Add ice, elderflower liqueur, prosecco and soda water."
+   ],
+   "garnish": "Mint and lime wheel"
+  },
+  "kir-royal": {
+   "tagline": "Blackcurrant and champagne, the French apéritif",
+   "description": "A splash of crème de cassis topped with champagne — the festive version of Burgundy's kir. Two ingredients, endless elegance.",
+   "steps": [
+    "Pour the crème de cassis into the flute.",
+    "Top up with well-chilled champagne."
+   ],
+   "garnish": null
+  },
+  "last-word": {
+   "tagline": "Herbal and intense, in equal parts",
+   "description": "Gin, green Chartreuse, maraschino and lime in equal measure. A Prohibition-era recipe rediscovered by modern bartenders: sweet, sour, herbal and perfectly balanced.",
+   "steps": [
+    "Shake with ice.",
+    "Strain into a chilled coupe."
+   ],
+   "garnish": "Maraschino cherry"
+  },
+  "limonade-concombre": {
+   "name": "Cucumber-basil lemonade",
+   "tagline": "A spa-day lemonade, herbal and refreshing",
+   "description": "Cucumber and basil muddled with lemon and topped with soda. Alcohol-free, garden-fresh and grown-up enough for the whole table.",
+   "steps": [
+    "Muddle the cucumber and basil in the shaker.",
+    "Add the lemon, syrup and ice, then shake.",
+    "Strain over ice and top up with soda water."
+   ],
+   "garnish": "Cucumber ribbon"
+  },
+  "mai-tai": {
+   "tagline": "The king of tiki cocktails",
+   "description": "Two rums, orange liqueur, almond orgeat and lime over crushed ice. The original mai tai isn't a fruit punch — it's nutty, tart and rum-forward.",
+   "steps": [
+    "Shake with crushed ice.",
+    "Pour unstrained into the glass."
+   ],
+   "garnish": "Mint sprig and half a lime"
+  },
+  "manhattan": {
+   "tagline": "Rye and vermouth, rich and silky",
+   "description": "Rye whiskey, sweet vermouth and Angostura, stirred and served up. Spicy, deep and smooth — one of the founding recipes of the cocktail canon.",
+   "steps": [
+    "Stir with ice for 30 seconds.",
+    "Strain into a chilled coupe."
+   ],
+   "garnish": "Maraschino cherry"
+  },
+  "margarita": {
+   "tagline": "Tequila, lime and triple sec, salted rim",
+   "description": "The classic margarita: tequila, orange liqueur and lime, shaken and served up. Salt half the rim so every sip can be salty or not.",
+   "steps": [
+    "Rim half the glass with salt.",
+    "Shake with ice.",
+    "Strain into the glass."
+   ],
+   "garnish": "Lime wheel"
+  },
+  "mimosa": {
+   "tagline": "Bubbles and orange juice for brunch",
+   "description": "Equal parts cold orange juice and sparkling wine. The easiest cocktail on the list, and the one most likely to appear next to pancakes.",
+   "steps": [
+    "Pour the cold orange juice into the flute.",
+    "Top up gently with sparkling wine."
+   ],
+   "garnish": null
+  },
+  "mojito": {
+   "tagline": "Fresh mint, lime and rum",
+   "description": "Havana's highball: mint pressed gently with lime and sugar, white rum, crushed ice and soda. Press the mint, don't shred it — you want aroma, not bitterness.",
+   "steps": [
+    "Gently press the mint with the syrup and lime in the glass.",
+    "Add the rum and fill with crushed ice.",
+    "Top up with soda water and stir from the bottom up."
+   ],
+   "garnish": "Mint sprig"
+  },
+  "moscow-mule": {
+   "tagline": "Vodka, ginger and lime",
+   "description": "Vodka, lime and spicy ginger beer in a frosty copper mug. Crisp, zesty and as easy to make as it is to drink.",
+   "steps": [
+    "Fill the mug with ice.",
+    "Pour in the vodka and lime.",
+    "Top up with ginger beer."
+   ],
+   "garnish": "Lime wedge and mint"
+  },
+  "ginger-mule-zero": {
+   "name": "Virgin mule",
+   "tagline": "Ginger, lime and mint",
+   "description": "All the bite of a Moscow mule without the vodka: ginger beer, fresh lime and a few mint leaves in a cold copper mug.",
+   "steps": [
+    "Fill the mug with ice.",
+    "Add the lime and top up with ginger beer."
+   ],
+   "garnish": "Mint and lime wedge"
+  },
+  "negroni": {
+   "tagline": "Bitter, Italian and perfectly balanced",
+   "description": "Equal parts gin, Campari and sweet vermouth, stirred over ice. Said to have been born in Florence around 1919, the negroni is the bittersweet apéritif every bar should know by heart.",
+   "steps": [
+    "Pour all the ingredients into a mixing glass filled with ice.",
+    "Stir for 20 seconds.",
+    "Strain into an old fashioned glass over a large ice cube."
+   ],
+   "garnish": "Orange zest"
+  },
+  "oaxaca-old-fashioned": {
+   "tagline": "A smoky agave old fashioned",
+   "description": "Tequila and a touch of mezcal stand in for whiskey, sweetened with agave. A modern classic from New York's Death & Co: earthy, smoky and smooth.",
+   "steps": [
+    "Stir with ice.",
+    "Strain over a large ice cube."
+   ],
+   "garnish": "Flamed orange zest"
+  },
+  "old-fashioned": {
+   "tagline": "The original cocktail, full of depth",
+   "description": "Spirit, sugar, bitters and water — the very definition of a cocktail. Stir it slowly, pour it over one big cube and let the orange oils do the rest.",
+   "steps": [
+    "Stir the ingredients with ice for 30 seconds.",
+    "Strain over a large ice cube.",
+    "Express the orange zest over the glass."
+   ],
+   "garnish": "Orange zest"
+  },
+  "old-fashioned-erable": {
+   "name": "Maple old fashioned",
+   "tagline": "The Québec version, with rye and maple",
+   "description": "Rye whiskey sweetened with maple syrup instead of sugar. Woody, spicy and a little caramelised — a sugar-shack twist on the original.",
+   "steps": [
+    "Stir with ice.",
+    "Strain over a large ice cube."
+   ],
+   "garnish": "Orange zest"
+  },
+  "paloma": {
+   "tagline": "Grapefruit and tequila, Mexico's favourite",
+   "description": "In Mexico the paloma outsells the margarita. Tequila, grapefruit, lime, a pinch of salt and soda — tart, salty and endlessly refreshing.",
+   "steps": [
+    "Fill the glass with ice.",
+    "Add the tequila, juices and salt.",
+    "Top up with soda water."
+   ],
+   "garnish": "Grapefruit slice"
+  },
+  "pamplemousse-romarin": {
+   "name": "Virgin paloma",
+   "tagline": "Grapefruit, lime and a pinch of salt",
+   "description": "The paloma without the tequila: grapefruit, lime and a touch of agave, lifted by a pinch of salt and soda. Proof that alcohol-free doesn't mean boring.",
+   "steps": [
+    "Fill the glass with ice.",
+    "Add the juices, agave and salt, then top up with soda water."
+   ],
+   "garnish": "Grapefruit slice"
+  },
+  "paper-plane": {
+   "tagline": "Bourbon, Aperol and amaro in equal parts",
+   "description": "A modern equal-parts classic: bourbon, Aperol, Amaro Nonino and lemon. Bittersweet, bright and dangerously easy to like.",
+   "steps": [
+    "Shake with ice.",
+    "Strain into a chilled coupe."
+   ],
+   "garnish": null
+  },
+  "penicillin": {
+   "tagline": "Scotch, honey and ginger: a modern remedy",
+   "description": "A whisky sour sweetened with honey-ginger syrup. Created in New York in the 2000s, it's warming, spicy and soothing — the bartender's cure-all.",
+   "steps": [
+    "Shake with ice.",
+    "Strain over a large ice cube."
+   ],
+   "garnish": "Candied ginger"
+  },
+  "pisco-sour": {
+   "tagline": "The pride of Peru and Chile",
+   "description": "Pisco, lime, sugar and egg white, finished with drops of bitters on the foam. Both Peru and Chile claim it — everyone agrees it's delicious.",
+   "steps": [
+    "Shake without ice for 10 seconds.",
+    "Add ice and shake for 15 seconds.",
+    "Strain and add a few drops of Angostura on the foam."
+   ],
+   "garnish": null
+  },
+  "pina-colada": {
+   "tagline": "Pineapple and coconut, instant holiday",
+   "description": "Rum, coconut cream and pineapple blended until smooth. Puerto Rico's national drink, and the fastest way to the beach from your kitchen.",
+   "steps": [
+    "Blend with a cup of ice until smooth.",
+    "Pour into a tall glass."
+   ],
+   "garnish": "Pineapple chunk and cherry"
+  },
+  "pornstar-martini": {
+   "tagline": "Passion fruit and vanilla, with bubbles on the side",
+   "description": "Vodka, passion fruit and vanilla, with a shot of prosecco served alongside. Fruity, tangy and made for celebrating.",
+   "steps": [
+    "Shake everything except the prosecco with ice.",
+    "Strain into a coupe.",
+    "Serve the prosecco on the side, in a small glass."
+   ],
+   "garnish": "Half a passion fruit"
+  },
+  "sazerac": {
+   "tagline": "New Orleans' great classic",
+   "description": "Rye, sugar and Peychaud's bitters in a glass rinsed with absinthe. Anise on the nose, spice on the palate — a true taste of New Orleans.",
+   "steps": [
+    "Rinse a chilled glass with the absinthe and discard the excess.",
+    "Stir the rye, syrup and bitters with ice.",
+    "Strain into the glass, without ice."
+   ],
+   "garnish": "Lemon zest"
+  },
+  "shirley-temple": {
+   "tagline": "The alcohol-free classic, pink and fizzy",
+   "description": "Ginger ale and grenadine, sinking into a pink sunset at the bottom of the glass. The original mocktail, loved by kids and grown-ups alike.",
+   "steps": [
+    "Fill the glass with ice and ginger ale.",
+    "Add the grenadine, which will sink to the bottom."
+   ],
+   "garnish": "Maraschino cherry"
+  },
+  "sidecar": {
+   "tagline": "Cognac and citrus, Roaring Twenties elegance",
+   "description": "Cognac, orange liqueur and lemon, served in a sugar-rimmed coupe. A Jazz Age classic that's tart, rich and polished.",
+   "steps": [
+    "Rim the coupe with sugar (optional).",
+    "Shake with ice.",
+    "Strain into the coupe."
+   ],
+   "garnish": "Orange zest"
+  },
+  "southside": {
+   "tagline": "A gimlet refreshed with mint",
+   "description": "Gin, lime, sugar and fresh mint, shaken and double strained. Think of it as a mojito in a tuxedo.",
+   "steps": [
+    "Shake all the ingredients with ice.",
+    "Double strain into a chilled coupe."
+   ],
+   "garnish": "Mint leaf"
+  },
+  "tommys-margarita": {
+   "tagline": "The modern margarita, made with agave",
+   "description": "No orange liqueur — just tequila, lime and agave syrup, so the tequila shines. Created in San Francisco and now a classic in its own right.",
+   "steps": [
+    "Shake with ice.",
+    "Strain over fresh ice."
+   ],
+   "garnish": "Lime wedge"
+  },
+  "virgin-colada": {
+   "tagline": "Creamy pineapple and coconut for everyone",
+   "description": "All the creamy pineapple-coconut of a piña colada, without the rum. Blend it smooth and serve it with a straw.",
+   "steps": [
+    "Blend with a cup of ice.",
+    "Pour into a tall glass."
+   ],
+   "garnish": "Pineapple chunk"
+  },
+  "virgin-mojito": {
+   "tagline": "All the freshness of a mojito, no alcohol",
+   "description": "Mint, lime, sugar, crushed ice and soda. Everything that makes a mojito refreshing, minus the rum.",
+   "steps": [
+    "Gently press the mint with the syrup and lime.",
+    "Fill with crushed ice and top up with soda water."
+   ],
+   "garnish": "Mint sprig"
+  },
+  "whisky-sour": {
+   "tagline": "Tart, silky and comforting",
+   "description": "Bourbon, lemon and sugar, with an optional egg white for a creamy texture. A few drops of bitters on the foam make it as pretty as it is balanced.",
+   "steps": [
+    "Shake without ice for 10 seconds (if using egg white).",
+    "Add ice and shake for 15 seconds.",
+    "Strain over ice and add a few drops of Angostura on the foam."
+   ],
+   "garnish": "Cherry and orange slice"
+  },
+  "white-russian": {
+   "tagline": "Creamy coffee comfort",
+   "description": "Vodka and coffee liqueur on ice, crowned with cream. A dessert in a glass, best enjoyed slowly in a comfortable chair.",
+   "steps": [
+    "Pour the vodka and coffee liqueur over ice.",
+    "Float the cream on top and stir lightly."
+   ],
+   "garnish": null
+  }
+ }
+}

@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dernier Verre — One more, perfectly mixed.</title>
+<meta name="description" content="Dernier Verre is a free iPhone cocktail app: 52 classic recipes as full-screen posters. Tick what's in your bar and see what you can mix tonight, with exact measures in ml or oz.">
+<meta name="theme-color" content="#0E0E0C">
+<link rel="canonical" href="https://dernierverre.app/">
+<meta property="og:url" content="https://dernierverre.app/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dernier Verre — One more, perfectly mixed.">
+<meta property="og:description" content="52 cocktail recipes as full-screen posters. Tick what's in your bar, mix what you can make tonight.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23FF6B35'/%3E%3Cpath d='M16 18h32L34 34v12h7v4H23v-4h7V34z' fill='%230E0E0C'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site surface">
+  <div class="col pad">
+    <a href="#top" class="logo poster" aria-label="Dernier Verre — home"><i aria-hidden="true" id="logo-dot"></i>Dernier Verre</a>
+    <nav class="main" aria-label="Sections">
+      <a href="#how">How it works</a>
+      <a href="#bar">My bar</a>
+      <a href="#features">Features</a>
+      <a href="#recipes">Recipes</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="pill" href="#download">Get the app</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ===================== HERO ===================== -->
+<!-- The hero is the app's Ideas feed: the page takes the colour of the drink on the
+     phone, and cycles through them the way swiping up does. -->
+<section class="hero surface" id="hero">
+  <div class="col">
+    <div class="hero-copy pad">
+      <p class="kicker tag rv">Free · iPhone · 52 recipes · No account</p>
+      <h1 class="poster rv"><span>One more,</span><span>perfectly</span><span>mixed.</span></h1>
+      <p class="lead rv">Dernier Verre turns what’s already in your cabinet into tonight’s cocktail. Swipe through full-screen posters, tick what’s in your bar, and mix with exact measures.</p>
+      <div class="hero-cta rv">
+        <a class="pill" href="#download" data-appstore>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.46a4.24 4.24 0 0 0-3.33-1.8c-1.42-.15-2.77.84-3.49.84-.72 0-1.83-.82-3-.8a4.46 4.46 0 0 0-3.77 2.29c-1.61 2.79-.41 6.92 1.16 9.18.77 1.1 1.68 2.35 2.88 2.3 1.16-.04 1.6-.74 3-.74s1.79.74 3.01.72c1.25-.02 2.04-1.12 2.8-2.23a9.8 9.8 0 0 0 1.27-2.6 4.04 4.04 0 0 1-2.46-3.7zM14.05 5.86A4.03 4.03 0 0 0 15 2.9a4.1 4.1 0 0 0-2.66 1.37 3.84 3.84 0 0 0-.97 2.86 3.4 3.4 0 0 0 2.68-1.27z"/></svg>
+          Download free on the App Store
+        </a>
+        <a class="pill ghost" href="#how">How it works</a>
+      </div>
+      <a class="now rv" id="hero-recipe" href="cocktails/negroni/"><span class="kicker">Now on screen</span> <b id="hero-name">Negroni</b> <span aria-hidden="true">→</span></a>
+    </div>
+
+    <div class="hero-phone">
+      <div class="phone-clip">
+      <button class="phone" id="phone" type="button" aria-label="Show the next cocktail">
+        <div class="screen" id="screen">
+          <div class="sb"><span>9:41</span><span class="island"></span><span>●●●</span></div>
+          <div class="app-head">
+            <span class="poster">Cocktails</span>
+            <span class="mini-circle"><svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="6"/><path d="m15 15 5 5"/></svg></span>
+            <span class="mini-pill">FILTERS</span>
+          </div>
+          <div class="mini-chips" id="mini-chips"></div>
+          <div class="poster-card swap" id="poster">
+            <div class="top"><span class="kicker" id="p-kicker"></span><span class="badge">READY</span></div>
+            <h3 class="poster" id="p-name"></h3>
+            <p class="tl" id="p-tag"></p>
+            <div class="rows" id="p-rows"></div>
+            <div class="poster-actions">
+              <span class="go">SEE THE RECIPE →</span>
+              <span class="heart"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></span>
+            </div>
+          </div>
+          <div class="tabbar"><span class="on">IDEAS</span><span>MY BAR</span><span>FAVORITES</span></div>
+        </div>
+      </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 01 — HOW IT WORKS ===================== -->
+<div class="band surface" id="how">
+  <div class="col pad"><h2>01 — How it works</h2><span>1, 2, shake</span></div>
+</div>
+<section class="surface">
+  <div class="col">
+    <div class="head pad rv">
+      <h2 class="poster">From bottle to glass <em>in three moves.</em></h2>
+      <p class="body muted">No sign-up, no setup. Open the app and the first poster is already waiting.</p>
+    </div>
+    <div class="cells c3">
+      <div class="step rv"><span class="poster num">01</span><h3 class="poster">Pick a spirit</h3><p class="body">Start from gin, rum, tequila — or nothing at all. The whole feed repaints itself in the colour of each drink.</p></div>
+      <div class="step rv"><span class="poster num">02</span><h3 class="poster">Tick your bar</h3><p class="body">Check off the bottles and fresh things you have. Recipes you can make right now float to the top.</p></div>
+      <div class="step rv"><span class="poster num">03</span><h3 class="poster">Mix it</h3><p class="body">Exact measures in ml or oz, scaled from one glass to twelve, and numbered steps you can follow with sticky fingers.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 02 — MY BAR (interactive) ===================== -->
+<div class="band surface" id="bar">
+  <div class="col pad"><h2>02 — My bar</h2><span>Try it here</span></div>
+</div>
+<section class="surface">
+  <div class="col">
+    <div class="head pad rv">
+      <h2 class="poster">What’s in your bar? <em>Tick it.</em></h2>
+      <p class="body muted">This is the real recipe library from the app. Tap what you have and see what you can serve right now.</p>
+    </div>
+    <div class="bar-grid">
+      <div class="bar-pick" id="bar-pick"></div>
+      <div class="bar-out" id="bar-out" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 03 — FEATURES ===================== -->
+<div class="band surface" id="features">
+  <div class="col pad"><h2>03 — Features</h2><span>Nothing you won’t use</span></div>
+</div>
+<section class="surface">
+  <div class="col">
+    <div class="head pad rv">
+      <h2 class="poster">Built like a poster. <em>Pours like a pro.</em></h2>
+      <p class="body muted">Big type you can read across the kitchen counter, and only the controls you actually reach for.</p>
+    </div>
+    <div class="cells c3x" id="feat-grid">
+      <div class="feat rv"><div class="top"><span class="kicker">N° 01</span><i class="dot" style="background:#FF6B35"></i></div><h3 class="poster">The poster feed</h3><p class="body muted">One drink per screen, full-bleed in its own colour. Swipe up for the next idea.</p></div>
+      <div class="feat rv"><div class="top"><span class="kicker">N° 02</span><i class="dot" style="background:#D7F25C"></i></div><h3 class="poster">My bar</h3><p class="body muted">“Ready to serve” and “one ingredient away”, worked out from the bottles you tick.</p></div>
+      <div class="feat rv"><div class="top"><span class="kicker">N° 03</span><i class="dot" style="background:#9FD8FF"></i></div><h3 class="poster">Filters that get it</h3><p class="body muted">Occasion, flavour, strength, difficulty. Apéritif on the patio? Something smoky for a cosy night?</p></div>
+      <div class="feat rv"><div class="top"><span class="kicker">N° 04</span><i class="dot" style="background:#F7A928"></i></div><h3 class="poster">Measures that scale</h3><p class="body muted">Switch between ml and oz, and go from one glass to twelve. Every quantity follows.</p></div>
+      <div class="feat rv"><div class="top"><span class="kicker">N° 05</span><i class="dot" style="background:#B99AFF"></i></div><h3 class="poster">Surprise me</h3><p class="body muted">Reached the end of the feed? Let chance pick. Not feeling it? One more idea.</p></div>
+      <div class="feat rv"><div class="top"><span class="kicker">N° 06</span><i class="dot" style="background:#FFB3CF"></i></div><h3 class="poster">Favorites &amp; sharing</h3><p class="body muted">Heart the keepers. Send a full recipe — ingredients, steps, garnish — to whoever’s pouring.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 04 — RECIPES ===================== -->
+<div class="band surface" id="recipes">
+  <div class="col pad"><h2>04 — Recipes</h2><span id="lib-count"><!-- build:count -->52<!-- /build:count --> posters</span></div>
+</div>
+<section class="surface">
+  <div class="col">
+    <div class="head pad rv">
+      <h2 class="poster"><!-- build:count -->52<!-- /build:count --> classics. <em>Zero filler.</em></h2>
+      <p class="body muted">From the Negroni to the Caesar, with six alcohol-free drinks so nobody holds an empty glass.</p>
+    </div>
+    <div class="lib-filters" id="lib-filters" role="group" aria-label="Filter by spirit"></div>
+    <div class="lib" id="lib">
+<!-- build:library -->
+<a class="tile" href="cocktails/amaretto-sour/" data-base="liqueur" style="--bg:#E6A75A;--ink:#0E0E0C"><p class="kicker">N° 01 · Liqueurs</p><div><h3 class="poster">Amaretto sour</h3><p class="ing">Amaretto · Lemon juice · Simple syrup</p></div></a>
+<a class="tile" href="cocktails/americano/" data-base="aperitif" style="--bg:#D64933;--ink:#F4F2EC"><p class="kicker">N° 02 · Apéritifs</p><div><h3 class="poster">Americano</h3><p class="ing">Campari · Sweet vermouth · Soda water</p></div></a>
+<a class="tile" href="cocktails/aperol-spritz/" data-base="aperitif" style="--bg:#F26B1D;--ink:#0E0E0C"><p class="kicker">N° 03 · Apéritifs</p><div><h3 class="poster">Aperol spritz</h3><p class="ing">Prosecco · Aperol · Soda water</p></div></a>
+<a class="tile" href="cocktails/aviation/" data-base="gin" style="--bg:#B7A6D9;--ink:#0E0E0C"><p class="kicker">N° 04 · Gin</p><div><h3 class="poster">Aviation</h3><p class="ing">Gin · Maraschino liqueur · Crème de violette · Lemon juice</p></div></a>
+<a class="tile" href="cocktails/bees-knees/" data-base="gin" style="--bg:#F2C14E;--ink:#0E0E0C"><p class="kicker">N° 05 · Gin</p><div><h3 class="poster">Bee&#x27;s Knees</h3><p class="ing">Gin · Lemon juice · Honey syrup</p></div></a>
+<a class="tile" href="cocktails/bellini/" data-base="bulles" style="--bg:#FFC9A3;--ink:#0E0E0C"><p class="kicker">N° 06 · Bubbles</p><div><h3 class="poster">Bellini</h3><p class="ing">Peach purée · Prosecco</p></div></a>
+<a class="tile" href="cocktails/bloody-mary/" data-base="vodka" style="--bg:#A4161A;--ink:#F4F2EC"><p class="kicker">N° 07 · Vodka</p><div><h3 class="poster">Bloody Mary</h3><p class="ing">Vodka · Tomato juice · Lemon juice · Worcestershire sauce · Tabasco</p></div></a>
+<a class="tile" href="cocktails/boulevardier/" data-base="whisky" style="--bg:#9B2D20;--ink:#F4F2EC"><p class="kicker">N° 08 · Whisky</p><div><h3 class="poster">Boulevardier</h3><p class="ing">Bourbon · Campari · Sweet vermouth</p></div></a>
+<a class="tile" href="cocktails/caesar/" data-base="vodka" style="--bg:#B0302A;--ink:#F4F2EC"><p class="kicker">N° 09 · Vodka</p><div><h3 class="poster">Caesar</h3><p class="ing">Vodka · Clamato · Lime juice · Worcestershire sauce · Tabasco · Celery salt</p></div></a>
+<a class="tile" href="cocktails/caipirinha/" data-base="rhum" style="--bg:#B8E06A;--ink:#0E0E0C"><p class="kicker">N° 10 · Rum</p><div><h3 class="poster">Caipirinha</h3><p class="ing">Cachaça · Lime · Sugar</p></div></a>
+<a class="tile" href="cocktails/clover-club/" data-base="gin" style="--bg:#E57A8A;--ink:#0E0E0C"><p class="kicker">N° 11 · Gin</p><div><h3 class="poster">Clover Club</h3><p class="ing">Gin · Lemon juice · Raspberry syrup · Egg white</p></div></a>
+<a class="tile" href="cocktails/cosmopolitan/" data-base="vodka" style="--bg:#E0475B;--ink:#0E0E0C"><p class="kicker">N° 12 · Vodka</p><div><h3 class="poster">Cosmopolitan</h3><p class="ing">Vodka · Triple sec · Cranberry juice · Lime juice</p></div></a>
+<a class="tile" href="cocktails/cuba-libre/" data-base="rhum" style="--bg:#5A2E1B;--ink:#F4F2EC"><p class="kicker">N° 13 · Rum</p><div><h3 class="poster">Cuba libre</h3><p class="ing">White rum · Cola · Lime juice</p></div></a>
+<a class="tile" href="cocktails/daiquiri/" data-base="rhum" style="--bg:#E8F1C4;--ink:#0E0E0C"><p class="kicker">N° 14 · Rum</p><div><h3 class="poster">Daiquiri</h3><p class="ing">White rum · Lime juice · Simple syrup</p></div></a>
+<a class="tile" href="cocktails/dark-n-stormy/" data-base="rhum" style="--bg:#8B5A2B;--ink:#F4F2EC"><p class="kicker">N° 15 · Rum</p><div><h3 class="poster">Dark &#x27;n&#x27; Stormy</h3><p class="ing">Ginger beer · Lime juice · Dark rum</p></div></a>
+<a class="tile" href="cocktails/dry-martini/" data-base="gin" style="--bg:#DDE6E8;--ink:#0E0E0C"><p class="kicker">N° 16 · Gin</p><div><h3 class="poster">Dry martini</h3><p class="ing">Gin · Dry vermouth</p></div></a>
+<a class="tile" href="cocktails/espresso-martini/" data-base="vodka" style="--bg:#4B2E20;--ink:#F4F2EC"><p class="kicker">N° 17 · Vodka</p><div><h3 class="poster">Espresso martini</h3><p class="ing">Vodka · Coffee liqueur · Espresso</p></div></a>
+<a class="tile" href="cocktails/french-75/" data-base="gin" style="--bg:#F7E7A1;--ink:#0E0E0C"><p class="kicker">N° 18 · Gin</p><div><h3 class="poster">French 75</h3><p class="ing">Gin · Lemon juice · Simple syrup · Champagne or sparkling wine</p></div></a>
+<a class="tile" href="cocktails/gimlet/" data-base="gin" style="--bg:#D4E79E;--ink:#0E0E0C"><p class="kicker">N° 19 · Gin</p><div><h3 class="poster">Gimlet</h3><p class="ing">Gin · Lime juice · Simple syrup</p></div></a>
+<a class="tile" href="cocktails/gin-fizz/" data-base="gin" style="--bg:#F3E9C6;--ink:#0E0E0C"><p class="kicker">N° 20 · Gin</p><div><h3 class="poster">Gin fizz</h3><p class="ing">Gin · Lemon juice · Simple syrup · Soda water</p></div></a>
+<a class="tile" href="cocktails/gin-tonic/" data-base="gin" style="--bg:#9FD8CB;--ink:#0E0E0C"><p class="kicker">N° 21 · Gin</p><div><h3 class="poster">Gin tonic</h3><p class="ing">Gin · Tonic water</p></div></a>
+<a class="tile" href="cocktails/hugo/" data-base="bulles" style="--bg:#DDEFB7;--ink:#0E0E0C"><p class="kicker">N° 22 · Bubbles</p><div><h3 class="poster">Hugo spritz</h3><p class="ing">Prosecco · Elderflower liqueur · Soda water · Fresh mint</p></div></a>
+<a class="tile" href="cocktails/kir-royal/" data-base="bulles" style="--bg:#8E1F4B;--ink:#F4F2EC"><p class="kicker">N° 23 · Bubbles</p><div><h3 class="poster">Kir royal</h3><p class="ing">Crème de cassis · Champagne or sparkling wine</p></div></a>
+<a class="tile" href="cocktails/last-word/" data-base="gin" style="--bg:#B5D33D;--ink:#0E0E0C"><p class="kicker">N° 24 · Gin</p><div><h3 class="poster">Last Word</h3><p class="ing">Gin · Green Chartreuse · Maraschino liqueur · Lime juice</p></div></a>
+<a class="tile" href="cocktails/limonade-concombre/" data-base="sansAlcool" style="--bg:#C6E5A8;--ink:#0E0E0C"><p class="kicker">N° 25 · Alcohol-free</p><div><h3 class="poster">Cucumber-basil lemonade</h3><p class="ing">Lemon juice · Simple syrup · Cucumber · Fresh basil · Soda water</p></div></a>
+<a class="tile" href="cocktails/mai-tai/" data-base="rhum" style="--bg:#E2892F;--ink:#0E0E0C"><p class="kicker">N° 26 · Rum</p><div><h3 class="poster">Mai tai</h3><p class="ing">Dark rum · White rum · Triple sec · Orgeat syrup · Lime juice</p></div></a>
+<a class="tile" href="cocktails/manhattan/" data-base="whisky" style="--bg:#8E2C1F;--ink:#F4F2EC"><p class="kicker">N° 27 · Whisky</p><div><h3 class="poster">Manhattan</h3><p class="ing">Rye whiskey · Sweet vermouth · Angostura bitters</p></div></a>
+<a class="tile" href="cocktails/margarita/" data-base="tequila" style="--bg:#D7E86A;--ink:#0E0E0C"><p class="kicker">N° 28 · Tequila</p><div><h3 class="poster">Margarita</h3><p class="ing">Tequila blanco · Triple sec · Lime juice</p></div></a>
+<a class="tile" href="cocktails/mimosa/" data-base="bulles" style="--bg:#FFB84D;--ink:#0E0E0C"><p class="kicker">N° 29 · Bubbles</p><div><h3 class="poster">Mimosa</h3><p class="ing">Orange juice · Champagne or sparkling wine</p></div></a>
+<a class="tile" href="cocktails/mojito/" data-base="rhum" style="--bg:#7BC67B;--ink:#0E0E0C"><p class="kicker">N° 30 · Rum</p><div><h3 class="poster">Mojito</h3><p class="ing">White rum · Lime juice · Simple syrup · Fresh mint · Soda water</p></div></a>
+<a class="tile" href="cocktails/moscow-mule/" data-base="vodka" style="--bg:#C98A4B;--ink:#0E0E0C"><p class="kicker">N° 31 · Vodka</p><div><h3 class="poster">Moscow mule</h3><p class="ing">Vodka · Lime juice · Ginger beer</p></div></a>
+<a class="tile" href="cocktails/ginger-mule-zero/" data-base="sansAlcool" style="--bg:#D9A066;--ink:#0E0E0C"><p class="kicker">N° 32 · Alcohol-free</p><div><h3 class="poster">Virgin mule</h3><p class="ing">Ginger beer · Lime juice</p></div></a>
+<a class="tile" href="cocktails/negroni/" data-base="gin" style="--bg:#C0392B;--ink:#F4F2EC"><p class="kicker">N° 33 · Gin</p><div><h3 class="poster">Negroni</h3><p class="ing">Gin · Campari · Sweet vermouth</p></div></a>
+<a class="tile" href="cocktails/oaxaca-old-fashioned/" data-base="tequila" style="--bg:#B5651D;--ink:#F4F2EC"><p class="kicker">N° 34 · Tequila</p><div><h3 class="poster">Oaxaca old fashioned</h3><p class="ing">Tequila blanco · Mezcal · Agave syrup · Angostura bitters</p></div></a>
+<a class="tile" href="cocktails/old-fashioned/" data-base="whisky" style="--bg:#C1772F;--ink:#0E0E0C"><p class="kicker">N° 35 · Whisky</p><div><h3 class="poster">Old fashioned</h3><p class="ing">Bourbon · Simple syrup · Angostura bitters</p></div></a>
+<a class="tile" href="cocktails/old-fashioned-erable/" data-base="whisky" style="--bg:#A0522D;--ink:#F4F2EC"><p class="kicker">N° 36 · Whisky</p><div><h3 class="poster">Maple old fashioned</h3><p class="ing">Rye whiskey · Maple syrup · Angostura bitters</p></div></a>
+<a class="tile" href="cocktails/paloma/" data-base="tequila" style="--bg:#F5A3A3;--ink:#0E0E0C"><p class="kicker">N° 37 · Tequila</p><div><h3 class="poster">Paloma</h3><p class="ing">Tequila blanco · Grapefruit juice · Lime juice · Soda water</p></div></a>
+<a class="tile" href="cocktails/pamplemousse-romarin/" data-base="sansAlcool" style="--bg:#F7B2A8;--ink:#0E0E0C"><p class="kicker">N° 38 · Alcohol-free</p><div><h3 class="poster">Virgin paloma</h3><p class="ing">Grapefruit juice · Lime juice · Agave syrup · Soda water</p></div></a>
+<a class="tile" href="cocktails/paper-plane/" data-base="whisky" style="--bg:#E97C3D;--ink:#0E0E0C"><p class="kicker">N° 39 · Whisky</p><div><h3 class="poster">Paper plane</h3><p class="ing">Bourbon · Aperol · Amaro Nonino · Lemon juice</p></div></a>
+<a class="tile" href="cocktails/penicillin/" data-base="whisky" style="--bg:#D99A3E;--ink:#0E0E0C"><p class="kicker">N° 40 · Whisky</p><div><h3 class="poster">Penicillin</h3><p class="ing">Scotch · Lemon juice · Honey-ginger syrup</p></div></a>
+<a class="tile" href="cocktails/pisco-sour/" data-base="brandy" style="--bg:#F1E6B8;--ink:#0E0E0C"><p class="kicker">N° 41 · Cognac &amp; pisco</p><div><h3 class="poster">Pisco sour</h3><p class="ing">Pisco · Lime juice · Simple syrup · Egg white</p></div></a>
+<a class="tile" href="cocktails/pina-colada/" data-base="rhum" style="--bg:#FFF1C1;--ink:#0E0E0C"><p class="kicker">N° 42 · Rum</p><div><h3 class="poster">Piña colada</h3><p class="ing">White rum · Coconut cream · Pineapple juice</p></div></a>
+<a class="tile" href="cocktails/pornstar-martini/" data-base="vodka" style="--bg:#F4A93B;--ink:#0E0E0C"><p class="kicker">N° 43 · Vodka</p><div><h3 class="poster">Pornstar martini</h3><p class="ing">Vodka · Passion fruit purée · Lime juice · Vanilla syrup</p></div></a>
+<a class="tile" href="cocktails/sazerac/" data-base="whisky" style="--bg:#A1442A;--ink:#F4F2EC"><p class="kicker">N° 44 · Whisky</p><div><h3 class="poster">Sazerac</h3><p class="ing">Rye whiskey · Simple syrup · Peychaud&#x27;s bitters · Absinthe</p></div></a>
+<a class="tile" href="cocktails/shirley-temple/" data-base="sansAlcool" style="--bg:#F26D7D;--ink:#0E0E0C"><p class="kicker">N° 45 · Alcohol-free</p><div><h3 class="poster">Shirley Temple</h3><p class="ing">Ginger ale · Grenadine</p></div></a>
+<a class="tile" href="cocktails/sidecar/" data-base="brandy" style="--bg:#D9A441;--ink:#0E0E0C"><p class="kicker">N° 46 · Cognac &amp; pisco</p><div><h3 class="poster">Sidecar</h3><p class="ing">Cognac · Triple sec · Lemon juice</p></div></a>
+<a class="tile" href="cocktails/southside/" data-base="gin" style="--bg:#A8D5A2;--ink:#0E0E0C"><p class="kicker">N° 47 · Gin</p><div><h3 class="poster">Southside</h3><p class="ing">Gin · Lime juice · Simple syrup · Fresh mint</p></div></a>
+<a class="tile" href="cocktails/tommys-margarita/" data-base="tequila" style="--bg:#E3EE9A;--ink:#0E0E0C"><p class="kicker">N° 48 · Tequila</p><div><h3 class="poster">Tommy&#x27;s margarita</h3><p class="ing">Tequila blanco · Lime juice · Agave syrup</p></div></a>
+<a class="tile" href="cocktails/virgin-colada/" data-base="sansAlcool" style="--bg:#FFF4D0;--ink:#0E0E0C"><p class="kicker">N° 49 · Alcohol-free</p><div><h3 class="poster">Virgin colada</h3><p class="ing">Coconut cream · Pineapple juice</p></div></a>
+<a class="tile" href="cocktails/virgin-mojito/" data-base="sansAlcool" style="--bg:#9ED89E;--ink:#0E0E0C"><p class="kicker">N° 50 · Alcohol-free</p><div><h3 class="poster">Virgin mojito</h3><p class="ing">Lime juice · Simple syrup · Fresh mint · Soda water</p></div></a>
+<a class="tile" href="cocktails/whisky-sour/" data-base="whisky" style="--bg:#E8B04B;--ink:#0E0E0C"><p class="kicker">N° 51 · Whisky</p><div><h3 class="poster">Whisky sour</h3><p class="ing">Bourbon · Lemon juice · Simple syrup</p></div></a>
+<a class="tile" href="cocktails/white-russian/" data-base="vodka" style="--bg:#D9C3A5;--ink:#0E0E0C"><p class="kicker">N° 52 · Vodka</p><div><h3 class="poster">White Russian</h3><p class="ing">Vodka · Coffee liqueur · Cream</p></div></a>
+<div class="tile end"><h3 class="poster">That’s all.</h3><p class="body">Can’t choose? Let chance pick.</p><button type="button" class="pill" id="surprise">Surprise me →</button></div>
+<!-- /build:library -->
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FACTS ===================== -->
+<section class="surface" aria-label="Privacy">
+  <div class="col facts pad">
+    <span><i style="background:#D7F25C"></i>No account</span>
+    <span><i style="background:#9FD8FF"></i>Works offline</span>
+    <span><i style="background:#FFB3CF"></i>Your bar stays on your phone</span>
+    <span><i style="background:#FF6B35"></i>No ads</span>
+  </div>
+</section>
+
+<!-- ===================== 05 — FAQ ===================== -->
+<div class="band surface" id="faq">
+  <div class="col pad"><h2>05 — Frequently asked</h2><span>FAQ</span></div>
+</div>
+<section class="surface faq">
+  <div class="col" id="faq-list">
+    <details><summary><span class="poster">Is it free?</span><span class="plus" aria-hidden="true">+</span></summary><p class="body">Yes. Dernier Verre is free to download on the App Store, with every recipe included.</p></details>
+    <details><summary><span class="poster">Do I need an account?</span><span class="plus" aria-hidden="true">+</span></summary><p class="body">No. There’s nothing to sign up for. Your bar and your favorites are saved on your iPhone and never leave it.</p></details>
+    <details><summary><span class="poster">Does it work offline?</span><span class="plus" aria-hidden="true">+</span></summary><p class="body">Yes. All 52 recipes are built into the app, so it works at the cottage, on the boat, or in a basement bar with no signal.</p></details>
+    <details><summary><span class="poster">What if I’m missing one ingredient?</span><span class="plus" aria-hidden="true">+</span></summary><p class="body">My bar lists the drinks you’re one ingredient away from and says which one. On the poster, the missing ingredient is struck through so you can improvise — or make a grocery run.</p></details>
+    <details><summary><span class="poster">Millilitres or ounces?</span><span class="plus" aria-hidden="true">+</span></summary><p class="body">Both. Switch units on any recipe and the app remembers your choice. Quantities scale from one glass to twelve.</p></details>
+    <details><summary><span class="poster">Any alcohol-free drinks?</span><span class="plus" aria-hidden="true">+</span></summary><p class="body">Six of them, from a virgin mojito to a cucumber-basil lemonade. Pick “Alcohol-free” as your starting point and the feed shows only those.</p></details>
+    <details><summary><span class="poster">Why “Dernier Verre”?</span><span class="plus" aria-hidden="true">+</span></summary><p class="body">It’s French for “last glass” — the one more round you pour when the night is going well. We’d like it to be a good one.</p></details>
+  </div>
+</section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section class="surface" id="download">
+  <div class="col">
+    <div class="final pad rv">
+      <div class="swatches" id="swatches" aria-hidden="true"></div>
+      <h2 class="poster">Your next favorite cocktail.</h2>
+      <p class="lead">Free on the App Store for iPhone. Your first poster is one tap away.</p>
+      <a class="pill" href="#download" data-appstore>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.46a4.24 4.24 0 0 0-3.33-1.8c-1.42-.15-2.77.84-3.49.84-.72 0-1.83-.82-3-.8a4.46 4.46 0 0 0-3.77 2.29c-1.61 2.79-.41 6.92 1.16 9.18.77 1.1 1.68 2.35 2.88 2.3 1.16-.04 1.6-.74 3-.74s1.79.74 3.01.72c1.25-.02 2.04-1.12 2.8-2.23a9.8 9.8 0 0 0 1.27-2.6 4.04 4.04 0 0 1-2.46-3.7zM14.05 5.86A4.03 4.03 0 0 0 15 2.9a4.1 4.1 0 0 0-2.66 1.37 3.84 3.84 0 0 0-.97 2.86 3.4 3.4 0 0 0 2.68-1.27z"/></svg>
+        Download free on the App Store
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="surface">
+  <div class="col pad">
+    <div>
+      <a href="#top" class="logo poster">Dernier Verre</a>
+      <p class="body muted" style="margin-top:10px">One more, perfectly mixed.</p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="#how">How it works</a>
+      <a href="#bar">My bar</a>
+      <a href="#features">Features</a>
+      <a href="cocktails/">All recipes</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="legal">
+      <span class="legal-left"><span>© <span id="year">2026</span> Dernier Verre</span> <span class="credit">Made with <span class="heartbeat" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z"/></svg></span><span class="sr">love</span> by <a href="https://wibeset.ca" rel="noopener">Wibeset</a> in Quebec <span aria-hidden="true">🇨🇦</span></span></span>
+      <span>Please drink responsibly. Never drink and drive.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/data.js"></script>
+<script src="assets/site.js"></script>
+<script src="assets/home.js"></script>
+</body>
+</html>
