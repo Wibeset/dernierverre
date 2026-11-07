@@ -1,7 +1,7 @@
 /* Recipe pages: ml/oz and 1–12 glasses, formatted like the app (UserLibrary.swift).
    The page is rendered for 1 glass in ml, so it reads fine without JavaScript. */
 (() => {
-const sep = document.documentElement.lang === 'fr' ? ',' : '.';
+const sep = ['fr', 'es'].includes(document.documentElement.lang) ? ',' : '.';
 const decimal = v => (Math.round(v * 10) / 10).toString().replace('.', sep);
 function fraction(v) {
   const q = Math.round(v * 4);

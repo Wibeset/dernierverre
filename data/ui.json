@@ -218,7 +218,7 @@
    ],
    [
     "Is the app in English?",
-    "The app is in French. Every recipe is also on this website in English, with the same measures in ml or oz."
+    "Yes. Dernier Verre is in English, French and Spanish, and follows your iPhone’s language. Every recipe is also on this website in all three languages."
    ],
    [
     "How do I delete my data?",
@@ -449,7 +449,7 @@
    ],
    [
     "L’app est-elle offerte en anglais?",
-    "L’app est en français. Toutes les recettes sont aussi sur ce site en anglais, avec les mêmes mesures en ml ou en oz."
+    "Oui. Dernier Verre est offerte en français, en anglais et en espagnol, et suit la langue de votre iPhone. Toutes les recettes sont aussi sur ce site dans les trois langues."
    ],
    [
     "Comment supprimer mes données?",
@@ -458,6 +458,237 @@
    [
     "Dernier Verre est-il gratuit?",
     "Oui, avec les 52 recettes, sans publicité et sans compte."
+   ]
+  ]
+ },
+ "es": {
+  "locale": "es_ES",
+  "lang_name": "Español",
+  "nav_how": "Cómo funciona",
+  "nav_bar": "Mi bar",
+  "nav_features": "Funciones",
+  "nav_recipes": "Recetas",
+  "nav_faq": "Preguntas",
+  "get_app": "Próximamente",
+  "all_recipes": "Todas las recetas",
+  "home": "Inicio",
+  "skip": "Ir al contenido",
+  "tagline": "Una más, en su punto justo.",
+  "credit": "Hecho con <span class=\"heartbeat\" aria-hidden=\"true\">{heart}</span><span class=\"sr\">amor</span> por <a href=\"https://wibeset.ca\" rel=\"noopener\">Wibeset</a> en Quebec <span aria-hidden=\"true\">🇨🇦</span>",
+  "drink_resp": "Bebe con moderación. Si bebes, no conduzcas.",
+  "home_title": "Dernier Verre — App de cócteles gratis con 52 recetas para iPhone",
+  "home_desc": "Dernier Verre, la app de cócteles gratis para iPhone, llega pronto: 52 recetas clásicas en pósteres a pantalla completa. Marca tu bar y mira qué preparar.",
+  "hero_tag": "Próximamente · Gratis · iPhone · 52 recetas",
+  "hero_h1": "<span>Una más,</span><span>en su punto</span><span>justo.</span>",
+  "hero_lead": "Dernier Verre convierte lo que ya tienes en el mueble bar en el cóctel de esta noche. Desliza pósteres a pantalla completa, marca lo que hay en tu bar y prepara con medidas exactas.",
+  "cta_download": "Próximamente en el App Store",
+  "now_on_screen": "En pantalla",
+  "phone_label": "Vista previa de la app — mostrar el siguiente cóctel",
+  "phone_filters": "FILTROS",
+  "phone_ready": "LISTO",
+  "phone_see": "VER LA RECETA",
+  "tab_ideas": "IDEAS",
+  "tab_bar": "MI BAR",
+  "tab_favorites": "FAVORITOS",
+  "how_aside": "1, 2, a agitar",
+  "how_h2": "De la botella al vaso <em>en tres pasos.</em>",
+  "how_lead": "Sin registro ni configuración. Abre la app y el primer póster ya te está esperando.",
+  "step1_t": "Elige un alcohol",
+  "step1_d": "Empieza por ginebra, ron, tequila… o por nada. Todo el feed se tiñe del color de cada cóctel.",
+  "step2_t": "Marca tu bar",
+  "step2_d": "Marca las botellas y los ingredientes frescos que tienes. Las recetas que puedes preparar ahora mismo suben arriba.",
+  "step3_t": "Prepáralo",
+  "step3_d": "Medidas exactas en ml u oz, de un vaso a doce, y pasos numerados que puedes seguir aunque tengas los dedos pegajosos.",
+  "bar_aside": "Pruébalo aquí",
+  "bar_h2": "¿Qué hay en tu bar? <em>Márcalo.</em>",
+  "bar_lead": "Esta es la biblioteca de recetas real de la app. Toca lo que tienes y mira qué puedes servir ahora mismo.",
+  "feat_aside": "Nada que sobre",
+  "feat_h2": "Diseñada como un póster. <em>Sirve como una pro.</em>",
+  "feat_lead": "Letras grandes que se leen desde la otra punta de la encimera, y solo los controles que de verdad usas.",
+  "f1_t": "El feed de pósteres",
+  "f1_d": "Un cóctel por pantalla, a sangre en su propio color. Desliza hacia arriba para la siguiente idea.",
+  "f2_t": "Mi bar",
+  "f2_d": "«Listos para servir» y «a un ingrediente», calculados a partir de las botellas que marcas.",
+  "f3_t": "Filtros que te entienden",
+  "f3_d": "Ocasión, sabores, intensidad, dificultad. ¿Un aperitivo en la terraza? ¿Algo ahumado para una noche acogedora?",
+  "f4_t": "Medidas que se adaptan",
+  "f4_d": "Cambia entre ml y oz, y pasa de un vaso a doce. Todas las cantidades se ajustan.",
+  "f5_t": "Sorpréndeme",
+  "f5_d": "¿Llegaste al final del feed? Deja que decida el azar. ¿No te convence? Otra idea.",
+  "f6_t": "Favoritos y compartir",
+  "f6_d": "Guarda tus preferidos con un corazón. Envía la receta completa —ingredientes, pasos, decoración— a quien esté sirviendo.",
+  "lib_count": "{n} pósteres",
+  "lib_h2": "{n} clásicos. <em>Cero relleno.</em>",
+  "lib_lead": "Del Negroni al Caesar, con seis bebidas sin alcohol para que nadie se quede con el vaso vacío.",
+  "lib_filter_label": "Filtrar por alcohol",
+  "facts_label": "Privacidad",
+  "fact1": "Sin cuenta",
+  "fact2": "Funciona sin conexión",
+  "fact3": "Tu bar se queda en tu teléfono",
+  "fact4": "Sin anuncios",
+  "faq_band": "Preguntas frecuentes",
+  "faq": [
+   [
+    "¿Dernier Verre es gratis?",
+    "Sí. Dernier Verre se podrá descargar gratis en el App Store para iPhone, con las 52 recetas incluidas. Llega pronto."
+   ],
+   [
+    "¿Cuándo estará disponible Dernier Verre?",
+    "Pronto. La app está en la recta final antes de su lanzamiento en el App Store para iPhone. Mientras tanto, todas las recetas están en esta web."
+   ],
+   [
+    "¿Necesito una cuenta?",
+    "No. No hay nada que crear. Tu bar y tus favoritos se guardan en tu iPhone y nunca salen de él."
+   ],
+   [
+    "¿Funciona sin conexión?",
+    "Sí. Las 52 recetas están integradas en la app, así que funciona en la casa de campo, en el barco o en un bar de sótano sin cobertura."
+   ],
+   [
+    "¿Y si me falta un ingrediente?",
+    "Mi bar enumera los cócteles a los que te falta un solo ingrediente y te dice cuál. En el póster, el ingrediente que falta aparece tachado para que puedas improvisar… o ir a la tienda."
+   ],
+   [
+    "¿Mililitros u onzas?",
+    "Las dos. Cambia de unidad en cualquier receta y la app recordará tu elección. Las cantidades se ajustan de un vaso a doce."
+   ],
+   [
+    "¿Hay bebidas sin alcohol?",
+    "Seis, del mojito sin alcohol a la limonada de pepino y albahaca. Elige «Sin alcohol» como punto de partida y el feed mostrará solo esas."
+   ],
+   [
+    "¿Por qué «Dernier Verre»?",
+    "En francés significa «último vaso»: la última ronda que sirves cuando la noche va bien. Queremos que sea una buena."
+   ]
+  ],
+  "final_h2": "Tu próximo cóctel favorito.",
+  "final_lead": "Próximamente en el App Store para iPhone: gratis, con las 52 recetas.",
+  "thats_all": "Eso es todo.",
+  "cant_choose": "¿No sabes cuál elegir? Deja que decida el azar.",
+  "surprise_me": "Sorpréndeme →",
+  "js": {
+   "groups": [
+    "Destilados",
+    "Licores y vinos",
+    "Frescos y refrescos"
+   ],
+   "short_list": "La app conoce {n} ingredientes: esta es la lista corta.",
+   "empty_t": "Bar vacío.",
+   "empty_d": "Marca lo que tienes y te diremos qué servir.",
+   "ingredients": [
+    "{n} ingrediente",
+    "{n} ingredientes"
+   ],
+   "ready": "{n} listos para servir",
+   "nothing": "Nada por ahora. Marca algunas botellas más.",
+   "more": "+ {n} más en la app",
+   "posters": [
+    "{n} póster",
+    "{n} pósteres"
+   ],
+   "all": "Todos",
+   "decimal": ","
+  },
+  "recipe_title": "Receta del cóctel {name} — Dernier Verre",
+  "recipe_title_free": "Receta de {name} (sin alcohol) — Dernier Verre",
+  "back": "← Todas las recetas",
+  "strength": "Intensidad",
+  "difficulty": "Dificultad",
+  "method": "Método",
+  "ingredients": "Ingredientes",
+  "units": "Unidades",
+  "glass": [
+   "vaso",
+   "vasos"
+  ],
+  "fewer": "Menos vasos",
+  "more_glasses": "Más vasos",
+  "optional": "opcional",
+  "garnish": "Decoración",
+  "preparation": "Preparación",
+  "app_h2": "Llévala en el bolsillo.",
+  "app_body": "En Dernier Verre, toca un ingrediente para añadirlo a tu bar: la app te muestra todos los cócteles que puedes preparar esta noche. Próximamente, gratis en iPhone.",
+  "download_short": "Próximamente",
+  "more_with": "Más recetas · {base}",
+  "also_like": "También te puede gustar",
+  "all_n": "Las {n} recetas →",
+  "prev": "← Anterior",
+  "next": "Siguiente →",
+  "recipe_kicker": "Receta de cóctel",
+  "list_title": "Las {n} recetas de cócteles — Dernier Verre",
+  "list_desc": "{n} recetas de cócteles clásicos con medidas exactas en ml y oz: del Negroni al Caesar, con bebidas sin alcohol incluidas.",
+  "list_kicker": "La biblioteca · {n} recetas",
+  "list_h1": "Todas las recetas.",
+  "list_lead": "Clásicos, clásicos modernos y bebidas sin alcohol, cada uno con sus medidas exactas y su preparación paso a paso.",
+  "jump_label": "Ir a un alcohol",
+  "nf_title": "Última ronda — Dernier Verre",
+  "nf_desc": "Esta página no existe.",
+  "nf_h1": "Última ronda.",
+  "nf_lead": "Este vaso está vacío: la página que buscas no existe.",
+  "nf_back": "Volver al bar",
+  "summary_with": "{name}: {list}.",
+  "summary_top": ", completado con {x}",
+  "summary_method": "{method} y se sirve en {glass}.",
+  "and": "y",
+  "method_sentence": {
+   "shaker": "Se agita en coctelera",
+   "verreMelange": "Se remueve en vaso mezclador",
+   "construit": "Se monta directamente en el vaso",
+   "pile": "Se machaca en el vaso",
+   "melangeur": "Se tritura en batidora"
+  },
+  "glass_article": {
+   "coupe": "una copa coupé",
+   "martini": "una copa de martini",
+   "rocks": "un vaso old fashioned",
+   "highball": "un vaso highball",
+   "flute": "una copa flauta",
+   "vin": "una copa de vino",
+   "tiki": "un vaso tiki",
+   "cuivre": "una taza de cobre"
+  },
+  "nav_support": "Ayuda",
+  "nav_privacy": "Privacidad",
+  "privacy_title": "Política de privacidad — Dernier Verre",
+  "privacy_desc": "Cómo trata Dernier Verre tu información. Sin cuenta, sin registro, sin conexión: tu bar y tus favoritos se quedan en tu iPhone.",
+  "privacy_h1": "Privacidad",
+  "support_title": "Ayuda — Dernier Verre",
+  "support_desc": "Ayuda con Dernier Verre, la app de cócteles para iPhone: contáctanos y encuentra respuestas sobre tu bar, favoritos, filtros, medidas y tus datos.",
+  "support_h1": "Ayuda",
+  "updated": "Última actualización: {date}",
+  "updated_date": "7 de noviembre de 2026",
+  "support_faq": [
+   [
+    "¿Dónde se guardan mi bar y mis favoritos?",
+    "Solo en tu iPhone. Dernier Verre no tiene cuenta ni servidor, y no se conecta a internet, así que no podemos verlos. Si haces copia de seguridad de tu iPhone en iCloud o en un ordenador, forman parte de esa copia."
+   ],
+   [
+    "¿Cómo paso mi bar a un iPhone nuevo?",
+    "Configura el iPhone nuevo a partir de una copia de seguridad del anterior (iCloud u ordenador), o transfiere los datos directamente desde el iPhone anterior durante la configuración. Tu bar, tus favoritos y tus preferencias se van con la app. Dernier Verre no se sincroniza entre dispositivos a través de iCloud."
+   ],
+   [
+    "¿Cómo añado o quito ingredientes de mi bar?",
+    "En la pestaña <strong>Mi bar</strong>, marca las botellas y los ingredientes frescos que tienes. También puedes tocar cualquier ingrediente en una receta para añadirlo a tu bar o quitarlo. Para empezar de cero, toca <strong>Desmarcar todo</strong>."
+   ],
+   [
+    "¿Por qué no veo el cóctel que busco?",
+    "Comprueba qué cócteles muestra el feed: <strong>Todos</strong>, <strong>Falta ≤ 1</strong> o <strong>Listos</strong>. Después revisa el alcohol de partida y los filtros; <strong>Restablecer</strong> borra la ocasión, los sabores, la intensidad y la dificultad."
+   ],
+   [
+    "¿Cómo cambio entre mililitros y onzas?",
+    "En cualquier receta, elige <strong>ml</strong> u <strong>oz</strong>. Dernier Verre recuerda tu elección, y los botones + y − ajustan todas las cantidades de un vaso a doce."
+   ],
+   [
+    "¿La app está en español?",
+    "Sí. Dernier Verre está en español, francés e inglés y sigue el idioma de tu iPhone. Todas las recetas también están en esta web en los tres idiomas."
+   ],
+   [
+    "¿Cómo borro mis datos?",
+    "Toca <strong>Desmarcar todo</strong> en <strong>Mi bar</strong> para vaciar tu bar, y vuelve a tocar el corazón para quitar un favorito. Al eliminar la app se borran todos sus datos de tu iPhone."
+   ],
+   [
+    "¿Dernier Verre es gratis?",
+    "Sí, con las 52 recetas, sin anuncios y sin cuenta."
    ]
   ]
  }

@@ -10,6 +10,7 @@ Dernier Verre is a free iPhone app by Wibeset (Quebec, Canada), coming soon to t
 - [Support](https://dernierverre.app/support/): contact and help with the app
 - [Privacy policy](https://dernierverre.app/privacy/): no account, no network, your bar stays on your iPhone
 - [Version française](https://dernierverre.app/fr/)
+- [Versión en español](https://dernierverre.app/es/)
 
 ## FAQ
 - **Is Dernier Verre free?** Yes. Dernier Verre will be free to download on the App Store for iPhone, with all 52 recipes included. It’s coming soon.

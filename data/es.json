@@ -1,0 +1,733 @@
+{
+ "labels": {
+  "base": {
+   "gin": "Ginebra",
+   "vodka": "Vodka",
+   "rhum": "Ron",
+   "tequila": "Tequila",
+   "whisky": "Whisky",
+   "brandy": "Coñac y pisco",
+   "aperitif": "Aperitivos",
+   "bulles": "Burbujas",
+   "liqueur": "Licores",
+   "sansAlcool": "Sin alcohol"
+  },
+  "flavors": {
+   "agrumes": "Cítrico",
+   "fruite": "Afrutado",
+   "sucre": "Dulce",
+   "amer": "Amargo",
+   "herbace": "Fresco y herbal",
+   "epice": "Picante",
+   "cremeux": "Cremoso",
+   "sec": "Seco e intenso",
+   "petillant": "Burbujeante",
+   "tropical": "Tropical"
+  },
+  "occasions": {
+   "apero": [
+    "🫒",
+    "Aperitivo"
+   ],
+   "brunch": [
+    "🥐",
+    "Brunch"
+   ],
+   "terrasse": [
+    "☀️",
+    "Terraza"
+   ],
+   "fete": [
+    "🎉",
+    "Fiesta"
+   ],
+   "cosy": [
+    "🔥",
+    "Noche acogedora"
+   ],
+   "digestif": [
+    "🌙",
+    "Digestivo"
+   ]
+  },
+  "strength": {
+   "sansAlcool": "Sin alcohol",
+   "leger": "Ligero",
+   "moyen": "Medio",
+   "fort": "Fuerte"
+  },
+  "difficulty": {
+   "facile": "Fácil",
+   "moyen": "Intermedio",
+   "avance": "Avanzado"
+  },
+  "method": {
+   "shaker": "Coctelera",
+   "verreMelange": "Vaso mezclador",
+   "construit": "En el vaso",
+   "pile": "Machacado",
+   "melangeur": "Batidora"
+  },
+  "glass": {
+   "coupe": "Copa coupé",
+   "martini": "Copa de martini",
+   "rocks": "Vaso old fashioned",
+   "highball": "Vaso highball",
+   "flute": "Copa flauta",
+   "vin": "Copa de vino",
+   "tiki": "Vaso tiki",
+   "cuivre": "Taza de cobre"
+  }
+ },
+ "units": {
+  "blanc": [
+   "clara",
+   "claras"
+  ],
+  "pincée": [
+   "pizca",
+   "pizcas"
+  ],
+  "quartier": [
+   "gajo",
+   "gajos"
+  ],
+  "trait": [
+   "golpe",
+   "golpes"
+  ],
+  "goutte": [
+   "gota",
+   "gotas"
+  ],
+  "tranche": [
+   "rodaja",
+   "rodajas"
+  ],
+  "feuille": [
+   "hoja",
+   "hojas"
+  ],
+  "lime": [
+   "lima",
+   "limas"
+  ],
+  "2 c. à thé": "2 cdtas.",
+  "Pour givrer le verre": "Para escarchar el vaso",
+  "Pour rincer le verre": "Para enjuagar el vaso",
+  "top": "Completar"
+ },
+ "ingredients": {
+  "gin": "Ginebra",
+  "vodka": "Vodka",
+  "rhumBlanc": "Ron blanco",
+  "rhumAmbre": "Ron añejo",
+  "cachaca": "Cachaza",
+  "tequila": "Tequila blanco",
+  "mezcal": "Mezcal",
+  "bourbon": "Bourbon",
+  "rye": "Whisky de centeno (rye)",
+  "scotch": "Whisky escocés",
+  "cognac": "Coñac",
+  "pisco": "Pisco",
+  "absinthe": "Absenta",
+  "tripleSec": "Triple seco (Cointreau)",
+  "campari": "Campari",
+  "aperol": "Aperol",
+  "liqueurCafe": "Licor de café",
+  "amaretto": "Amaretto",
+  "chartreuse": "Chartreuse verde",
+  "marasquin": "Licor marrasquino",
+  "violette": "Licor de violeta",
+  "cassis": "Crema de casis",
+  "sureau": "Licor de flor de saúco",
+  "amaro": "Amaro Nonino",
+  "vermouthRouge": "Vermut rojo",
+  "vermouthSec": "Vermut seco",
+  "prosecco": "Prosecco",
+  "champagne": "Champán o cava",
+  "angostura": "Angostura",
+  "orangeBitters": "Bitter de naranja",
+  "peychaud": "Bitter Peychaud's",
+  "jusLime": "Zumo de lima",
+  "jusCitron": "Zumo de limón",
+  "jusOrange": "Zumo de naranja",
+  "jusAnanas": "Zumo de piña",
+  "jusCanneberge": "Zumo de arándano rojo",
+  "jusPamplemousse": "Zumo de pomelo",
+  "jusTomate": "Zumo de tomate",
+  "clamato": "Clamato",
+  "passion": "Puré de maracuyá",
+  "peche": "Puré de melocotón",
+  "sirop": "Almíbar simple",
+  "orgeat": "Sirope de horchata (orgeat)",
+  "grenadine": "Granadina",
+  "erable": "Sirope de arce",
+  "agave": "Sirope de agave",
+  "miel": "Sirope de miel",
+  "mielGingembre": "Sirope de miel y jengibre",
+  "framboise": "Sirope de frambuesa",
+  "vanille": "Sirope de vainilla",
+  "soda": "Agua con gas",
+  "tonic": "Tónica",
+  "gingerBeer": "Ginger beer",
+  "gingerAle": "Ginger ale",
+  "cola": "Cola",
+  "menthe": "Menta fresca",
+  "basilic": "Albahaca fresca",
+  "concombre": "Pepino",
+  "lime": "Lima",
+  "blancOeuf": "Clara de huevo",
+  "creme": "Nata ligera",
+  "cremeCoco": "Crema de coco",
+  "espresso": "Espresso",
+  "sel": "Sal",
+  "sucre": "Azúcar",
+  "worcestershire": "Salsa Worcestershire",
+  "tabasco": "Tabasco",
+  "selCeleri": "Sal de apio"
+ },
+ "cocktails": {
+  "amaretto-sour": {
+   "name": "Amaretto sour",
+   "tagline": "Almendra y limón, dulce y espumoso",
+   "description": "El amaretto sour es puro mazapán y piel de limón bajo una suave capa de espuma. El chorrito de bourbon es opcional, pero templa el dulzor y le da cuerpo a la bebida.",
+   "steps": [
+    "Agita sin hielo 10 s.",
+    "Añade hielo y agita 15 s.",
+    "Cuela sobre hielo."
+   ],
+   "garnish": "Cereza y piel de limón"
+  },
+  "americano": {
+   "name": "Americano",
+   "tagline": "El negroni ligero y burbujeante",
+   "description": "Campari y vermut rojo alargados con agua con gas: el aperitivo agridulce que Milán sirve desde el siglo XIX y el cóctel del que nació el negroni. Poco alcohol y mucha frescura.",
+   "steps": [
+    "Vierte el Campari y el vermut sobre hielo.",
+    "Completa con agua con gas."
+   ],
+   "garnish": "Rodaja de naranja"
+  },
+  "aperol-spritz": {
+   "name": "Aperol spritz",
+   "tagline": "El naranja burbujeante de las terrazas",
+   "description": "Tres partes de prosecco, dos de Aperol y un chorrito de agua con gas. Naranja amarga, burbujas suaves y casi ningún esfuerzo: el cóctel que convierte cualquier balcón en una terraza veneciana.",
+   "steps": [
+    "Llena una copa de vino de hielo.",
+    "Vierte el prosecco, luego el Aperol y luego el agua con gas."
+   ],
+   "garnish": "Rodaja de naranja"
+  },
+  "aviation": {
+   "name": "Aviation",
+   "tagline": "Floral, del color del cielo",
+   "description": "Ginebra, limón y licor marrasquino, teñidos de lila pálido por un toque de licor de violeta. Un clásico neoyorquino de antes de la Ley Seca, tan delicado como parece.",
+   "steps": [
+    "Agita con hielo.",
+    "Cuela en una copa coupé fría."
+   ],
+   "garnish": "Cereza al marrasquino"
+  },
+  "bees-knees": {
+   "name": "Bee's Knees",
+   "tagline": "Ginebra, limón y miel de la época de la Ley Seca",
+   "description": "La miel suaviza la ginebra y redondea el limón, un truco de la época en que la ginebra casera necesitaba toda la ayuda posible. Con una buena ginebra, es sencillamente luminoso y dorado.",
+   "steps": [
+    "Agita con hielo.",
+    "Cuela en una copa coupé fría."
+   ],
+   "garnish": "Piel de limón"
+  },
+  "bellini": {
+   "name": "Bellini",
+   "tagline": "Melocotón blanco y prosecco, a la veneciana",
+   "description": "Creado en el Harry’s Bar de Venecia, el Bellini es solo puré de melocotón blanco y prosecco. Maduro, veraniego y mejor con los melocotones más frescos que encuentres.",
+   "steps": [
+    "Vierte el puré de melocotón en la copa flauta.",
+    "Añade el prosecco poco a poco mientras remueves."
+   ],
+   "garnish": ""
+  },
+  "bloody-mary": {
+   "name": "Bloody Mary",
+   "tagline": "Tomate picante, el imprescindible del brunch",
+   "description": "Vodka, tomate, limón y un buen golpe de salsa Worcestershire y Tabasco. Sazónalo a tu gusto: el Bloody Mary es tanto una receta como una conversación.",
+   "steps": [
+    "Mezcla todos los ingredientes en un vaso lleno de hielo.",
+    "Remueve y prueba el punto de sazón."
+   ],
+   "garnish": "Rama de apio"
+  },
+  "boulevardier": {
+   "name": "Boulevardier",
+   "tagline": "El primo otoñal del negroni",
+   "description": "Cambia la ginebra del negroni por bourbon y tendrás el Boulevardier: más cálido, más redondo y un poco más dulce. Un clásico parisino de los años veinte pensado para las noches frescas.",
+   "steps": [
+    "Remueve con hielo.",
+    "Cuela sobre un cubo de hielo grande."
+   ],
+   "garnish": "Piel de naranja"
+  },
+  "caesar": {
+   "name": "Caesar",
+   "tagline": "El cóctel nacional de Canadá",
+   "description": "Nacido en Calgary en 1969, el Caesar cambia el zumo de tomate del Bloody Mary por Clamato. Con el borde escarchado de sal de apio y un toque de salsa picante, es sabroso, salino y muy canadiense.",
+   "steps": [
+    "Escarcha el borde del vaso con sal de apio.",
+    "Llena de hielo.",
+    "Añade los ingredientes y remueve."
+   ],
+   "garnish": "Rama de apio y gajo de lima"
+  },
+  "caipirinha": {
+   "name": "Caipiriña",
+   "tagline": "El cóctel nacional de Brasil",
+   "description": "Lima y azúcar machacadas en el mismo vaso, y después cachaza y hielo picado. Rústica, cítrica e imposible de beber despacio en un día de calor.",
+   "steps": [
+    "Corta la media lima en gajos y macházala con el azúcar en el vaso.",
+    "Añade el hielo picado y luego la cachaza.",
+    "Remueve."
+   ],
+   "garnish": ""
+  },
+  "clover-club": {
+   "name": "Clover Club",
+   "tagline": "Frambuesa y limón, con espuma sedosa",
+   "description": "Un sour de ginebra rosa y espumoso, nacido en el Clover Club de Filadelfia. La frambuesa y el limón le dan acidez; la clara de huevo, una espuma aterciopelada.",
+   "steps": [
+    "Agita sin hielo 10 s para que haga espuma.",
+    "Añade hielo y agita 15 s más.",
+    "Cuela en una copa coupé."
+   ],
+   "garnish": "Frambuesas frescas"
+  },
+  "cosmopolitan": {
+   "name": "Cosmopolitan",
+   "tagline": "Arándano rojo y cítricos, rosado y vivo",
+   "description": "Vodka, triple seco, arándano rojo y lima. El Cosmo definió las coctelerías de los noventa y, hecho con lima fresca, se sigue ganando su sitio.",
+   "steps": [
+    "Agita con hielo.",
+    "Cuela en una copa de martini fría."
+   ],
+   "garnish": "Piel de naranja"
+  },
+  "cuba-libre": {
+   "name": "Cuba libre",
+   "tagline": "Ron, cola y un chorrito de lima",
+   "description": "Más que un ron con cola: la lima es lo que lo convierte en un Cuba libre. Sencillo, dulce y refrescante, un highball para cualquier noche.",
+   "steps": [
+    "Llena el vaso de hielo.",
+    "Vierte el ron y la lima, y completa con cola."
+   ],
+   "garnish": "Gajo de lima"
+  },
+  "daiquiri": {
+   "name": "Daiquiri",
+   "tagline": "Ron, lima y azúcar: la trinidad perfecta",
+   "description": "Olvídate de la versión granizada. El daiquiri clásico son tres ingredientes agitados con fuerza y servidos sin hielo: la prueba más pura de un buen ron y de una mano equilibrada.",
+   "steps": [
+    "Agita fuerte con hielo.",
+    "Cuela en una copa coupé fría."
+   ],
+   "garnish": "Rodaja de lima"
+  },
+  "dark-n-stormy": {
+   "name": "Dark 'n' Stormy",
+   "tagline": "Ron añejo y jengibre picante",
+   "description": "Ginger beer picante abajo y ron añejo flotando encima como un nubarrón. Bébelo por capas, o remuévelo y deja que amaine la tormenta.",
+   "steps": [
+    "Llena el vaso de hielo y ginger beer.",
+    "Añade la lima.",
+    "Haz flotar el ron por encima."
+   ],
+   "garnish": "Gajo de lima"
+  },
+  "dry-martini": {
+   "name": "Dry martini",
+   "tagline": "Seco, frío y elegante",
+   "description": "Ginebra, un susurro de vermut seco y mucho remover. El dry martini es cuestión de temperatura y contención: mantenlo todo helado y sírvelo al momento.",
+   "steps": [
+    "Remueve los ingredientes 30 s en un vaso mezclador lleno de hielo.",
+    "Cuela en una copa de martini bien fría."
+   ],
+   "garnish": "Aceituna o piel de limón"
+  },
+  "espresso-martini": {
+   "name": "Espresso martini",
+   "tagline": "El café que despierta la noche",
+   "description": "Vodka, licor de café y espresso recién hecho, agitados hasta formar una crema espesa. Creado en Londres en los años ochenta, es la copa de sobremesa que mantiene viva la noche.",
+   "steps": [
+    "Prepara un espresso y déjalo templar.",
+    "Agita con mucha fuerza y mucho hielo.",
+    "Cuela dos veces en una copa coupé para lograr una buena espuma."
+   ],
+   "garnish": "3 granos de café"
+  },
+  "french-75": {
+   "name": "French 75",
+   "tagline": "Ginebra, limón y burbujas: elegante y festivo",
+   "description": "Bautizado en honor a un cañón de la Primera Guerra Mundial, el French 75 es un sour de ginebra coronado con champán. Ligero en apariencia, pero con más pegada de la que crees.",
+   "steps": [
+    "Agita la ginebra, el limón y el almíbar con hielo.",
+    "Cuela en una copa flauta.",
+    "Completa con champán."
+   ],
+   "garnish": "Tira larga de piel de limón"
+  },
+  "gimlet": {
+   "name": "Gimlet",
+   "tagline": "Ginebra y lima, sin más",
+   "description": "Ginebra, lima y un poco de azúcar. Afilado, vigorizante y fresco: el gimlet recuerda que un gran cóctel cabe en una servilleta.",
+   "steps": [
+    "Agita con fuerza con hielo.",
+    "Cuela en una copa coupé fría."
+   ],
+   "garnish": "Rodaja de lima"
+  },
+  "gin-fizz": {
+   "name": "Gin fizz",
+   "tagline": "Alimonado, ligero y burbujeante",
+   "description": "Un sour de ginebra alargado con agua con gas y servido sin hielo. Añade una clara de huevo para una textura sedosa, como de nube: es la versión favorita de los bármanes.",
+   "steps": [
+    "Agita la ginebra, el limón, el almíbar (y la clara) sin hielo durante 10 s.",
+    "Añade hielo y agita 15 s más.",
+    "Cuela en un vaso sin hielo y completa con agua con gas."
+   ],
+   "garnish": "Piel de limón"
+  },
+  "gin-tonic": {
+   "name": "Gin tonic",
+   "tagline": "El gran clásico refrescante",
+   "description": "Ginebra y tónica con mucho hielo. El truco: ingredientes fríos, un vaso lleno de hielo y verter con suavidad, para que las burbujas duren hasta el último sorbo.",
+   "steps": [
+    "Llena un vaso de hielo.",
+    "Vierte la ginebra y luego la tónica, con suavidad.",
+    "Remueve una vez."
+   ],
+   "garnish": "Gajo de lima o rodaja de pepino"
+  },
+  "hugo": {
+   "name": "Hugo spritz",
+   "tagline": "Flor de saúco, menta y burbujas",
+   "description": "El primo floral del Aperol spritz, llegado de los Alpes: flor de saúco, menta fresca, prosecco y agua con gas. Aromático, ligero y pensado para las largas tardes de verano.",
+   "steps": [
+    "Estruja la menta en la copa.",
+    "Añade hielo, licor de saúco, prosecco y agua con gas."
+   ],
+   "garnish": "Menta y rodaja de lima"
+  },
+  "kir-royal": {
+   "name": "Kir royal",
+   "tagline": "Casis y champán, el aperitivo a la francesa",
+   "description": "Un chorrito de crema de casis completado con champán: la versión festiva del kir de Borgoña. Dos ingredientes y una elegancia infinita.",
+   "steps": [
+    "Vierte la crema de casis en la copa flauta.",
+    "Completa con champán bien frío."
+   ],
+   "garnish": ""
+  },
+  "last-word": {
+   "name": "Last Word",
+   "tagline": "Herbal e intenso, a partes iguales",
+   "description": "Ginebra, Chartreuse verde, licor marrasquino y lima a partes iguales. Una receta de la época de la Ley Seca redescubierta por los bármanes de hoy: dulce, ácida, herbal y perfectamente equilibrada.",
+   "steps": [
+    "Agita con hielo.",
+    "Cuela en una copa coupé fría."
+   ],
+   "garnish": "Cereza al marrasquino"
+  },
+  "limonade-concombre": {
+   "name": "Limonada de pepino y albahaca",
+   "tagline": "Una limonada de spa, herbal y refrescante",
+   "description": "Pepino y albahaca machacados con limón y completados con agua con gas. Sin alcohol, fresca como recién salida del huerto y lo bastante adulta para toda la mesa.",
+   "steps": [
+    "Macera el pepino y la albahaca en la coctelera.",
+    "Añade el limón, el almíbar y el hielo, y agita.",
+    "Cuela sobre hielo y completa con agua con gas."
+   ],
+   "garnish": "Cinta de pepino"
+  },
+  "mai-tai": {
+   "name": "Mai tai",
+   "tagline": "El rey de los cócteles tiki",
+   "description": "Dos rones, triple seco, sirope de horchata y lima sobre hielo picado. El mai tai original no es un ponche de frutas: es almendrado, ácido y con el ron como protagonista.",
+   "steps": [
+    "Agita con hielo picado.",
+    "Vierte en el vaso sin colar."
+   ],
+   "garnish": "Ramita de menta y media lima"
+  },
+  "manhattan": {
+   "name": "Manhattan",
+   "tagline": "Whisky de centeno y vermut, rico y sedoso",
+   "description": "Whisky de centeno, vermut rojo y Angostura, removidos y servidos sin hielo. Especiado, profundo y sedoso: una de las recetas fundacionales del canon coctelero.",
+   "steps": [
+    "Remueve con hielo durante 30 s.",
+    "Cuela en una copa coupé fría."
+   ],
+   "garnish": "Cereza al marrasquino"
+  },
+  "margarita": {
+   "name": "Margarita",
+   "tagline": "Tequila, lima y triple seco, con borde de sal",
+   "description": "La margarita clásica: tequila, triple seco y lima, agitados y servidos sin hielo. Escarcha con sal solo la mitad del borde y decide en cada sorbo si lo quieres salado o no.",
+   "steps": [
+    "Escarcha con sal la mitad del borde del vaso.",
+    "Agita con hielo.",
+    "Cuela en el vaso."
+   ],
+   "garnish": "Rodaja de lima"
+  },
+  "mimosa": {
+   "name": "Mimosa",
+   "tagline": "Burbujas y zumo de naranja para el brunch",
+   "description": "Zumo de naranja frío y vino espumoso a partes iguales. El cóctel más fácil de la lista, y el que tiene más papeletas para aparecer junto a unas tortitas.",
+   "steps": [
+    "Vierte el zumo de naranja frío en la copa flauta.",
+    "Completa con cuidado con vino espumoso."
+   ],
+   "garnish": ""
+  },
+  "mojito": {
+   "name": "Mojito",
+   "tagline": "Menta fresca, lima y ron",
+   "description": "El highball de La Habana: menta presionada con suavidad junto a la lima y el azúcar, ron blanco, hielo picado y agua con gas. Presiona la menta, no la destroces: buscas aroma, no amargor.",
+   "steps": [
+    "Presiona suavemente la menta con el almíbar y la lima en el vaso.",
+    "Añade el ron y llena de hielo picado.",
+    "Completa con agua con gas y remueve de abajo arriba."
+   ],
+   "garnish": "Ramita de menta"
+  },
+  "moscow-mule": {
+   "name": "Moscow mule",
+   "tagline": "Vodka, jengibre y lima",
+   "description": "Vodka, lima y ginger beer picante en una taza de cobre escarchada. Fresco, cítrico y tan fácil de preparar como de beber.",
+   "steps": [
+    "Llena la taza de hielo.",
+    "Vierte el vodka y la lima.",
+    "Completa con ginger beer."
+   ],
+   "garnish": "Gajo de lima y menta"
+  },
+  "ginger-mule-zero": {
+   "name": "Mule sin alcohol",
+   "tagline": "Jengibre, lima y menta",
+   "description": "Todo el mordiente de un Moscow mule sin el vodka: ginger beer, lima fresca y unas hojas de menta en una taza de cobre bien fría.",
+   "steps": [
+    "Llena la taza de hielo.",
+    "Añade la lima y completa con ginger beer."
+   ],
+   "garnish": "Menta y gajo de lima"
+  },
+  "negroni": {
+   "name": "Negroni",
+   "tagline": "El aperitivo italiano, amargo y perfectamente equilibrado",
+   "description": "Ginebra, Campari y vermut rojo a partes iguales, removidos con hielo. Nacido, según se dice, en Florencia hacia 1919, el negroni es el aperitivo agridulce que todo bar debería saberse de memoria.",
+   "steps": [
+    "Vierte todos los ingredientes en un vaso mezclador lleno de hielo.",
+    "Remueve durante 20 segundos.",
+    "Cuela en un vaso old fashioned sobre un cubo de hielo grande."
+   ],
+   "garnish": "Piel de naranja"
+  },
+  "oaxaca-old-fashioned": {
+   "name": "Oaxaca old fashioned",
+   "tagline": "Un old fashioned ahumado de agave",
+   "description": "El tequila y un toque de mezcal sustituyen al whisky, endulzados con agave. Un clásico moderno del Death & Co de Nueva York: terroso, ahumado y sedoso.",
+   "steps": [
+    "Remueve con hielo.",
+    "Cuela sobre un cubo de hielo grande."
+   ],
+   "garnish": "Piel de naranja flameada"
+  },
+  "old-fashioned": {
+   "name": "Old fashioned",
+   "tagline": "El cóctel original, lleno de profundidad",
+   "description": "Destilado, azúcar, bitter y agua: la definición misma de cóctel. Remuévelo despacio, sírvelo sobre un cubito grande y deja que los aceites de la piel de naranja hagan el resto.",
+   "steps": [
+    "Remueve los ingredientes con hielo durante 30 s.",
+    "Cuela sobre un cubo de hielo grande.",
+    "Exprime la piel de naranja sobre el vaso."
+   ],
+   "garnish": "Piel de naranja"
+  },
+  "old-fashioned-erable": {
+   "name": "Old fashioned de arce",
+   "tagline": "La versión quebequense, con whisky de centeno y arce",
+   "description": "Whisky de centeno endulzado con sirope de arce en lugar de azúcar. Amaderado, especiado y ligeramente caramelizado: una versión del original con aire de cabaña de azúcar.",
+   "steps": [
+    "Remueve con hielo.",
+    "Cuela sobre un cubo de hielo grande."
+   ],
+   "garnish": "Piel de naranja"
+  },
+  "paloma": {
+   "name": "Paloma",
+   "tagline": "Pomelo y tequila, el favorito de México",
+   "description": "En México, la paloma se vende más que la margarita. Tequila, pomelo, lima, una pizca de sal y agua con gas: ácida, salada e infinitamente refrescante.",
+   "steps": [
+    "Llena el vaso de hielo.",
+    "Añade el tequila, el zumo y la sal.",
+    "Completa con agua con gas."
+   ],
+   "garnish": "Rodaja de pomelo"
+  },
+  "pamplemousse-romarin": {
+   "name": "Paloma sin alcohol",
+   "tagline": "Pomelo, lima y una pizca de sal",
+   "description": "La paloma sin el tequila: pomelo, lima y un toque de agave, realzados con una pizca de sal y agua con gas. La prueba de que sin alcohol no significa aburrido.",
+   "steps": [
+    "Llena el vaso de hielo.",
+    "Añade el zumo, el agave y la sal, y completa con agua con gas."
+   ],
+   "garnish": "Rodaja de pomelo"
+  },
+  "paper-plane": {
+   "name": "Paper plane",
+   "tagline": "Bourbon, Aperol y amaro a partes iguales",
+   "description": "Un clásico moderno a partes iguales: bourbon, Aperol, Amaro Nonino y limón. Agridulce, luminoso y peligrosamente fácil de querer.",
+   "steps": [
+    "Agita con hielo.",
+    "Cuela en una copa coupé fría."
+   ],
+   "garnish": ""
+  },
+  "penicillin": {
+   "name": "Penicillin",
+   "tagline": "Whisky escocés, miel y jengibre: un remedio moderno",
+   "description": "Un whisky sour endulzado con sirope de miel y jengibre. Creado en Nueva York en los años 2000, es reconfortante, especiado y balsámico: el remedio para todo del barman.",
+   "steps": [
+    "Agita con hielo.",
+    "Cuela sobre un cubo de hielo grande."
+   ],
+   "garnish": "Jengibre confitado"
+  },
+  "pisco-sour": {
+   "name": "Pisco sour",
+   "tagline": "El orgullo de Perú y Chile",
+   "description": "Pisco, lima, azúcar y clara de huevo, rematado con unas gotas de bitter sobre la espuma. Perú y Chile se lo disputan, pero todos coinciden en que está delicioso.",
+   "steps": [
+    "Agita sin hielo 10 s.",
+    "Añade hielo y agita 15 s.",
+    "Cuela y pon unas gotas de angostura sobre la espuma."
+   ],
+   "garnish": ""
+  },
+  "pina-colada": {
+   "name": "Piña colada",
+   "tagline": "Piña y coco, vacaciones al instante",
+   "description": "Ron, crema de coco y piña batidos hasta quedar sedosos. La bebida nacional de Puerto Rico y el camino más corto entre tu cocina y la playa.",
+   "steps": [
+    "Bate con una taza de hielo hasta que quede homogéneo.",
+    "Sirve en un vaso alto."
+   ],
+   "garnish": "Trozo de piña y cereza"
+  },
+  "pornstar-martini": {
+   "name": "Pornstar martini",
+   "tagline": "Maracuyá y vainilla, con burbujas al lado",
+   "description": "Vodka, maracuyá y vainilla, con un chupito de prosecco al lado. Afrutado, ácido y pensado para celebrar.",
+   "steps": [
+    "Agita todos los ingredientes, salvo el prosecco, con hielo.",
+    "Cuela en una copa coupé.",
+    "Sirve el prosecco aparte, en un vasito."
+   ],
+   "garnish": "Medio maracuyá"
+  },
+  "sazerac": {
+   "name": "Sazerac",
+   "tagline": "El gran clásico de Nueva Orleans",
+   "description": "Whisky de centeno, azúcar y bitter Peychaud’s en un vaso enjuagado con absenta. Anís en nariz, especias en boca: un auténtico sabor de Nueva Orleans.",
+   "steps": [
+    "Enjuaga un vaso frío con la absenta y desecha el sobrante.",
+    "Remueve el whisky de centeno, el almíbar y el bitter con hielo.",
+    "Cuela en el vaso, sin hielo."
+   ],
+   "garnish": "Piel de limón"
+  },
+  "shirley-temple": {
+   "name": "Shirley Temple",
+   "tagline": "El clásico sin alcohol, rosado y burbujeante",
+   "description": "Ginger ale y granadina que se hunde hasta formar un atardecer rosado en el fondo del vaso. El cóctel sin alcohol original, querido por pequeños y mayores.",
+   "steps": [
+    "Llena el vaso de hielo y ginger ale.",
+    "Añade la granadina, que se irá al fondo."
+   ],
+   "garnish": "Cereza al marrasquino"
+  },
+  "sidecar": {
+   "name": "Sidecar",
+   "tagline": "Coñac y cítricos, la elegancia de los años veinte",
+   "description": "Coñac, triple seco y limón, servidos en una copa con el borde escarchado de azúcar. Un clásico de los locos años veinte: ácido, intenso y refinado.",
+   "steps": [
+    "Escarcha el borde de la copa con azúcar (opcional).",
+    "Agita con hielo.",
+    "Cuela en la copa."
+   ],
+   "garnish": "Piel de naranja"
+  },
+  "southside": {
+   "name": "Southside",
+   "tagline": "Un gimlet refrescado con menta",
+   "description": "Ginebra, lima, azúcar y menta fresca, agitados y con doble colado. Piensa en él como un mojito de esmoquin.",
+   "steps": [
+    "Agita todos los ingredientes con hielo.",
+    "Cuela dos veces en una copa coupé fría."
+   ],
+   "garnish": "Hoja de menta"
+  },
+  "tommys-margarita": {
+   "name": "Tommy's margarita",
+   "tagline": "La margarita moderna con agave",
+   "description": "Sin triple seco: solo tequila, lima y sirope de agave, para que brille el tequila. Creado en San Francisco y hoy un clásico por derecho propio.",
+   "steps": [
+    "Agita con hielo.",
+    "Cuela sobre hielo nuevo."
+   ],
+   "garnish": "Gajo de lima"
+  },
+  "virgin-colada": {
+   "name": "Piña colada sin alcohol",
+   "tagline": "Piña y coco cremosos para todos",
+   "description": "Toda la cremosidad de piña y coco de una piña colada, sin el ron. Bátela hasta que quede suave y sírvela con pajita.",
+   "steps": [
+    "Bate con una taza de hielo.",
+    "Sirve en un vaso alto."
+   ],
+   "garnish": "Trozo de piña"
+  },
+  "virgin-mojito": {
+   "name": "Mojito sin alcohol",
+   "tagline": "Toda la frescura del mojito, sin alcohol",
+   "description": "Menta, lima, azúcar, hielo picado y agua con gas. Todo lo que hace refrescante a un mojito, menos el ron.",
+   "steps": [
+    "Presiona suavemente la menta con el almíbar y la lima.",
+    "Llena de hielo picado y completa con agua con gas."
+   ],
+   "garnish": "Ramita de menta"
+  },
+  "whisky-sour": {
+   "name": "Whisky sour",
+   "tagline": "Ácido, sedoso y reconfortante",
+   "description": "Bourbon, limón y azúcar, con clara de huevo opcional para una textura cremosa. Unas gotas de bitter sobre la espuma lo dejan tan bonito como equilibrado.",
+   "steps": [
+    "Agita sin hielo 10 s (si usas clara de huevo).",
+    "Añade hielo y agita 15 s.",
+    "Cuela sobre hielo y pon unas gotas de angostura sobre la espuma."
+   ],
+   "garnish": "Cereza y rodaja de naranja"
+  },
+  "white-russian": {
+   "name": "White Russian",
+   "tagline": "Dulzura cremosa con café",
+   "description": "Vodka y licor de café con hielo, coronados con nata. Un postre en un vaso, para disfrutarlo despacio en un buen sillón.",
+   "steps": [
+    "Vierte el vodka y el licor de café sobre hielo.",
+    "Cubre con la nata y remueve ligeramente."
+   ],
+   "garnish": ""
+  }
+ }
+}

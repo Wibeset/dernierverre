@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Render link-preview and recipe images with headless Chrome (macOS: uses `sips` to convert to JPEG).
 
-    python3 tools/images.py              # everything missing, both languages (--force to redo all)
+    python3 tools/images.py              # everything missing, every language (--force to redo all)
     python3 tools/images.py negroni      # only these cocktails
+    python3 tools/images.py es --force   # only this language (combine with ids or 'home')
 
-Writes, for each language (en, fr):
+Writes, for each language (en, fr, es):
     assets/og/<lang>/home.jpg, cocktails.jpg       1200×630, link previews
     assets/og/<lang>/<id>.jpg                      1200×630, link previews + Recipe schema
     assets/og/<lang>/<id>-1x1.jpg                  1200×1200, Recipe schema (Google wants several ratios)
@@ -19,9 +20,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
 recipes = json.loads((ROOT / 'data/recipes.json').read_text())
-DATA = {l: json.loads((ROOT / f'data/{l}.json').read_text()) for l in ('en', 'fr')}
+DATA = {l: json.loads((ROOT / f'data/{l}.json').read_text()) for l in ('en', 'fr', 'es')}
 KICK = {'en': ('Cocktail recipe', 'Coming soon on iPhone', 'One more, perfectly mixed.', 'Every cocktail recipe.', 'recipes'),
-        'fr': ('Recette de cocktail', 'Bientôt sur iPhone', 'Un dernier, parfaitement dosé.', 'Toutes les recettes.', 'recettes')}
+        'fr': ('Recette de cocktail', 'Bientôt sur iPhone', 'Un dernier, parfaitement dosé.', 'Toutes les recettes.', 'recettes'),
+        'es': ('Receta de cóctel', 'Próximamente en iPhone', 'Una más, en su punto justo.', 'Todas las recetas.', 'recetas')}
 TMP = Path(tempfile.mkdtemp(prefix='dv-img-'))
 
 def ink_on(hex_):
@@ -37,7 +39,7 @@ PAGE = '''<!doctype html><html><head><meta charset="utf-8">
 body{{background:{bg};color:{ink};font-family:Archivo,sans-serif;padding:{pad}px;display:flex;flex-direction:column;justify-content:space-between}}
 .k{{font-size:{k}px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;display:flex;justify-content:space-between;align-items:center}}
 .k img{{width:{icon}px;height:{icon}px;border-radius:{rad}px}}
-.p{{font-stretch:62%;font-weight:900;text-transform:uppercase;line-height:.86;margin:0;overflow:hidden}}
+.p{{font-stretch:62%;font-weight:900;text-transform:uppercase;line-height:.86;margin:0;padding-top:.14em;overflow:hidden}}
 .t{{font-size:{tl}px;font-weight:600;margin:18px 0 0;line-height:1.3}}
 .r{{border-top:4px solid {ink};padding-top:18px;font-size:{r}px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;line-height:1.35}}
 .sw{{display:flex;gap:10px}} .sw i{{width:44px;height:44px;border-radius:10px;border:3px solid {ink}}}
@@ -63,18 +65,21 @@ def jpg(png, dest):
                    check=True, stdout=subprocess.DEVNULL)
 
 FORCE = '--force' in sys.argv
-only = {a for a in sys.argv[1:] if a != '--force'}
-for lang in ('en', 'fr'):
+LANGS = ('en', 'fr', 'es')
+args = {a for a in sys.argv[1:] if a != '--force'}
+langs = [l for l in LANGS if l in args] or LANGS
+only = args - set(LANGS)
+for lang in langs:
     d, (kick, free, tagline, every, word) = DATA[lang], KICK[lang]
     out = ROOT / 'assets/og' / lang
     for i, r in enumerate(recipes, 1):
         if only and r['id'] not in only: continue  # pass 'home' to render only the home/list images
         if not FORCE and not only and (out / f'{r["id"]}-1x1.jpg').exists(): continue  # already rendered
-        if lang == 'en':
+        if lang != 'fr':
             t = d['cocktails'][r['id']]; name, tl = t.get('name', r['name']), t['tagline']
         else:
             name, tl = r['name'], r['tagline']
-        qty = lambda m: (f'{m["ml"]:g}'.replace('.', ',' if lang == 'fr' else '.') + ' ml ') if 'ml' in m else ''
+        qty = lambda m: (f'{m["ml"]:g}'.replace('.', ',' if lang in ('fr', 'es') else '.') + ' ml ') if 'ml' in m else ''
         ings = ' · '.join(f'{qty(m)}{d["ingredients"][m["id"]].split(" (")[0]}' for m in r['ingredients'] if not m.get('optional'))
         head = f'<div class="k"><span>Dernier Verre · {kick}</span><span>N° {i:02d} / {len(recipes)}</span></div>'
         mid = f'<div><h1 class="p">{e(name)}</h1><p class="t">{e(tl)}</p></div>'

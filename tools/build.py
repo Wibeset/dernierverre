@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the static site for GitHub Pages (https://dernierverre.app), in English and French.
+"""Build the static site for GitHub Pages (https://dernierverre.app), in English, French and Spanish.
 
     python3 tools/build.py
 
@@ -8,15 +8,16 @@ Sources
     data/recipes.json      recipes extracted from the app (French text, quantities, colours) — see extract.py
     data/en.json           English recipe copy and labels
     data/fr.json           French descriptions and labels (names, taglines, steps come from the app)
-    data/ui.json           interface strings, both languages
+    data/es.json           Spanish recipe copy and labels (names, taglines, steps, garnishes from the app's Recipes.xcstrings)
+    data/ui.json           interface strings, every language
     src/privacy.<lang>.html, src/support.<lang>.html   privacy policy and support page bodies
 
-Output (English at the root, French under /fr/)
-    index.html, fr/index.html                      home
-    cocktails/index.html, fr/cocktails/index.html  all recipes
-    cocktails/<id>/, fr/cocktails/<id>/            one page per cocktail
-    privacy/, support/, fr/confidentialite/, fr/assistance/   from src/privacy.<lang>.html, src/support.<lang>.html
-    assets/data.en.js, assets/data.fr.js           data for the home page scripts
+Output (English at the root, French under /fr/, Spanish under /es/)
+    index.html, fr/index.html, es/index.html       home
+    cocktails/index.html, <lang>/cocktails/        all recipes
+    cocktails/<id>/, <lang>/cocktails/<id>/        one page per cocktail
+    privacy/, support/, fr/confidentialite/, fr/assistance/, es/privacidad/, es/ayuda/   from src/privacy.<lang>.html, src/support.<lang>.html
+    assets/data.<lang>.js                          data for the home page scripts
     404.html, sitemap.xml, robots.txt, llms.txt, site.webmanifest, CNAME, .nojekyll
 
 Images (assets/og/) are rendered separately by tools/images.py. Standard library only.
@@ -28,13 +29,14 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SITE = 'https://dernierverre.app'
 APP_STORE = None  # the App Store URL once the app is published; until then buttons say "coming soon"
-LANGS = ('en', 'fr')
-PREFIX = {'en': '', 'fr': 'fr/'}
+LANGS = ('en', 'fr', 'es')
+PREFIX = {'en': '', 'fr': 'fr/', 'es': 'es/'}
 # Privacy and support pages: their slug in each language (body in src/<page>.<lang>.html)
-PAGES = {'privacy': {'en': 'privacy', 'fr': 'confidentialite'}, 'support': {'en': 'support', 'fr': 'assistance'}}
+PAGES = {'privacy': {'en': 'privacy', 'fr': 'confidentialite', 'es': 'privacidad'},
+         'support': {'en': 'support', 'fr': 'assistance', 'es': 'ayuda'}}
 
 recipes = json.loads((ROOT / 'data/recipes.json').read_text())
-DATA = {'en': json.loads((ROOT / 'data/en.json').read_text()), 'fr': json.loads((ROOT / 'data/fr.json').read_text())}
+DATA = {lang: json.loads((ROOT / f'data/{lang}.json').read_text()) for lang in LANGS}
 UI = json.loads((ROOT / 'data/ui.json').read_text())
 HOME = (ROOT / 'src/home.html').read_text()
 TODAY = date.today().isoformat()
@@ -44,8 +46,11 @@ e = lambda s: html.escape(str(s), quote=True)
 for r in recipes:
     if r['id'] not in DATA['en']['cocktails']: raise SystemExit(f'data/en.json: no English copy for {r["id"]}')
     if r['id'] not in DATA['fr']['cocktails']: raise SystemExit(f'data/fr.json: no French description for {r["id"]}')
-    if len(DATA['en']['cocktails'][r['id']]['steps']) != len(r['steps']):
-        raise SystemExit(f'{r["id"]}: {len(r["steps"])} steps in the app, {len(DATA["en"]["cocktails"][r["id"]]["steps"])} in en.json')
+    for lang in ('en', 'es'):  # full copy per cocktail; French text comes from recipes.json
+        t = DATA[lang]['cocktails'].get(r['id'])
+        if not t or not t.get('description'): raise SystemExit(f'data/{lang}.json: no copy for {r["id"]}')
+        if len(t['steps']) != len(r['steps']):
+            raise SystemExit(f'{r["id"]}: {len(r["steps"])} steps in the app, {len(t["steps"])} in {lang}.json')
 
 def lum(hex_):
     n = int(hex_[1:], 16)
@@ -66,7 +71,7 @@ def ink_on(hex_):
 def cocktails(lang):
     d, out = DATA[lang], []
     for i, r in enumerate(recipes, 1):
-        if lang == 'en':
+        if lang != 'fr':
             t = d['cocktails'][r['id']]
             text = dict(name=t.get('name', r['name']), tagline=t['tagline'], description=t['description'], steps=t['steps'], garnish=t['garnish'])
         else:
@@ -76,7 +81,8 @@ def cocktails(lang):
 C = {lang: cocktails(lang) for lang in LANGS}
 
 # ---------- quantities, formatted like the app (UserLibrary.swift) ----------
-def decimal(v, lang): return f'{v:.1f}'.rstrip('0').rstrip('.').replace('.', ',' if lang == 'fr' else '.')
+COMMA = {'fr', 'es'}  # languages that write 1,5 rather than 1.5
+def decimal(v, lang): return f'{v:.1f}'.rstrip('0').rstrip('.').replace('.', ',' if lang in COMMA else '.')
 def fraction(v, lang):
     q = round(v * 4)
     if q <= 0: return decimal(v, lang)
@@ -106,7 +112,7 @@ def qty_attrs(m, lang):
 BRANDS = {'campari', 'aperol', 'chartreuse', 'amaro', 'angostura', 'peychaud', 'clamato', 'tabasco', 'worcestershire'}
 def ing_lower(i, lang):
     name = re.sub(r'\s*\(.*\)$', '', DATA[lang]['ingredients'][i])
-    if i in BRANDS and not (lang == 'fr' and i == 'worcestershire'): return name
+    if i in BRANDS and (name.lower().startswith(i[:4]) if lang == 'es' else not (lang == 'fr' and i == 'worcestershire')): return name
     return name[0].lower() + name[1:]
 def de(word):  # French partitive: "de gin", "d’Aperol"
     return ('d’' if word[0].lower() in 'aeiouyhéèêâîôû' else 'de ') + word
@@ -116,11 +122,11 @@ def phrase(m, lang):
         q = qty(m, lang)
         unit = DATA[lang]['units'][m['unit']][0]
         if name.lower().startswith(unit.lower()): return f'{fraction(m["count"], lang)} {name}'
-        return f'{q} {de(name)}' if lang == 'fr' else f'{q} of {name}'
+        return {'fr': f'{q} {de(name)}', 'es': f'{q} de {name}'}.get(lang, f'{q} of {name}')
     if 'text' in m:
-        if m['text'] == '2 c. à thé': return f'2 c. à thé {de(name)}' if lang == 'fr' else f'2 tsp {name}'
+        if m['text'] == '2 c. à thé': return {'fr': f'2 c. à thé {de(name)}', 'es': f'2 cdtas. de {name}'}.get(lang, f'2 tsp {name}')
         return None  # "to rim the glass" and friends read better in the list than in a sentence
-    return f'{qty(m, lang)} {de(name)}' if lang == 'fr' else f'{qty(m, lang)} {name}'
+    return {'fr': f'{qty(m, lang)} {de(name)}', 'es': f'{qty(m, lang)} de {name}'}.get(lang, f'{qty(m, lang)} {name}')
 def summary(c, lang):
     u = UI[lang]
     parts = [p for m in c['ingredients'] if not m.get('optional') and not m.get('top') for p in [phrase(m, lang)] if p]
@@ -167,7 +173,7 @@ def up_for(path):
     return '../' * (path.strip('/').count('/') + 1) if path.strip('/') else ''
 
 def head(lang, title, desc, path, alt, extra=(), color=None, image=None, noindex=False, base=None):
-    """alt: {'en': path, 'fr': path} — the same page in each language."""
+    """alt: {lang: path} — the same page in each language."""
     u = UI[lang]
     up = base if base is not None else up_for(path)
     theme = color or '#F4F2EC'
@@ -177,12 +183,12 @@ def head(lang, title, desc, path, alt, extra=(), color=None, image=None, noindex
              + ''.join(f'<link rel="alternate" hreflang="{l}" href="{SITE}{p}">\n' for l, p in alt.items())
              + f'<link rel="alternate" hreflang="x-default" href="{SITE}{alt["en"]}">\n')
     ld = ''.join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>\n' for x in extra)
-    other = 'fr' if lang == 'en' else 'en'
     cur = lambda l: ' aria-current="true"' if l == lang else ''
-    switch = (f'<span class="langs"><a href="{up}{alt["en"].lstrip("/") or "./"}" hreflang="en" lang="en"{cur("en")}>EN</a>'
-              f'<span aria-hidden="true">/</span><a href="{up}{alt["fr"].lstrip("/")}" hreflang="fr" lang="fr"{cur("fr")}>FR</a></span>')
+    switch = ('<span class="langs">' + '<span aria-hidden="true">/</span>'.join(
+        f'<a href="{up}{alt[l].lstrip("/") or "./"}" hreflang="{l}" lang="{l}"{cur(l)}>{l.upper()}</a>' for l in LANGS) + '</span>')
+    alternates = ''.join(f'<meta property="og:locale:alternate" content="{UI[l]["locale"]}">\n' for l in LANGS if l != lang)
     home = up + PREFIX[lang]
-    kind = 'article' if path.count('/') > (3 if lang == 'fr' else 2) and '/cocktails/' in path else 'website'
+    kind = 'article' if path.count('/') > (3 if PREFIX[lang] else 2) and '/cocktails/' in path else 'website'
     robots = '<meta name="robots" content="noindex">\n' if noindex else ''
     return f'''<!doctype html>
 <html lang="{lang}"{style}>
@@ -202,8 +208,7 @@ def head(lang, title, desc, path, alt, extra=(), color=None, image=None, noindex
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="{e(title)}">
 <meta property="og:locale" content="{u['locale']}">
-<meta property="og:locale:alternate" content="{UI[other]['locale']}">
-<meta name="twitter:card" content="summary_large_image">
+{alternates}<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -280,7 +285,10 @@ BY_BASE = {lang: {} for lang in LANGS}
 for lang in LANGS:
     for c in C[lang]: BY_BASE[lang].setdefault(c['base'], []).append(c)
 N = len(recipes)
-sitemap = []  # (path_en, path_fr)
+sitemap = []  # {lang: path} for each page
+LD_TEXT = {'en': {'cocktail': 'Cocktail', 'free': 'Mocktail', 'yield': '1 drink'},
+           'fr': {'cocktail': 'Cocktail', 'free': 'Cocktail sans alcool', 'yield': '1 verre'},
+           'es': {'cocktail': 'Cóctel', 'free': 'Cóctel sin alcohol', 'yield': '1 vaso'}}
 
 for lang in LANGS:
     u, d, P = UI[lang], DATA[lang], PREFIX[lang]
@@ -296,7 +304,7 @@ for lang in LANGS:
           + json.dumps(data, ensure_ascii=False, separators=(',', ':')) + ';\n')
 
     # ---------- home ----------
-    path, alt = f'/{P}', {'en': '/', 'fr': '/fr/'}
+    path, alt = f'/{P}', {l: f'/{PREFIX[l]}' for l in LANGS}
     up = up_for(path)
     faq = '\n'.join(f'    <details><summary><h3 class="poster">{q}</h3><span class="plus" aria-hidden="true">+</span></summary><p class="body">{a}</p></details>'
                     for q, a in u['faq'])
@@ -319,12 +327,12 @@ for lang in LANGS:
     ]}
     write(f'{P}index.html', head(lang, u['home_title'], u['home_desc'], path, alt, [graph], image=f'{SITE}/assets/og/{lang}/home.jpg')
           + body + foot(lang, up, (f'data.{lang}.js', 'site.js', 'home.js')))
-    if lang == 'en': sitemap.append(('/', '/fr/'))
+    if lang == 'en': sitemap.append(alt)
 
     # ---------- one page per cocktail ----------
     for i, c in enumerate(C[lang]):
         path = f'/{P}cocktails/{c["id"]}/'
-        alt = {'en': f'/cocktails/{c["id"]}/', 'fr': f'/fr/cocktails/{c["id"]}/'}
+        alt = {l: f'/{PREFIX[l]}cocktails/{c["id"]}/' for l in LANGS}
         up = up_for(path)
         home = up + P
         base, glass = L['base'][c['base']], L['glass'][c['glass']]
@@ -337,9 +345,9 @@ for lang in LANGS:
             'image': [img_s, img_w], 'url': SITE + path, 'inLanguage': lang,
             'author': {'@type': 'Organization', 'name': 'Dernier Verre', 'url': SITE + '/'},
             'publisher': ORG,
-            'recipeCategory': 'Cocktail' if c['base'] != 'sansAlcool' else ('Mocktail' if lang == 'en' else 'Cocktail sans alcool'),
+            'recipeCategory': LD_TEXT[lang]['free' if c['base'] == 'sansAlcool' else 'cocktail'],
             'keywords': ', '.join([base] + [L['flavors'][f] for f in c['flavors']] + [L['occasions'][o][1] for o in c['occasions']]),
-            'recipeYield': '1 drink' if lang == 'en' else '1 verre',
+            'recipeYield': LD_TEXT[lang]['yield'],
             'recipeIngredient': [f'{qty(m, lang)} {d["ingredients"][m["id"]]}' if ('ml' in m or 'count' in m) else f'{d["ingredients"][m["id"]]} — {qty(m, lang)}'
                                  for m in c['ingredients']],
             'recipeInstructions': [{'@type': 'HowToStep', 'position': j, 'text': s} for j, s in enumerate(c['steps'], 1)],
@@ -428,10 +436,10 @@ for lang in LANGS:
 </main>
 ''' + foot(lang, up, ('site.js', 'recipe.js'))
         write(f'{P}cocktails/{c["id"]}/index.html', page)
-        if lang == 'en': sitemap.append((alt['en'], alt['fr']))
+        if lang == 'en': sitemap.append(alt)
 
     # ---------- all recipes, grouped by spirit ----------
-    path, alt = f'/{P}cocktails/', {'en': '/cocktails/', 'fr': '/fr/cocktails/'}
+    path, alt = f'/{P}cocktails/', {l: f'/{PREFIX[l]}cocktails/' for l in LANGS}
     up = up_for(path)
     home = up + P
     order = [k for k in L['base'] if k in BY_BASE[lang]]
@@ -457,11 +465,11 @@ for lang in LANGS:
   {groups}
 </main>
 ''' + foot(lang, up, ('site.js', 'recipe.js')))
-    if lang == 'en': sitemap.insert(1, ('/cocktails/', '/fr/cocktails/'))
+    if lang == 'en': sitemap.insert(1, alt)
 
     # ---------- privacy policy and support ----------
     for page, slugs in PAGES.items():
-        alt = {'en': f'/{slugs["en"]}/', 'fr': f'/fr/{slugs["fr"]}/'}
+        alt = {l: f'/{PREFIX[l]}{slugs[l]}/' for l in LANGS}
         path = alt[lang]
         up = up_for(path)
         home = up + P
@@ -484,26 +492,27 @@ for lang in LANGS:
 {body}  </article>
 </main>
 ''' + foot(lang, up, current=page))
-        if lang == 'en': sitemap.append((alt['en'], alt['fr']))
+        if lang == 'en': sitemap.append(alt)
 
-# ---------- 404 (one page for both languages; served for any missing URL, so root-absolute links) ----------
-en, fr = UI['en'], UI['fr']
-write('404.html', head('en', en['nf_title'], en['nf_desc'], '/404.html', {'en': '/', 'fr': '/fr/'}, noindex=True, base='/') + f'''
+# ---------- 404 (one page for every language; served for any missing URL, so root-absolute links) ----------
+en = UI['en']
+others = [l for l in LANGS if l != 'en']
+write('404.html', head('en', en['nf_title'], en['nf_desc'], '/404.html', {l: f'/{PREFIX[l]}' for l in LANGS}, noindex=True, base='/') + f'''
 <main class="col pad r-hero" id="top" style="min-height:60vh">
   <p class="kicker">404</p>
   <h1 class="poster r-title">{en["nf_h1"]}</h1>
   <p class="lead">{en["nf_lead"]}</p>
-  <p class="lead" lang="fr">{fr["nf_lead"]}</p>
-  <p><a class="pill" href="/">{en["nf_back"]}</a> <a class="pill ghost" href="/fr/" lang="fr">{fr["nf_back"]}</a></p>
+  {"".join(f'<p class="lead" lang="{l}">{UI[l]["nf_lead"]}</p>' for l in others)}
+  <p><a class="pill" href="/">{en["nf_back"]}</a> {" ".join(f'<a class="pill ghost" href="/{PREFIX[l]}" lang="{l}">{UI[l]["nf_back"]}</a>' for l in others)}</p>
 </main>
 ''' + foot('en', '/'))
 
 # ---------- sitemap with language alternates ----------
-def url(en_p, fr_p, loc):
-    alts = ''.join(f'<xhtml:link rel="alternate" hreflang="{l}" href="{SITE}{p}"/>' for l, p in (('en', en_p), ('fr', fr_p), ('x-default', en_p)))
+def url(alt, loc):
+    alts = ''.join(f'<xhtml:link rel="alternate" hreflang="{l}" href="{SITE}{p}"/>' for l, p in [*alt.items(), ('x-default', alt['en'])])
     return f'  <url><loc>{SITE}{loc}</loc><lastmod>{TODAY}</lastmod>{alts}</url>\n'
 write('sitemap.xml', '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
-      + ''.join(url(a, b, a) + url(a, b, b) for a, b in sitemap) + '</urlset>\n')
+      + ''.join(url(alt, alt[l]) for alt in sitemap for l in LANGS) + '</urlset>\n')
 
 # ---------- llms.txt: a plain summary for answer engines ----------
 lines = ['# Dernier Verre', '', f'> {en["home_desc"]}', '',
@@ -512,7 +521,8 @@ lines = ['# Dernier Verre', '', f'> {en["home_desc"]}', '',
          'Tick the ingredients you own and the app shows what you can make.', '',
          '## Pages', f'- [Home]({SITE}/): what the app does, FAQ',
          f'- [All {N} cocktail recipes]({SITE}/cocktails/)', f'- [Support]({SITE}/support/): contact and help with the app',
-         f'- [Privacy policy]({SITE}/privacy/): no account, no network, your bar stays on your iPhone', f'- [Version française]({SITE}/fr/)', '',
+         f'- [Privacy policy]({SITE}/privacy/): no account, no network, your bar stays on your iPhone',
+         f'- [Version française]({SITE}/fr/)', f'- [Versión en español]({SITE}/es/)', '',
          '## FAQ'] + [f'- **{q}** {a}' for q, a in en['faq']] + ['', '## Recipes'] + [
          f'- [{c["name"]}]({SITE}/cocktails/{c["id"]}/): {" ".join(summary(c, "en"))}' for c in C['en']] + ['']
 write('llms.txt', '\n'.join(lines))
@@ -528,4 +538,4 @@ write('site.webmanifest', json.dumps({
 write('robots.txt', f'User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n')
 write('CNAME', 'dernierverre.app\n')
 write('.nojekyll', '')
-print(f'Built {N} recipes × {len(LANGS)} languages, home, recipe lists, privacy, support, 404, sitemap ({len(sitemap) * 2} URLs), llms.txt.')
+print(f'Built {N} recipes × {len(LANGS)} languages, home, recipe lists, privacy, support, 404, sitemap ({len(sitemap) * len(LANGS)} URLs), llms.txt.')
