@@ -9,11 +9,13 @@ Sources
     data/en.json           English recipe copy and labels
     data/fr.json           French descriptions and labels (names, taglines, steps come from the app)
     data/ui.json           interface strings, both languages
+    src/privacy.<lang>.html, src/support.<lang>.html   privacy policy and support page bodies
 
 Output (English at the root, French under /fr/)
     index.html, fr/index.html                      home
     cocktails/index.html, fr/cocktails/index.html  all recipes
     cocktails/<id>/, fr/cocktails/<id>/            one page per cocktail
+    privacy/, support/, fr/confidentialite/, fr/assistance/   from src/privacy.<lang>.html, src/support.<lang>.html
     assets/data.en.js, assets/data.fr.js           data for the home page scripts
     404.html, sitemap.xml, robots.txt, llms.txt, site.webmanifest, CNAME, .nojekyll
 
@@ -28,6 +30,8 @@ SITE = 'https://dernierverre.app'
 APP_STORE = None  # the App Store URL once the app is published; until then buttons say "coming soon"
 LANGS = ('en', 'fr')
 PREFIX = {'en': '', 'fr': 'fr/'}
+# Privacy and support pages: their slug in each language (body in src/<page>.<lang>.html)
+PAGES = {'privacy': {'en': 'privacy', 'fr': 'confidentialite'}, 'support': {'en': 'support', 'fr': 'assistance'}}
 
 recipes = json.loads((ROOT / 'data/recipes.json').read_text())
 DATA = {'en': json.loads((ROOT / 'data/en.json').read_text()), 'fr': json.loads((ROOT / 'data/fr.json').read_text())}
@@ -228,8 +232,9 @@ def head(lang, title, desc, path, alt, extra=(), color=None, image=None, noindex
 </header>
 '''
 
-def foot(lang, up, scripts=('site.js',)):
+def foot(lang, up, scripts=('site.js',), current=None):
     u, home = UI[lang], up + PREFIX[lang]
+    cur = lambda k: ' aria-current="page"' if k == current else ''
     js = ''.join(f'<script src="{up}assets/{s}" defer></script>\n' for s in scripts)
     return f'''<footer class="surface">
   <div class="col pad">
@@ -243,6 +248,8 @@ def foot(lang, up, scripts=('site.js',)):
       <a href="{home}#features">{u['nav_features']}</a>
       <a href="{home}cocktails/">{u['all_recipes']}</a>
       <a href="{home}#faq">{u['nav_faq']}</a>
+      <a href="{home}{PAGES['support'][lang]}/"{cur('support')}>{u['nav_support']}</a>
+      <a href="{home}{PAGES['privacy'][lang]}/"{cur('privacy')}>{u['nav_privacy']}</a>
     </nav>
     <div class="legal">
       <span class="legal-left"><span>© <span id="year">{date.today().year}</span> Dernier Verre</span> <span class="credit">{u['credit'].replace('{heart}', HEART)}</span></span>
@@ -452,6 +459,33 @@ for lang in LANGS:
 ''' + foot(lang, up, ('site.js', 'recipe.js')))
     if lang == 'en': sitemap.insert(1, ('/cocktails/', '/fr/cocktails/'))
 
+    # ---------- privacy policy and support ----------
+    for page, slugs in PAGES.items():
+        alt = {'en': f'/{slugs["en"]}/', 'fr': f'/fr/{slugs["fr"]}/'}
+        path = alt[lang]
+        up = up_for(path)
+        home = up + P
+        faq = '\n'.join(f'<details><summary><h3 class="poster">{q}</h3><span class="plus" aria-hidden="true">+</span></summary><p class="body">{a}</p></details>'
+                        for q, a in u['support_faq'])
+        values = {'faq': f'<div class="faq">\n{faq}\n</div>', 'privacy': f'{home}{PAGES["privacy"][lang]}/'}
+        body = re.sub(r'\{\{(\w+)\}\}', lambda m: values[m[1]], (ROOT / f'src/{page}.{lang}.html').read_text())
+        updated = f'<p class="kicker doc-updated">{u["updated"].format(date=u["updated_date"])}</p>' if page == 'privacy' else ''
+        ld = [crumbs([(u['home'], f'/{P}'), (u[f'{page}_h1'], path)])]
+        if page == 'support':
+            ld.append({'@context': 'https://schema.org', '@type': 'FAQPage', 'url': SITE + path, 'inLanguage': lang, 'mainEntity': [
+                {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in u['support_faq']]})
+        write(f'{P}{slugs[lang]}/index.html', head(lang, u[f'{page}_title'], u[f'{page}_desc'], path, alt, ld) + f'''
+<main id="top">
+  <section class="col pad r-hero">
+    <h1 class="poster r-title doc-title">{u[f"{page}_h1"]}</h1>
+    {updated}
+  </section>
+  <article class="col pad doc">
+{body}  </article>
+</main>
+''' + foot(lang, up, current=page))
+        if lang == 'en': sitemap.append((alt['en'], alt['fr']))
+
 # ---------- 404 (one page for both languages; served for any missing URL, so root-absolute links) ----------
 en, fr = UI['en'], UI['fr']
 write('404.html', head('en', en['nf_title'], en['nf_desc'], '/404.html', {'en': '/', 'fr': '/fr/'}, noindex=True, base='/') + f'''
@@ -477,7 +511,8 @@ lines = ['# Dernier Verre', '', f'> {en["home_desc"]}', '',
          f'and contains {N} cocktail recipes with exact measures in ml or oz, scalable from 1 to 12 glasses. '
          'Tick the ingredients you own and the app shows what you can make.', '',
          '## Pages', f'- [Home]({SITE}/): what the app does, FAQ',
-         f'- [All {N} cocktail recipes]({SITE}/cocktails/)', f'- [Version française]({SITE}/fr/)', '',
+         f'- [All {N} cocktail recipes]({SITE}/cocktails/)', f'- [Support]({SITE}/support/): contact and help with the app',
+         f'- [Privacy policy]({SITE}/privacy/): no account, no network, your bar stays on your iPhone', f'- [Version française]({SITE}/fr/)', '',
          '## FAQ'] + [f'- **{q}** {a}' for q, a in en['faq']] + ['', '## Recipes'] + [
          f'- [{c["name"]}]({SITE}/cocktails/{c["id"]}/): {" ".join(summary(c, "en"))}' for c in C['en']] + ['']
 write('llms.txt', '\n'.join(lines))
@@ -493,4 +528,4 @@ write('site.webmanifest', json.dumps({
 write('robots.txt', f'User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n')
 write('CNAME', 'dernierverre.app\n')
 write('.nojekyll', '')
-print(f'Built {N} recipes × {len(LANGS)} languages, home, recipe lists, 404, sitemap ({len(sitemap) * 2} URLs), llms.txt.')
+print(f'Built {N} recipes × {len(LANGS)} languages, home, recipe lists, privacy, support, 404, sitemap ({len(sitemap) * 2} URLs), llms.txt.')

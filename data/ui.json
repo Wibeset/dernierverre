@@ -184,7 +184,51 @@
    "vin": "a wine glass",
    "tiki": "a tiki glass",
    "cuivre": "a copper mug"
-  }
+  },
+  "nav_support": "Support",
+  "nav_privacy": "Privacy",
+  "privacy_title": "Privacy Policy — Dernier Verre",
+  "privacy_desc": "How Dernier Verre handles your information. No account, no sign-up, no network: your bar and your favourites stay on your iPhone.",
+  "privacy_h1": "Privacy",
+  "support_title": "Support — Dernier Verre",
+  "support_desc": "Get help with Dernier Verre, the cocktail app for iPhone: contact us, and answers about your bar, favourites, filters, measures and your data.",
+  "support_h1": "Support",
+  "updated": "Last updated: {date}",
+  "updated_date": "November 7, 2026",
+  "support_faq": [
+   [
+    "Where are my bar and favourites stored?",
+    "Only on your iPhone. Dernier Verre has no account and no server, and it doesn’t connect to the internet, so we can’t see them. If you back up your iPhone with iCloud or to a computer, they are part of that backup."
+   ],
+   [
+    "How do I move my bar to a new iPhone?",
+    "Set up the new iPhone from a backup of your old one (iCloud or computer), or transfer directly from the old iPhone during setup. Your bar, favourites and preferences come along with the app. Dernier Verre doesn’t sync between devices through iCloud."
+   ],
+   [
+    "How do I add or remove ingredients in my bar?",
+    "In the <strong>Mon bar</strong> tab, tick the bottles and fresh ingredients you have. You can also tap any ingredient in a recipe to add it to your bar or take it out. To start over, tap <strong>Tout décocher</strong> (untick all)."
+   ],
+   [
+    "Why don’t I see a cocktail I’m looking for?",
+    "Check which drinks the feed shows: <strong>Tous</strong> (all), <strong>Il manque ≤ 1</strong> (missing one at most) or <strong>Prêts à faire</strong> (ready to make). Then check the spirit you started from and the filters; <strong>Réinitialiser</strong> (reset) clears occasion, flavour, strength and difficulty."
+   ],
+   [
+    "How do I switch between millilitres and ounces?",
+    "On any recipe, switch between <strong>ml</strong> and <strong>oz</strong>. Dernier Verre remembers your choice, and the + and − buttons scale every quantity from one glass to twelve."
+   ],
+   [
+    "Is the app in English?",
+    "The app is in French. Every recipe is also on this website in English, with the same measures in ml or oz."
+   ],
+   [
+    "How do I delete my data?",
+    "Tap <strong>Tout décocher</strong> in <strong>Mon bar</strong> to clear your bar, and tap the heart again to remove a favourite. Deleting the app erases all its data from your iPhone."
+   ],
+   [
+    "Is Dernier Verre free?",
+    "Yes, with all 52 recipes, no ads and no account."
+   ]
+  ]
  },
  "fr": {
   "locale": "fr_CA",
@@ -371,6 +415,50 @@
    "vin": "un verre à vin",
    "tiki": "un verre tiki",
    "cuivre": "une tasse en cuivre"
-  }
+  },
+  "nav_support": "Assistance",
+  "nav_privacy": "Confidentialité",
+  "privacy_title": "Politique de confidentialité — Dernier Verre",
+  "privacy_desc": "Comment Dernier Verre traite vos renseignements. Aucun compte, aucune inscription, aucune connexion : votre bar et vos favoris restent sur votre iPhone.",
+  "privacy_h1": "Confidentialité",
+  "support_title": "Assistance — Dernier Verre",
+  "support_desc": "De l’aide pour Dernier Verre, l’app de cocktails pour iPhone : nous joindre, et des réponses sur votre bar, vos favoris, les filtres, les mesures et vos données.",
+  "support_h1": "Assistance",
+  "updated": "Dernière mise à jour : {date}",
+  "updated_date": "7 novembre 2026",
+  "support_faq": [
+   [
+    "Où sont enregistrés mon bar et mes favoris?",
+    "Seulement sur votre iPhone. Dernier Verre n’a ni compte ni serveur, et ne se connecte pas à Internet : nous ne pouvons donc pas les voir. Si vous sauvegardez votre iPhone avec iCloud ou sur un ordinateur, ils font partie de cette sauvegarde."
+   ],
+   [
+    "Comment retrouver mon bar sur un nouvel iPhone?",
+    "Configurez le nouvel iPhone à partir d’une sauvegarde de l’ancien (iCloud ou ordinateur), ou transférez directement depuis l’ancien iPhone pendant la configuration. Votre bar, vos favoris et vos préférences suivent l’app. Dernier Verre ne se synchronise pas entre vos appareils par iCloud."
+   ],
+   [
+    "Comment ajouter ou retirer des ingrédients de mon bar?",
+    "Dans l’onglet <strong>Mon bar</strong>, cochez les bouteilles et les ingrédients frais que vous avez. Vous pouvez aussi toucher un ingrédient dans une recette pour l’ajouter à votre bar ou l’en retirer. Pour repartir de zéro, touchez <strong>Tout décocher</strong>."
+   ],
+   [
+    "Pourquoi je ne vois pas le cocktail que je cherche?",
+    "Vérifiez quels cocktails le fil affiche : <strong>Tous</strong>, <strong>Il manque ≤ 1</strong> ou <strong>Prêts à faire</strong>. Vérifiez ensuite l’alcool de départ et les filtres; <strong>Réinitialiser</strong> efface l’occasion, les saveurs, l’intensité et la difficulté."
+   ],
+   [
+    "Comment passer des millilitres aux onces?",
+    "Dans n’importe quelle recette, choisissez <strong>ml</strong> ou <strong>oz</strong>. Dernier Verre retient votre choix, et les boutons + et − ajustent toutes les quantités, de un à douze verres."
+   ],
+   [
+    "L’app est-elle offerte en anglais?",
+    "L’app est en français. Toutes les recettes sont aussi sur ce site en anglais, avec les mêmes mesures en ml ou en oz."
+   ],
+   [
+    "Comment supprimer mes données?",
+    "Touchez <strong>Tout décocher</strong> dans <strong>Mon bar</strong> pour vider votre bar, et touchez de nouveau le cœur pour retirer un favori. Supprimer l’app efface toutes ses données de votre iPhone."
+   ],
+   [
+    "Dernier Verre est-il gratuit?",
+    "Oui, avec les 52 recettes, sans publicité et sans compte."
+   ]
+  ]
  }
 }

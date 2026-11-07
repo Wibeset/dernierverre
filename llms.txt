@@ -7,6 +7,8 @@ Dernier Verre is a free iPhone app by Wibeset (Quebec, Canada), coming soon to t
 ## Pages
 - [Home](https://dernierverre.app/): what the app does, FAQ
 - [All 52 cocktail recipes](https://dernierverre.app/cocktails/)
+- [Support](https://dernierverre.app/support/): contact and help with the app
+- [Privacy policy](https://dernierverre.app/privacy/): no account, no network, your bar stays on your iPhone
 - [Version française](https://dernierverre.app/fr/)
 
 ## FAQ

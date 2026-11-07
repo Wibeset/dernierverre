@@ -465,3 +465,20 @@ header.site .pill { min-height: 40px; }
 html[style*="--bg"] :is(.muted, .band span, nav.main a, footer nav a, footer .legal, .fact .kicker, .opt,
   .garnish b, .langs a, .row .d, .more, .now .kicker, .chip-group .kicker) { opacity: 1; }
 html[style*="--bg"] .langs a[aria-current] { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 2px; }
+
+/* ---------- Privacy and support (privacy/, support/), long-form text ---------- */
+.doc-title { font-size: clamp(64px, 12vw, 160px); }
+.doc-updated { opacity: .72; }
+.doc { padding-bottom: 72px; }
+.doc > * { max-width: 760px; }
+.doc .lede { font-size: clamp(20px, 2.4vw, 26px); font-weight: 600; line-height: 1.4; margin: 12px 0 0; text-wrap: pretty; }
+.doc h2 { font-family: var(--poster); font-stretch: 62%; font-weight: 900; text-transform: uppercase; line-height: .9; font-size: clamp(30px, 4vw, 44px); margin: 56px 0 0; }
+.doc p, .doc li { font-size: 16.5px; font-weight: 500; line-height: 1.55; text-wrap: pretty; }
+.doc p { margin: 14px 0 0; }
+.doc ul { margin: 14px 0 0; padding-left: 1.2em; }
+.doc li + li { margin-top: 8px; }
+.doc strong { font-weight: 800; }
+.doc .faq { max-width: none; margin-top: 24px; }
+.doc .faq summary .poster { font-size: clamp(24px, 3vw, 32px); }
+.doc .faq details p { margin: 0; }
+.doc .faq + p { margin-top: 32px; }
