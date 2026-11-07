@@ -69,7 +69,7 @@ img, svg { display: block; }
 /* Numbered band between sections, like a sheet number */
 .band { scroll-margin-top: 60px; padding-top: 64px; }
 .band .col { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 24px; }
-.band h2, .band span { font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; margin: 0; }
+.band h2, .band p, .band span { font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; margin: 0; }
 .band span { opacity: .7; }
 
 /* ---------- Controls, as in the app ---------- */
@@ -160,10 +160,10 @@ header.site .pill { margin-left: auto; height: 40px; padding: 0 16px; font-size:
 .poster-card .top { display: flex; justify-content: space-between; align-items: center; }
 .poster-card .kicker { font-size: 9px; }
 .badge { font-size: 9px; font-weight: 900; letter-spacing: .08em; padding: 3px 7px; border-radius: 99px; background: var(--ink); color: var(--bg); transition: background-color .5s, color .5s; }
-.poster-card h3 { font-size: 66px; margin-top: auto; overflow: hidden; }
+.poster-card .p-name { font-size: 66px; margin-top: auto; overflow: hidden; }
 .poster-card .tl { font-size: 13px; font-weight: 600; line-height: 1.3; }
 .rows { border-top: 2px solid var(--ink); }
-.rows div { display: flex; justify-content: space-between; font-size: 10.5px; font-weight: 600; padding: 5px 0; border-bottom: 1.5px solid color-mix(in srgb, var(--ink) 35%, transparent); }
+.rows .row-i { display: flex; justify-content: space-between; font-size: 10.5px; font-weight: 600; padding: 5px 0; border-bottom: 1.5px solid color-mix(in srgb, var(--ink) 35%, transparent); }
 .rows b { font-weight: 900; font-variant-numeric: tabular-nums; }
 .poster-actions { display: flex; gap: 6px; }
 .poster-actions .go { flex: 1; height: 38px; border-radius: 99px; background: var(--ink); color: var(--bg); display: grid; place-items: center; font-size: 11px; font-weight: 900; letter-spacing: .06em; transition: background-color .5s, color .5s; }
@@ -381,9 +381,9 @@ footer .legal { display: flex; flex-wrap: wrap; justify-content: space-between; 
 .mini-chips { margin: 10px -18px 0; padding: 0 18px; } .mini-chips span { font-size: 10.5px; padding: 5px 10px; }
 .poster-card { flex: none; padding: 22px 0 0; gap: 12px; }
 .poster-card .kicker { font-size: 10.5px; } .badge { font-size: 10.5px; padding: 4px 8px; }
-.poster-card h3 { font-size: 84px; margin-top: 18px; }
+.poster-card .p-name { display: block; font-size: 84px; margin-top: 18px; overflow: hidden; }
 .poster-card .tl { font-size: 15px; }
-.rows div { font-size: 12.5px; padding: 7px 0; }
+.rows .row-i { font-size: 12.5px; padding: 7px 0; }
 .now { display: inline-flex; align-items: baseline; gap: 10px; color: inherit; text-decoration: none; font-weight: 800; font-size: 15px; text-transform: uppercase; letter-spacing: .06em; }
 .now .kicker { opacity: .6; }
 .now b { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
@@ -425,3 +425,36 @@ footer .legal { display: flex; flex-wrap: wrap; justify-content: space-between; 
 
 /* Footer: copyright and credit side by side */
 .legal-left { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 4px 14px; }
+
+/* Phone preview is built from spans (it lives inside a <button>) */
+.sb .island, .tl, .rows, .poster-card .p-name { display: block; }
+.rows .row-i { display: flex; justify-content: space-between; }
+
+/* Skip link, language switch, the one-sentence answer on recipe pages */
+.skip { position: absolute; left: 12px; top: -60px; z-index: 100; padding: 10px 16px; border-radius: 999px; background: var(--ink); color: var(--bg); font-weight: 800; text-decoration: none; }
+.skip:focus { top: 10px; }
+.langs { display: flex; align-items: center; gap: 6px; margin-left: auto; font-size: 12.5px; font-weight: 800; letter-spacing: .07em; }
+.langs a { text-decoration: none; opacity: .55; padding: 6px 2px; }
+.langs a[aria-current], .langs a:hover { opacity: 1; }
+.langs span { opacity: .35; }
+header.site .langs + .pill { margin-left: 8px; }
+.r-answer { font-size: 15.5px; font-weight: 700; line-height: 1.5; max-width: 820px; margin: 36px 0 0; padding-left: 14px; border-left: 4px solid var(--ink); }
+.r-desc { margin-top: 18px; }
+.faq summary h3 { margin: 0; }
+
+/* French headline has longer words ("PARFAITEMENT"): scale it down so it never reaches the phone */
+:lang(fr) .hero h1 { font-size: clamp(52px, 14vw, 156px); }
+@media (min-width: 960px) { :lang(fr) .hero h1 { font-size: clamp(56px, 7.6vw, 110px); } }
+
+/* Header fits both languages: nav only when there's room, never wrapped */
+nav.main a, header.site .pill, .langs { white-space: nowrap; }
+@media (min-width: 900px) and (max-width: 1179px) { nav.main { display: none; } }
+@media (max-width: 479px) { header.site .pill { display: none; } }
+/* Long CTA labels may wrap to two lines on narrow screens */
+.pill { min-height: 52px; height: auto; padding-top: 8px; padding-bottom: 8px; text-align: center; }
+header.site .pill { min-height: 40px; }
+@media (max-width: 479px) { .tag { font-size: 10.5px; letter-spacing: .06em; } }
+
+/* "Coming soon" store button: same pill, not a link */
+.pill.soon { cursor: default; }
+.pill.soon:hover { transform: none; }

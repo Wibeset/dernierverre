@@ -1,0 +1,74 @@
+# Dernier Verre
+
+> Dernier Verre is a free iPhone cocktail app, coming soon: 52 classic recipes as full-screen posters. Tick what’s in your bar and see what you can mix.
+
+Dernier Verre is a free iPhone app by Wibeset (Quebec, Canada), coming soon to the App Store. It needs no account, works offline, keeps your bar on your phone, and contains 52 cocktail recipes with exact measures in ml or oz, scalable from 1 to 12 glasses. Tick the ingredients you own and the app shows what you can make.
+
+## Pages
+- [Home](https://dernierverre.app/): what the app does, FAQ
+- [All 52 cocktail recipes](https://dernierverre.app/cocktails/)
+- [Version française](https://dernierverre.app/fr/)
+
+## FAQ
+- **Is Dernier Verre free?** Yes. Dernier Verre will be free to download on the App Store for iPhone, with all 52 recipes included. It’s coming soon.
+- **When is Dernier Verre available?** Soon. The app is in its final stretch before launch on the App Store for iPhone. In the meantime, every recipe is on this site.
+- **Do I need an account?** No. There’s nothing to sign up for. Your bar and your favorites are saved on your iPhone and never leave it.
+- **Does it work offline?** Yes. All 52 recipes are built into the app, so it works at the cottage, on the boat, or in a basement bar with no signal.
+- **What if I’m missing one ingredient?** My bar lists the drinks you’re one ingredient away from and says which one. On the poster, the missing ingredient is struck through so you can improvise — or make a grocery run.
+- **Millilitres or ounces?** Both. Switch units on any recipe and the app remembers your choice. Quantities scale from one glass to twelve.
+- **Any alcohol-free drinks?** Six of them, from a virgin mojito to a cucumber-basil lemonade. Pick “Alcohol-free” as your starting point and the feed shows only those.
+- **Why “Dernier Verre”?** It’s French for “last glass” — the one more round you pour when the night is going well. We’d like it to be a good one.
+
+## Recipes
+- [Amaretto sour](https://dernierverre.app/cocktails/amaretto-sour/): An Amaretto sour is made with 45 ml amaretto, 30 ml lemon juice and 7.5 ml simple syrup. Shaken and served in an old fashioned glass.
+- [Americano](https://dernierverre.app/cocktails/americano/): An Americano is made with 30 ml Campari and 30 ml sweet vermouth, topped with soda water. Built in the glass and served in a highball glass.
+- [Aperol spritz](https://dernierverre.app/cocktails/aperol-spritz/): An Aperol spritz is made with 90 ml prosecco, 60 ml Aperol and 30 ml soda water. Built in the glass and served in a wine glass.
+- [Aviation](https://dernierverre.app/cocktails/aviation/): An Aviation is made with 50 ml gin, 10 ml maraschino liqueur, 5 ml crème de violette and 15 ml lemon juice. Shaken and served in a coupe.
+- [Bee's Knees](https://dernierverre.app/cocktails/bees-knees/): A Bee's Knees is made with 50 ml gin, 20 ml lemon juice and 20 ml honey syrup. Shaken and served in a coupe.
+- [Bellini](https://dernierverre.app/cocktails/bellini/): A Bellini is made with 50 ml peach purée and 100 ml prosecco. Built in the glass and served in a flute.
+- [Bloody Mary](https://dernierverre.app/cocktails/bloody-mary/): A Bloody Mary is made with 45 ml vodka, 90 ml tomato juice, 15 ml lemon juice, 2 dashes of Worcestershire sauce and 2 dashes of Tabasco. Built in the glass and served in a highball glass.
+- [Boulevardier](https://dernierverre.app/cocktails/boulevardier/): A Boulevardier is made with 40 ml bourbon, 25 ml Campari and 25 ml sweet vermouth. Stirred and served in an old fashioned glass.
+- [Caesar](https://dernierverre.app/cocktails/caesar/): A Caesar is made with 45 ml vodka, 120 ml Clamato, 10 ml lime juice, 2 dashes of Worcestershire sauce and 2 dashes of Tabasco. Built in the glass and served in a highball glass.
+- [Caipirinha](https://dernierverre.app/cocktails/caipirinha/): A Caipirinha is made with 60 ml cachaça, ½ lime and 2 tsp sugar. Muddled and served in an old fashioned glass.
+- [Clover Club](https://dernierverre.app/cocktails/clover-club/): A Clover Club is made with 50 ml gin, 20 ml lemon juice, 15 ml raspberry syrup and 1 egg white. Shaken and served in a coupe.
+- [Cosmopolitan](https://dernierverre.app/cocktails/cosmopolitan/): A Cosmopolitan is made with 40 ml vodka, 15 ml triple sec, 30 ml cranberry juice and 15 ml lime juice. Shaken and served in a martini glass.
+- [Cuba libre](https://dernierverre.app/cocktails/cuba-libre/): A Cuba libre is made with 50 ml white rum, 120 ml cola and 10 ml lime juice. Built in the glass and served in a highball glass.
+- [Daiquiri](https://dernierverre.app/cocktails/daiquiri/): A Daiquiri is made with 60 ml white rum, 25 ml lime juice and 15 ml simple syrup. Shaken and served in a coupe.
+- [Dark 'n' Stormy](https://dernierverre.app/cocktails/dark-n-stormy/): A Dark 'n' Stormy is made with 100 ml ginger beer, 10 ml lime juice and 60 ml dark rum. Built in the glass and served in a highball glass.
+- [Dry martini](https://dernierverre.app/cocktails/dry-martini/): A Dry martini is made with 60 ml gin and 10 ml dry vermouth. Stirred and served in a martini glass.
+- [Espresso martini](https://dernierverre.app/cocktails/espresso-martini/): An Espresso martini is made with 50 ml vodka, 20 ml coffee liqueur and 30 ml espresso. Shaken and served in a coupe.
+- [French 75](https://dernierverre.app/cocktails/french-75/): A French 75 is made with 30 ml gin, 15 ml lemon juice, 10 ml simple syrup and 60 ml champagne or sparkling wine. Shaken and served in a flute.
+- [Gimlet](https://dernierverre.app/cocktails/gimlet/): A Gimlet is made with 60 ml gin, 20 ml lime juice and 15 ml simple syrup. Shaken and served in a coupe.
+- [Gin fizz](https://dernierverre.app/cocktails/gin-fizz/): A Gin fizz is made with 50 ml gin, 25 ml lemon juice and 15 ml simple syrup, topped with soda water. Shaken and served in a highball glass.
+- [Gin tonic](https://dernierverre.app/cocktails/gin-tonic/): A Gin tonic is made with 50 ml gin and 150 ml tonic water. Built in the glass and served in a highball glass.
+- [Hugo spritz](https://dernierverre.app/cocktails/hugo/): A Hugo spritz is made with 90 ml prosecco, 20 ml elderflower liqueur, 30 ml soda water and 4 leaves of fresh mint. Built in the glass and served in a wine glass.
+- [Kir royal](https://dernierverre.app/cocktails/kir-royal/): A Kir royal is made with 15 ml crème de cassis and 120 ml champagne or sparkling wine. Built in the glass and served in a flute.
+- [Last Word](https://dernierverre.app/cocktails/last-word/): A Last Word is made with 22.5 ml gin, 22.5 ml Green Chartreuse, 22.5 ml maraschino liqueur and 22.5 ml lime juice. Shaken and served in a coupe.
+- [Cucumber-basil lemonade](https://dernierverre.app/cocktails/limonade-concombre/): A Cucumber-basil lemonade is made with 30 ml lemon juice, 20 ml simple syrup, 3 slices of cucumber and 4 leaves of fresh basil, topped with soda water. Shaken and served in a highball glass.
+- [Mai tai](https://dernierverre.app/cocktails/mai-tai/): A Mai tai is made with 40 ml dark rum, 20 ml white rum, 15 ml triple sec, 15 ml orgeat syrup and 25 ml lime juice. Shaken and served in an old fashioned glass.
+- [Manhattan](https://dernierverre.app/cocktails/manhattan/): A Manhattan is made with 50 ml rye whiskey, 20 ml sweet vermouth and 2 dashes of Angostura bitters. Stirred and served in a coupe.
+- [Margarita](https://dernierverre.app/cocktails/margarita/): A Margarita is made with 50 ml tequila blanco, 20 ml triple sec and 25 ml lime juice. Shaken and served in a coupe.
+- [Mimosa](https://dernierverre.app/cocktails/mimosa/): A Mimosa is made with 75 ml orange juice and 75 ml champagne or sparkling wine. Built in the glass and served in a flute.
+- [Mojito](https://dernierverre.app/cocktails/mojito/): A Mojito is made with 50 ml white rum, 25 ml lime juice, 20 ml simple syrup and 8 leaves of fresh mint, topped with soda water. Muddled and served in a highball glass.
+- [Moscow mule](https://dernierverre.app/cocktails/moscow-mule/): A Moscow mule is made with 50 ml vodka, 15 ml lime juice and 120 ml ginger beer. Built in the glass and served in a copper mug.
+- [Virgin mule](https://dernierverre.app/cocktails/ginger-mule-zero/): A Virgin mule is made with 150 ml ginger beer and 20 ml lime juice. Built in the glass and served in a copper mug.
+- [Negroni](https://dernierverre.app/cocktails/negroni/): A Negroni is made with 30 ml gin, 30 ml Campari and 30 ml sweet vermouth. Stirred and served in an old fashioned glass.
+- [Oaxaca old fashioned](https://dernierverre.app/cocktails/oaxaca-old-fashioned/): An Oaxaca old fashioned is made with 45 ml tequila blanco, 15 ml mezcal, 5 ml agave syrup and 2 dashes of Angostura bitters. Stirred and served in an old fashioned glass.
+- [Old fashioned](https://dernierverre.app/cocktails/old-fashioned/): An Old fashioned is made with 60 ml bourbon, 7.5 ml simple syrup and 2 dashes of Angostura bitters. Stirred and served in an old fashioned glass.
+- [Maple old fashioned](https://dernierverre.app/cocktails/old-fashioned-erable/): A Maple old fashioned is made with 60 ml rye whiskey, 7.5 ml maple syrup and 2 dashes of Angostura bitters. Stirred and served in an old fashioned glass.
+- [Paloma](https://dernierverre.app/cocktails/paloma/): A Paloma is made with 50 ml tequila blanco, 60 ml grapefruit juice and 15 ml lime juice, topped with soda water. Built in the glass and served in a highball glass.
+- [Virgin paloma](https://dernierverre.app/cocktails/pamplemousse-romarin/): A Virgin paloma is made with 90 ml grapefruit juice, 15 ml lime juice and 10 ml agave syrup, topped with soda water. Built in the glass and served in a highball glass.
+- [Paper plane](https://dernierverre.app/cocktails/paper-plane/): A Paper plane is made with 22.5 ml bourbon, 22.5 ml Aperol, 22.5 ml Amaro Nonino and 22.5 ml lemon juice. Shaken and served in a coupe.
+- [Penicillin](https://dernierverre.app/cocktails/penicillin/): A Penicillin is made with 60 ml scotch, 25 ml lemon juice and 25 ml honey-ginger syrup. Shaken and served in an old fashioned glass.
+- [Pisco sour](https://dernierverre.app/cocktails/pisco-sour/): A Pisco sour is made with 60 ml pisco, 30 ml lime juice, 20 ml simple syrup and 1 egg white. Shaken and served in a coupe.
+- [Piña colada](https://dernierverre.app/cocktails/pina-colada/): A Piña colada is made with 50 ml white rum, 30 ml coconut cream and 90 ml pineapple juice. Blended and served in a tiki glass.
+- [Pornstar martini](https://dernierverre.app/cocktails/pornstar-martini/): A Pornstar martini is made with 45 ml vodka, 30 ml passion fruit purée, 15 ml lime juice and 15 ml vanilla syrup. Shaken and served in a coupe.
+- [Sazerac](https://dernierverre.app/cocktails/sazerac/): A Sazerac is made with 60 ml rye whiskey, 7.5 ml simple syrup and 3 dashes of Peychaud's bitters. Stirred and served in an old fashioned glass.
+- [Shirley Temple](https://dernierverre.app/cocktails/shirley-temple/): A Shirley Temple is made with 180 ml ginger ale and 15 ml grenadine. Built in the glass and served in a highball glass.
+- [Sidecar](https://dernierverre.app/cocktails/sidecar/): A Sidecar is made with 50 ml cognac, 20 ml triple sec and 20 ml lemon juice. Shaken and served in a coupe.
+- [Southside](https://dernierverre.app/cocktails/southside/): A Southside is made with 50 ml gin, 25 ml lime juice, 15 ml simple syrup and 6 leaves of fresh mint. Shaken and served in a coupe.
+- [Tommy's margarita](https://dernierverre.app/cocktails/tommys-margarita/): A Tommy's margarita is made with 60 ml tequila blanco, 30 ml lime juice and 15 ml agave syrup. Shaken and served in an old fashioned glass.
+- [Virgin colada](https://dernierverre.app/cocktails/virgin-colada/): A Virgin colada is made with 45 ml coconut cream and 120 ml pineapple juice. Blended and served in a tiki glass.
+- [Virgin mojito](https://dernierverre.app/cocktails/virgin-mojito/): A Virgin mojito is made with 25 ml lime juice, 20 ml simple syrup and 8 leaves of fresh mint, topped with soda water. Muddled and served in a highball glass.
+- [Whisky sour](https://dernierverre.app/cocktails/whisky-sour/): A Whisky sour is made with 50 ml bourbon, 25 ml lemon juice and 20 ml simple syrup. Shaken and served in an old fashioned glass.
+- [White Russian](https://dernierverre.app/cocktails/white-russian/): A White Russian is made with 50 ml vodka, 20 ml coffee liqueur and 30 ml cream. Built in the glass and served in an old fashioned glass.

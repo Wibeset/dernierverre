@@ -2,7 +2,9 @@
    the app's library), the library tiles are already in the HTML for search engines;
    this file only animates the hero, runs the "My bar" demo and filters the tiles. */
 (() => {
-const { cocktails: LIB, ingredients: ING, base: SPIRIT } = window.DV;
+const { cocktails: LIB, ingredients: ING, base: SPIRIT, ui: T } = window.DV;
+const t = (s, n) => s.replace('{n}', n);
+const plural = (pair, n) => t(pair[n > 1 ? 1 : 0], n);
 const $ = (s, el = document) => el.querySelector(s);
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const pad2 = n => String(n).padStart(2, '0');
@@ -31,7 +33,7 @@ const FEATURED = ['negroni', 'aperol-spritz', 'mojito', 'espresso-martini', 'pal
 const screen = $('#screen'), poster = $('#poster'), heroLink = $('#hero-recipe');
 const SPIRITS = Object.entries(SPIRIT);
 let heroIndex = 0, heroTimer = null;
-const fmt = ml => ml == null ? '—' : `${Number.isInteger(ml) ? ml : ml.toFixed(1)} ml`;
+const fmt = ml => ml == null ? '—' : `${(Number.isInteger(ml) ? String(ml) : ml.toFixed(1)).replace('.', T.decimal)} ml`;
 
 function showHero(i, animate = true) {
   heroIndex = (i + FEATURED.length) % FEATURED.length;
@@ -40,7 +42,7 @@ function showHero(i, animate = true) {
     $('#p-kicker').textContent = `N° ${pad2(LIB.indexOf(c) + 1)} / ${LIB.length} · ${SPIRIT[c.base] || ''}`;
     $('#p-name').textContent = c.name; fit($('#p-name'), 84, 36);
     $('#p-tag').textContent = c.tagline;
-    $('#p-rows').innerHTML = c.ing.slice(0, 4).map(([id, ml]) => `<div><span>${esc(ING[id] || id)}</span><b>${fmt(ml)}</b></div>`).join('');
+    $('#p-rows').innerHTML = c.ing.slice(0, 4).map(([id, ml]) => `<span class="row-i"><span>${esc(ING[id] || id)}</span><b>${fmt(ml)}</b></span>`).join('');
     $('#mini-chips').innerHTML = SPIRITS.map(([k, l]) => `<span class="${k === c.base ? 'on' : ''}">${esc(l.toUpperCase())}</span>`).join('');
     heroLink.href = url(c.id);
     $('#hero-name').textContent = c.name;
@@ -62,9 +64,9 @@ showHero(0, false); autoplay(true);
 
 /* ---------- My bar demo ---------- */
 const GROUPS = [
-  ['Spirits', ['gin', 'vodka', 'rhumBlanc', 'rhumAmbre', 'tequila', 'bourbon', 'rye', 'cognac']],
-  ['Liqueurs & wine', ['campari', 'aperol', 'vermouthRouge', 'tripleSec', 'liqueurCafe', 'prosecco', 'angostura']],
-  ['Fresh & mixers', ['jusLime', 'jusCitron', 'sirop', 'menthe', 'soda', 'tonic', 'gingerBeer', 'cola']],
+  [T.groups[0], ['gin', 'vodka', 'rhumBlanc', 'rhumAmbre', 'tequila', 'bourbon', 'rye', 'cognac']],
+  [T.groups[1], ['campari', 'aperol', 'vermouthRouge', 'tripleSec', 'liqueurCafe', 'prosecco', 'angostura']],
+  [T.groups[2], ['jusLime', 'jusCitron', 'sirop', 'menthe', 'soda', 'tonic', 'gingerBeer', 'cola']],
 ];
 const shortName = id => (ING[id] || id).replace(/\s*\(.*\)$/, '');
 const bar = new Set(['gin', 'rhumBlanc', 'campari', 'vermouthRouge', 'jusLime', 'sirop', 'menthe', 'soda', 'tonic']);
@@ -74,22 +76,22 @@ $('#bar-pick').innerHTML = GROUPS.map(([title, ids]) => `
   <div class="chip-group"><p class="kicker">${title}</p><div class="chips">
     ${ids.map(id => `<button type="button" class="chip" data-ing="${id}" aria-pressed="${bar.has(id)}">${esc(shortName(id))}</button>`).join('')}
   </div></div>`).join('') +
-  `<p class="body muted">The app knows ${Object.keys(ING).length} ingredients — this is the short list.</p>`;
+  `<p class="body muted">${esc(t(T.short_list, Object.keys(ING).length))}</p>`;
 
 function rows(list) {
   const max = 8;
   return `<div class="group"><div class="list">${list.slice(0, max).map(c => {
     const sub = c.ing.filter(i => !i[2]).map(i => shortName(i[0])).join(' · ');
     return `<a class="row" href="${url(c.id)}"><span class="sw" style="background:${c.color}"></span><span class="t"><span class="poster n">${esc(c.name)}</span><span class="d">${esc(sub)}</span></span><span class="arrow" aria-hidden="true">→</span></a>`;
-  }).join('')}</div>` + (list.length > max ? `<p class="more">+ ${list.length - max} more in the app</p>` : '') + '</div>';
+  }).join('')}</div>` + (list.length > max ? `<p class="more">${esc(t(T.more, list.length - max))}</p>` : '') + '</div>';
 }
 function renderOut() {
   const ready = LIB.filter(c => missing(c).length === 0);
   $('#bar-out').innerHTML = bar.size === 0
-    ? `<h3 class="poster">Empty bar.</h3><p class="empty">Tick what you have — we’ll tell you what to pour.</p>`
-    : `<p class="kicker muted">${bar.size} ingredient${bar.size > 1 ? 's' : ''}</p>
-       <h3 class="poster">${ready.length} ready to serve</h3>
-       ${ready.length ? rows(ready) : '<p class="empty">Nothing yet. Tick a few more bottles.</p>'}`;
+    ? `<h3 class="poster">${esc(T.empty_t)}</h3><p class="empty">${esc(T.empty_d)}</p>`
+    : `<p class="kicker muted">${esc(plural(T.ingredients, bar.size))}</p>
+       <h3 class="poster">${esc(t(T.ready, ready.length))}</h3>
+       ${ready.length ? rows(ready) : `<p class="empty">${esc(T.nothing)}</p>`}`;
 }
 $('#bar-pick').addEventListener('click', e => {
   const b = e.target.closest('[data-ing]'); if (!b) return;
@@ -103,7 +105,7 @@ renderOut();
 /* ---------- Library: filters, surprise, title fitting ---------- */
 const lib = $('#lib');
 const present = SPIRITS.filter(([k]) => LIB.some(c => c.base === k));
-$('#lib-filters').innerHTML = `<button type="button" class="chip" data-base="" aria-pressed="true">All</button>` +
+$('#lib-filters').innerHTML = `<button type="button" class="chip" data-base="" aria-pressed="true">${esc(T.all)}</button>` +
   present.map(([k, l]) => `<button type="button" class="chip" data-base="${k}" aria-pressed="false">${esc(l)}</button>`).join('');
 $('#lib-filters').addEventListener('click', e => {
   const b = e.target.closest('[data-base]'); if (!b) return;
@@ -111,7 +113,7 @@ $('#lib-filters').addEventListener('click', e => {
   $('#lib-filters').querySelectorAll('.chip').forEach(x => x.setAttribute('aria-pressed', x === b));
   let n = 0;
   lib.querySelectorAll('.tile:not(.end)').forEach(t => { const on = !base || t.dataset.base === base; t.hidden = !on; n += on; });
-  $('#lib-count').textContent = `${n} poster${n > 1 ? 's' : ''}`;
+  $('#lib-count').textContent = plural(T.posters, n);
   fitTiles();
 });
 $('#surprise').addEventListener('click', () => {
@@ -125,6 +127,4 @@ const fitTiles = () => lib.querySelectorAll('.tile:not(.end):not([hidden]) h3').
 (document.fonts ? document.fonts.ready : Promise.resolve()).then(() => { fitTiles(); fit($('#p-name'), 84, 36); });
 let rz; addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(fitTiles, 120); });
 
-/* ---------- Final CTA swatches, FAQ (one open at a time), reveal ---------- */
-$('#swatches').innerHTML = LIB.filter((_, i) => i % 4 === 0).map(c => `<i style="background:${c.color}"></i>`).join('');
 })();
