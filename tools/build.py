@@ -43,12 +43,20 @@ for r in recipes:
     if len(DATA['en']['cocktails'][r['id']]['steps']) != len(r['steps']):
         raise SystemExit(f'{r["id"]}: {len(r["steps"])} steps in the app, {len(DATA["en"]["cocktails"][r["id"]]["steps"])} in en.json')
 
-def ink_on(hex_):
-    """Theme.isDark from the app: relative luminance ≤ 0.2 → paper ink."""
+def lum(hex_):
     n = int(hex_[1:], 16)
     lin = lambda v: (v / 255) / 12.92 if v / 255 <= 0.03928 else (((v / 255) + 0.055) / 1.055) ** 2.4
-    l = 0.2126 * lin(n >> 16 & 255) + 0.7152 * lin(n >> 8 & 255) + 0.0722 * lin(n & 255)
-    return '#F4F2EC' if l <= 0.2 else '#0E0E0C'
+    return 0.2126 * lin(n >> 16 & 255) + 0.7152 * lin(n >> 8 & 255) + 0.0722 * lin(n & 255)
+
+def ink_on(hex_):
+    """Theme.isDark from the app: relative luminance ≤ 0.2 → paper ink, else chrome ink.
+    The web also needs WCAG AA (4.5:1) for small text: on the few mid-tones where neither
+    passes (Americano, Oaxaca old fashioned), fall back to pure black or white."""
+    l = lum(hex_)
+    ink = '#F4F2EC' if l <= 0.2 else '#0E0E0C'
+    contrast = lambda a, b: (max(a, b) + .05) / (min(a, b) + .05)
+    if contrast(l, lum(ink)) >= 4.5: return ink
+    return '#000000' if contrast(l, 0) >= contrast(l, 1) else '#FFFFFF'
 
 # ---------- one localized view of each cocktail ----------
 def cocktails(lang):
@@ -134,6 +142,22 @@ def store_button(label, cls='pill'):
     if APP_STORE: return f'<a class="{cls}" href="{APP_STORE}" data-appstore>{APPLE} {label}</a>'
     return f'<span class="{cls} soon">{APPLE} {label}</span>'
 
+# Styles are inlined and the font is self-hosted so nothing blocks the first paint (PageSpeed: render-blocking requests).
+def minify_css(css):
+    css = re.sub(r'/\*.*?\*/', '', css, flags=re.S)
+    css = re.sub(r'\s+', ' ', css)
+    return re.sub(r'\s*([{};,])\s*', r'\1', css).replace(';}', '}').strip()
+
+CSS = minify_css((ROOT / 'assets/site.css').read_text())
+FONT_FACE = ("@font-face{{font-family:Archivo;font-style:normal;font-weight:400 900;font-stretch:62% 125%;font-display:swap;"
+             "src:url({up}assets/fonts/archivo-{subset}.woff2) format('woff2');unicode-range:{range}}}")
+FONT_RANGES = {
+    'latin-ext': 'U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF',
+    'latin': 'U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD',
+}
+def fonts(up):
+    return ''.join(FONT_FACE.format(up=up, subset=k, range=v) for k, v in FONT_RANGES.items())
+
 def up_for(path):
     """Relative prefix from a page's URL path back to the site root."""
     return '../' * (path.strip('/').count('/') + 1) if path.strip('/') else ''
@@ -182,10 +206,8 @@ def head(lang, title, desc, path, alt, extra=(), color=None, image=None, noindex
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{up}assets/site.css">
+<link rel="preload" href="{up}assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>{fonts(up)}{CSS}</style>
 {ld}</head>
 <body>
 <script>document.documentElement.classList.add('js')</script>
@@ -208,7 +230,7 @@ def head(lang, title, desc, path, alt, extra=(), color=None, image=None, noindex
 
 def foot(lang, up, scripts=('site.js',)):
     u, home = UI[lang], up + PREFIX[lang]
-    js = ''.join(f'<script src="{up}assets/{s}"></script>\n' for s in scripts)
+    js = ''.join(f'<script src="{up}assets/{s}" defer></script>\n' for s in scripts)
     return f'''<footer class="surface">
   <div class="col pad">
     <div>

@@ -17,14 +17,31 @@ function inkOn(hex) {
   const n = parseInt(hex.slice(1), 16);
   const lin = v => { const c = v / 255; return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4); };
   const l = 0.2126 * lin(n >> 16 & 255) + 0.7152 * lin(n >> 8 & 255) + 0.0722 * lin(n & 255);
-  return l <= 0.2 ? '#F4F2EC' : '#0E0E0C';
+  const ink = l <= 0.2 ? '#F4F2EC' : '#0E0E0C', li = l <= 0.2 ? 0.886 : 0.0045;
+  const ratio = (a, b) => (Math.max(a, b) + .05) / (Math.min(a, b) + .05);
+  if (ratio(l, li) >= 4.5) return ink;   // WCAG AA; same fallback as tools/build.py ink_on
+  return ratio(l, 0) >= ratio(l, 1) ? '#000000' : '#FFFFFF';
 }
 const paint = (el, hex) => { el.style.setProperty('--bg', hex); el.style.setProperty('--ink', inkOn(hex)); };
 
-/* Shrink a poster title until every word fits (SwiftUI's minimumScaleFactor) */
-function fit(el, max, min = 16) {
-  let size = max; el.style.fontSize = size + 'px';
-  while (size > min && el.scrollWidth > el.clientWidth + 1) el.style.fontSize = (size -= 1) + 'px';
+/* Shrink poster titles until every word fits (SwiftUI's minimumScaleFactor).
+   Widths are only read on the frame after a change, once the browser has laid the page out itself,
+   so measuring never forces a synchronous layout (PageSpeed: forced reflow). jobs: [[el, max|null, min]] */
+const later = f => requestAnimationFrame(() => setTimeout(f));
+function fit(jobs) {
+  jobs = jobs.filter(([el]) => el);
+  jobs.forEach(([el, max]) => { const want = max == null ? '' : max + 'px'; if (el.style.fontSize !== want) el.style.fontSize = want; });
+  const measure = () => {
+    const m = jobs.map(([el]) => [el.scrollWidth, el.clientWidth, parseFloat(getComputedStyle(el).fontSize)]);
+    jobs = jobs.filter(([el, , min], i) => {
+      const [sw, cw, size] = m[i];
+      if (sw <= cw + 1 || size <= min) return false;
+      el.style.fontSize = Math.max(min, Math.min(size - 1, Math.floor(size * cw / sw))) + 'px';
+      return true;
+    });
+    if (jobs.length) later(measure);   // check the ones that shrank, next frame
+  };
+  later(measure);
 }
 
 /* ---------- Hero: the app's feed, cycling on the phone ---------- */
@@ -40,7 +57,7 @@ function showHero(i, animate = true) {
   const c = byId[FEATURED[heroIndex]];
   const apply = () => {
     $('#p-kicker').textContent = `N° ${pad2(LIB.indexOf(c) + 1)} / ${LIB.length} · ${SPIRIT[c.base] || ''}`;
-    $('#p-name').textContent = c.name; fit($('#p-name'), 84, 36);
+    $('#p-name').textContent = c.name; fit([[$('#p-name'), 84, 36]]);
     $('#p-tag').textContent = c.tagline;
     $('#p-rows').innerHTML = c.ing.slice(0, 4).map(([id, ml]) => `<span class="row-i"><span>${esc(ING[id] || id)}</span><b>${fmt(ml)}</b></span>`).join('');
     $('#mini-chips').innerHTML = SPIRITS.map(([k, l]) => `<span class="${k === c.base ? 'on' : ''}">${esc(l.toUpperCase())}</span>`).join('');
@@ -123,8 +140,9 @@ $('#surprise').addEventListener('click', () => {
   t.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'center' });
   void t.offsetWidth; t.classList.add('flash');
 });
-const fitTiles = () => lib.querySelectorAll('.tile:not(.end):not([hidden]) h3').forEach(h => fit(h, 36));
-(document.fonts ? document.fonts.ready : Promise.resolve()).then(() => { fitTiles(); fit($('#p-name'), 84, 36); });
+const tileJobs = () => [...lib.querySelectorAll('.tile:not(.end):not([hidden]) h3')].map(h => [h, 36, 16]);
+const fitTiles = () => fit(tileJobs());
+(document.fonts ? document.fonts.ready : Promise.resolve()).then(() => fit([...tileJobs(), [$('#p-name'), 84, 36]]));
 let rz; addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(fitTiles, 120); });
 
 })();

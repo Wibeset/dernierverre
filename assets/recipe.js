@@ -9,17 +9,30 @@ function fraction(v) {
   const whole = Math.floor(q / 4), frac = ['', '¼', '½', '¾'][q % 4];
   return whole === 0 ? frac : frac ? `${whole} ${frac}` : String(whole);
 }
-function fit(el, max, min = 16) {
-  el.style.fontSize = '';
-  let size = max ?? parseFloat(getComputedStyle(el).fontSize);
-  el.style.fontSize = size + 'px';
-  while (size > min && el.scrollWidth > el.clientWidth + 1) el.style.fontSize = (size -= 1) + 'px';
+/* Shrink poster titles until every word fits (SwiftUI's minimumScaleFactor).
+   Widths are only read on the frame after a change, once the browser has laid the page out itself,
+   so measuring never forces a synchronous layout (PageSpeed: forced reflow). jobs: [[el, max|null, min]] */
+const later = f => requestAnimationFrame(() => setTimeout(f));
+function fit(jobs) {
+  jobs = jobs.filter(([el]) => el);
+  jobs.forEach(([el, max]) => { const want = max == null ? '' : max + 'px'; if (el.style.fontSize !== want) el.style.fontSize = want; });
+  const measure = () => {
+    const m = jobs.map(([el]) => [el.scrollWidth, el.clientWidth, parseFloat(getComputedStyle(el).fontSize)]);
+    jobs = jobs.filter(([el, , min], i) => {
+      const [sw, cw, size] = m[i];
+      if (sw <= cw + 1 || size <= min) return false;
+      el.style.fontSize = Math.max(min, Math.min(size - 1, Math.floor(size * cw / sw))) + 'px';
+      return true;
+    });
+    if (jobs.length) later(measure);   // check the ones that shrank, next frame
+  };
+  later(measure);
 }
-const fitAll = () => {
-  document.querySelectorAll('.r-title').forEach(h => fit(h, null, 40));
-  document.querySelectorAll('.tile h3').forEach(h => fit(h, 36));
-  document.querySelectorAll('.fact .poster').forEach(h => fit(h, null, 12));
-};
+const fitAll = () => fit([
+  ...[...document.querySelectorAll('.r-title')].map(h => [h, null, 40]),
+  ...[...document.querySelectorAll('.tile h3')].map(h => [h, 36, 16]),
+  ...[...document.querySelectorAll('.fact .poster')].map(h => [h, null, 12]),
+]);
 (document.fonts ? document.fonts.ready : Promise.resolve()).then(fitAll);
 let rz; addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(fitAll, 120); });
 
