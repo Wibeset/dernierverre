@@ -289,6 +289,8 @@ sitemap = []  # {lang: path} for each page
 LD_TEXT = {'en': {'cocktail': 'Cocktail', 'free': 'Mocktail', 'yield': '1 drink'},
            'fr': {'cocktail': 'Cocktail', 'free': 'Cocktail sans alcool', 'yield': '1 verre'},
            'es': {'cocktail': 'Cóctel', 'free': 'Cóctel sin alcohol', 'yield': '1 vaso'}}
+# Hands-on time per difficulty, for the Recipe schema. Nothing is cooked, so cookTime is zero.
+PREP_TIME = {'facile': 'PT3M', 'moyen': 'PT5M', 'avance': 'PT8M'}
 
 for lang in LANGS:
     u, d, P = UI[lang], DATA[lang], PREFIX[lang]
@@ -348,6 +350,7 @@ for lang in LANGS:
             'recipeCategory': LD_TEXT[lang]['free' if c['base'] == 'sansAlcool' else 'cocktail'],
             'keywords': ', '.join([base] + [L['flavors'][f] for f in c['flavors']] + [L['occasions'][o][1] for o in c['occasions']]),
             'recipeYield': LD_TEXT[lang]['yield'],
+            'prepTime': PREP_TIME[c['difficulty']], 'cookTime': 'PT0M', 'totalTime': PREP_TIME[c['difficulty']],
             'recipeIngredient': [f'{qty(m, lang)} {d["ingredients"][m["id"]]}' if ('ml' in m or 'count' in m) else f'{d["ingredients"][m["id"]]} — {qty(m, lang)}'
                                  for m in c['ingredients']],
             'recipeInstructions': [{'@type': 'HowToStep', 'position': j, 'text': s} for j, s in enumerate(c['steps'], 1)],
