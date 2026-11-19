@@ -228,7 +228,14 @@
     "Is Dernier Verre free?",
     "Yes, with all 52 recipes, no ads and no account."
    ]
-  ]
+  ],
+  "ads_label": "From the same makers",
+  "ads_soon": "Coming soon to iPhone",
+  "ads_store": "Get it on the App Store",
+  "ad_reliure": "Your reading life, bound together.",
+  "ad_arpente": "Every step tells a story.",
+  "ad_porcom": "A tiny journal for everything you watch.",
+  "ad_coutume": "Keep your habits, one day at a time."
  },
  "fr": {
   "locale": "fr_CA",
@@ -459,7 +466,14 @@
     "Dernier Verre est-il gratuit?",
     "Oui, avec les 52 recettes, sans publicité et sans compte."
    ]
-  ]
+  ],
+  "ads_label": "Des mêmes créateurs",
+  "ads_soon": "Bientôt sur iPhone",
+  "ads_store": "Télécharger sur l’App Store",
+  "ad_reliure": "Toutes tes lectures, reliées.",
+  "ad_arpente": "Chaque pas raconte un parcours.",
+  "ad_porcom": "Un petit journal pour tout ce que vous regardez.",
+  "ad_coutume": "Vos habitudes, un jour à la fois."
  },
  "es": {
   "locale": "es_ES",
@@ -690,6 +704,13 @@
     "¿Dernier Verre es gratis?",
     "Sí, con las 52 recetas, sin anuncios y sin cuenta."
    ]
-  ]
+  ],
+  "ads_label": "De los mismos creadores",
+  "ads_soon": "Próximamente en iPhone",
+  "ads_store": "Descárgala en el App Store",
+  "ad_reliure": "Toda tu vida lectora, encuadernada.",
+  "ad_arpente": "Cada paso cuenta una historia.",
+  "ad_porcom": "Un pequeño diario para todo lo que ves.",
+  "ad_coutume": "Tus hábitos, un día a la vez."
  }
 }

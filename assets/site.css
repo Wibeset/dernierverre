@@ -263,6 +263,30 @@ header.site .pill { margin-left: auto; height: 40px; padding: 0 16px; font-size:
 .swatches { display: flex; gap: 4px; flex-wrap: wrap; justify-content: center; max-width: 360px; }
 .swatches i { width: 22px; height: 22px; border-radius: 6px; border: var(--rule) solid var(--ink); }
 
+/* The makers' other apps: a quiet row of small cards, each in its own app's colours */
+.ads .col { padding-top: 32px; padding-bottom: 48px; }
+.ads-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+@media (min-width: 560px) { .ads-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1000px) { .ads-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.ad { display: flex; flex-direction: column; padding: 20px 20px 18px; border-radius: 18px; text-decoration: none; transition: transform .25s ease; }
+.ad:hover { transform: translateY(-2px); }
+.ad .kicker { font-size: 11px; opacity: .6; }
+.ad h3 { display: flex; align-items: center; gap: 9px; margin: 10px 0 0; font-size: 19px; font-weight: 700; letter-spacing: -.01em; }
+.ad h3 img { width: 28px; height: 28px; border-radius: 7px; }
+.ad-tagline { margin: 8px 0 14px; font-family: "Instrument Serif", Georgia, serif; font-size: 18px; line-height: 1.2; }
+.ad-cta { display: inline-flex; align-items: center; gap: 6px; margin-top: auto; font-size: 13px; font-weight: 600; opacity: .75; transition: opacity .2s ease; }
+.ad:hover .ad-cta { opacity: 1; }
+.ad-cta svg { width: 12px; height: 12px; margin-top: -2px; fill: currentColor; }
+.ad-reliure { background: #17191d; color: #f2f1ee; }
+.ad-arpente { background: #2d5a3d; color: #f4efe4; }
+.ad-arpente h3 img { box-shadow: 0 0 0 1px rgb(244 239 228 / .3); }
+.ad-porcom { background: #1c1312; color: #f4efe8; }
+.ad-porcom .ad-tagline { font-family: inherit; font-size: 15px; font-weight: 600; letter-spacing: -.01em; line-height: 1.3; }
+.ad-porcom .ad-cta { color: #ff7a72; opacity: 1; }
+.ad-coutume { background: #17212b; color: #f5f3ee; }
+.ad-coutume h3 img { box-shadow: 0 0 0 1px rgb(245 243 238 / .2); }
+@media (prefers-reduced-motion: reduce) { .ad, .ad-cta { transition: none; } }
+
 /* Footer */
 footer .col { display: grid; gap: 28px; padding-top: 24px; padding-bottom: 40px; }
 footer .logo { font-size: 40px; }

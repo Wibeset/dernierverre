@@ -152,6 +152,25 @@ def store_button(label, cls='pill'):
     if APP_STORE: return f'<a class="{cls}" href="{APP_STORE}" data-appstore>{APPLE} {label}</a>'
     return f'<span class="{cls} soon">{APPLE} {label}</span>'
 
+# The makers' other apps, each card in its own app's colours (same row as on reliure.me and coutume.app).
+# (key, name, icon, url, French url, store key: 'ads_store' once on the App Store, 'ads_soon' before)
+OTHER_APPS = [
+    ('reliure', 'Reliure', 'reliure-icon-dark.png', 'https://reliure.me/', 'https://reliure.me/fr/', 'ads_store'),
+    ('arpente', 'Arpente', 'arpente-icon.png', 'https://arpente.app/', 'https://arpente.app/fr/', 'ads_soon'),
+    ('porcom', 'Porcom', 'porcom-logo.png', 'https://porcom.app/', 'https://porcom.app/fr/', 'ads_store'),
+    ('coutume', 'Coutume', 'coutume-icon.png', 'https://coutume.app/', 'https://coutume.app/fr/', 'ads_soon'),
+]
+
+def ads(lang, up):
+    u = UI[lang]
+    return '\n'.join(
+        f'      <a class="ad ad-{k} rv" href="{fr if lang == "fr" else en}">'
+        f'<span class="kicker">{u["ads_label"]}</span>'
+        f'<h3><img src="{up}assets/ads/{icon}" width="40" height="40" alt="" loading="lazy">{name}</h3>'
+        f'<p class="ad-tagline">{u["ad_" + k]}</p>'
+        f'<span class="ad-cta">{APPLE} {u[cta]}</span></a>'
+        for k, name, icon, en, fr, cta in OTHER_APPS)
+
 # Styles are inlined and the font is self-hosted so nothing blocks the first paint (PageSpeed: render-blocking requests).
 def minify_css(css):
     css = re.sub(r'/\*.*?\*/', '', css, flags=re.S)
@@ -315,7 +334,7 @@ for lang in LANGS:
         f'<button type="button" class="pill" id="surprise">{u["surprise_me"]}</button></div>')
     values = {**{k: v for k, v in u.items() if isinstance(v, str)},
               'lib_count': u['lib_count'].format(n=N), 'lib_h2': u['lib_h2'].format(n=N),
-              'store_button': store_button(u['cta_download']), 'library': library, 'faq': faq,
+              'store_button': store_button(u['cta_download']), 'library': library, 'faq': faq, 'ads': ads(lang, up),
               'swatches': ''.join(f'<i style="background:{c["color"]}"></i>' for c in C[lang][::4])}
     body = re.sub(r'\{\{(\w+)\}\}', lambda m: values[m[1]], HOME)
     app = {'@type': 'MobileApplication', '@id': f'{SITE}/#app', 'name': 'Dernier Verre', 'operatingSystem': 'iOS',
